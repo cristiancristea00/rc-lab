@@ -1,0 +1,158 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7a100tcsg324-1",
+      "gen_directory": "../../../../assignment-1.gen/sources_1/bd/uart_rx_design",
+      "name": "uart_rx_design",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.1.1"
+    },
+    "design_tree": {
+      "clk_wiz_0": ""
+    },
+    "components": {
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "uart_rx_design_clk_wiz_0_0",
+        "xci_path": "ip/uart_rx_design_clk_wiz_0_0/uart_rx_design_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "CLKIN1_JITTER_PS": {
+            "value": "100.000"
+          },
+          "CLKIN1_UI_JITTER": {
+            "value": "100.000"
+          },
+          "CLKIN2_JITTER_PS": {
+            "value": "100.000"
+          },
+          "CLKIN2_UI_JITTER": {
+            "value": "100.000"
+          },
+          "CLKOUT1_DRIVES": {
+            "value": "BUFGCE"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "116.394"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "87.466"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "100"
+          },
+          "CLKOUT2_DRIVES": {
+            "value": "BUFGCE"
+          },
+          "CLKOUT2_JITTER": {
+            "value": "189.709"
+          },
+          "CLKOUT2_PHASE_ERROR": {
+            "value": "87.466"
+          },
+          "CLKOUT2_REQUESTED_OUT_FREQ": {
+            "value": "9.8304"
+          },
+          "CLKOUT2_USED": {
+            "value": "true"
+          },
+          "CLKOUT3_DRIVES": {
+            "value": "BUFGCE"
+          },
+          "CLKOUT3_JITTER": {
+            "value": "112.775"
+          },
+          "CLKOUT3_PHASE_ERROR": {
+            "value": "87.466"
+          },
+          "CLKOUT3_REQUESTED_OUT_FREQ": {
+            "value": "117.9648"
+          },
+          "CLKOUT3_USED": {
+            "value": "true"
+          },
+          "CLKOUT4_DRIVES": {
+            "value": "BUFGCE"
+          },
+          "CLKOUT5_DRIVES": {
+            "value": "BUFGCE"
+          },
+          "CLKOUT6_DRIVES": {
+            "value": "BUFGCE"
+          },
+          "CLKOUT7_DRIVES": {
+            "value": "BUFGCE"
+          },
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "Custom"
+          },
+          "CLK_IN2_BOARD_INTERFACE": {
+            "value": "Custom"
+          },
+          "CLK_OUT1_PORT": {
+            "value": "sys_clk"
+          },
+          "CLK_OUT2_PORT": {
+            "value": "baud_9600"
+          },
+          "CLK_OUT3_PORT": {
+            "value": "baud_115200"
+          },
+          "FEEDBACK_SOURCE": {
+            "value": "FDBK_AUTO"
+          },
+          "JITTER_OPTIONS": {
+            "value": "PS"
+          },
+          "JITTER_SEL": {
+            "value": "Min_O_Jitter"
+          },
+          "MMCM_BANDWIDTH": {
+            "value": "HIGH"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "11.875"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "11.875"
+          },
+          "MMCM_CLKOUT1_DIVIDE": {
+            "value": "121"
+          },
+          "MMCM_CLKOUT2_DIVIDE": {
+            "value": "10"
+          },
+          "MMCM_COMPENSATION": {
+            "value": "ZHOLD"
+          },
+          "MMCM_REF_JITTER2": {
+            "value": "0.010"
+          },
+          "NUM_OUT_CLKS": {
+            "value": "3"
+          },
+          "PRIMITIVE": {
+            "value": "MMCM"
+          },
+          "RESET_BOARD_INTERFACE": {
+            "value": "Custom"
+          },
+          "USE_CLOCK_SEQUENCING": {
+            "value": "false"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          },
+          "USE_RESET": {
+            "value": "false"
+          },
+          "USE_SAFE_CLOCK_STARTUP": {
+            "value": "true"
+          }
+        }
+      }
+    }
+  }
+}
