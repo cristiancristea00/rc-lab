@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x0",
+      "boundary_crc": "0x38EABEE7FAC9C80",
       "device": "xc7a100tcsg324-1",
       "gen_directory": "../../../../assignment-1.gen/sources_1/bd/uart_rx_design",
       "name": "uart_rx_design",
@@ -10,14 +10,46 @@
       "tool_version": "2023.1.1"
     },
     "design_tree": {
-      "clk_wiz_0": ""
+      "clk_gen": "",
+      "uart_receiver": ""
+    },
+    "ports": {
+      "CLK100MHZ": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "PHASE": {
+            "value": "0.0"
+          }
+        }
+      },
+      "RESET": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "BAUD_SELECT": {
+        "type": "data",
+        "direction": "I"
+      },
+      "TX": {
+        "type": "data",
+        "direction": "I"
+      }
     },
     "components": {
-      "clk_wiz_0": {
+      "clk_gen": {
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
         "xci_name": "uart_rx_design_clk_wiz_0_0",
-        "xci_path": "ip/uart_rx_design_clk_wiz_0_0/uart_rx_design_clk_wiz_0_0.xci",
-        "inst_hier_path": "clk_wiz_0",
+        "xci_path": "ip\\uart_rx_design_clk_wiz_0_0\\uart_rx_design_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_gen",
         "parameters": {
           "CLKIN1_JITTER_PS": {
             "value": "100.000"
@@ -47,31 +79,31 @@
             "value": "BUFGCE"
           },
           "CLKOUT2_JITTER": {
-            "value": "189.709"
+            "value": "123.670"
           },
           "CLKOUT2_PHASE_ERROR": {
-            "value": "87.466"
+            "value": "92.672"
           },
           "CLKOUT2_REQUESTED_OUT_FREQ": {
             "value": "9.8304"
           },
           "CLKOUT2_USED": {
-            "value": "true"
+            "value": "false"
           },
           "CLKOUT3_DRIVES": {
             "value": "BUFGCE"
           },
           "CLKOUT3_JITTER": {
-            "value": "112.775"
+            "value": "123.670"
           },
           "CLKOUT3_PHASE_ERROR": {
-            "value": "87.466"
+            "value": "92.672"
           },
           "CLKOUT3_REQUESTED_OUT_FREQ": {
             "value": "117.9648"
           },
           "CLKOUT3_USED": {
-            "value": "true"
+            "value": "false"
           },
           "CLKOUT4_DRIVES": {
             "value": "BUFGCE"
@@ -86,7 +118,7 @@
             "value": "BUFGCE"
           },
           "CLK_IN1_BOARD_INTERFACE": {
-            "value": "Custom"
+            "value": "sys_clock"
           },
           "CLK_IN2_BOARD_INTERFACE": {
             "value": "Custom"
@@ -95,10 +127,13 @@
             "value": "sys_clk"
           },
           "CLK_OUT2_PORT": {
-            "value": "baud_9600"
+            "value": "baud_1024x9600"
           },
           "CLK_OUT3_PORT": {
-            "value": "baud_115200"
+            "value": "baud_1024x115200"
+          },
+          "ENABLE_CLOCK_MONITOR": {
+            "value": "false"
           },
           "FEEDBACK_SOURCE": {
             "value": "FDBK_AUTO"
@@ -119,10 +154,10 @@
             "value": "11.875"
           },
           "MMCM_CLKOUT1_DIVIDE": {
-            "value": "121"
+            "value": "1"
           },
           "MMCM_CLKOUT2_DIVIDE": {
-            "value": "10"
+            "value": "1"
           },
           "MMCM_COMPENSATION": {
             "value": "ZHOLD"
@@ -131,7 +166,7 @@
             "value": "0.010"
           },
           "NUM_OUT_CLKS": {
-            "value": "3"
+            "value": "1"
           },
           "PRIMITIVE": {
             "value": "MMCM"
@@ -139,19 +174,111 @@
           "RESET_BOARD_INTERFACE": {
             "value": "Custom"
           },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          },
           "USE_CLOCK_SEQUENCING": {
+            "value": "false"
+          },
+          "USE_DYN_PHASE_SHIFT": {
             "value": "false"
           },
           "USE_LOCKED": {
             "value": "false"
           },
           "USE_RESET": {
-            "value": "false"
+            "value": "true"
           },
           "USE_SAFE_CLOCK_STARTUP": {
             "value": "true"
           }
         }
+      },
+      "uart_receiver": {
+        "vlnv": "xilinx.com:module_ref:uart_receiver:1.0",
+        "xci_name": "uart_rx_design_uart_receiver_0_0",
+        "xci_path": "ip\\uart_rx_design_uart_receiver_0_0\\uart_rx_design_uart_receiver_0_0.xci",
+        "inst_hier_path": "uart_receiver",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "uart_receiver",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_gen_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "baud_sel": {
+            "direction": "I"
+          },
+          "rx": {
+            "direction": "I"
+          },
+          "data": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "ready": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "BAUD_SELECT_1": {
+        "ports": [
+          "BAUD_SELECT",
+          "uart_receiver/baud_sel"
+        ]
+      },
+      "RESET_1": {
+        "ports": [
+          "RESET",
+          "clk_gen/reset",
+          "uart_receiver/rst"
+        ]
+      },
+      "TX_1": {
+        "ports": [
+          "TX",
+          "uart_receiver/rx"
+        ]
+      },
+      "clk_gen_sys_clk": {
+        "ports": [
+          "clk_gen/sys_clk",
+          "uart_receiver/clk"
+        ]
+      },
+      "sys_clock_1": {
+        "ports": [
+          "CLK100MHZ",
+          "clk_gen/clk_in1"
+        ]
       }
     }
   }
