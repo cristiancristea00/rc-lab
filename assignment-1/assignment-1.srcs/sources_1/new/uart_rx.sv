@@ -130,7 +130,7 @@ end
 
 
 // Sequential Logic
-always_ff @ (posedge clk or posedge rst) begin
+always_ff @ (posedge clk) begin
     if (rst) begin
         state     <= STATE_IDLE;
         ticks     <= 16'b0;

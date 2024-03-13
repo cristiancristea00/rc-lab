@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xAD72C40CC30C55B",
+      "boundary_crc": "0x9F17625C5922DF56",
       "device": "xc7a100tcsg324-1",
       "gen_directory": "../../../../assignment-1.gen/sources_1/bd/uart_rx_design",
       "name": "uart_rx_design",
@@ -11,33 +11,11 @@
       "validated": "true"
     },
     "design_tree": {
-      "clk_gen": ""
+      "clk_gen": "",
+      "led_controller": "",
+      "uart_receiver": ""
     },
     "ports": {
-      "CLK100MHZ": {
-        "type": "clk",
-        "direction": "I",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "uart_rx_design_CLK100MHZ",
-            "value_src": "default"
-          },
-          "FREQ_HZ": {
-            "value": "100000000"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.0"
-          }
-        }
-      },
       "RESET": {
         "type": "rst",
         "direction": "I",
@@ -70,13 +48,50 @@
             "value_src": "default"
           }
         }
+      },
+      "LED": {
+        "type": "data",
+        "direction": "O",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "CLK": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "uart_rx_design_CLK",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
       }
     },
     "components": {
       "clk_gen": {
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
         "xci_name": "uart_rx_design_clk_wiz_0_0",
-        "xci_path": "ip\\uart_rx_design_clk_wiz_0_0\\uart_rx_design_clk_wiz_0_0.xci",
+        "xci_path": "ip/uart_rx_design_clk_wiz_0_0/uart_rx_design_clk_wiz_0_0.xci",
         "inst_hier_path": "clk_gen",
         "parameters": {
           "CLKIN1_JITTER_PS": {
@@ -215,25 +230,192 @@
             "value": "false"
           },
           "USE_RESET": {
-            "value": "true"
+            "value": "false"
           },
           "USE_SAFE_CLOCK_STARTUP": {
             "value": "true"
           }
         }
+      },
+      "led_controller": {
+        "vlnv": "xilinx.com:module_ref:led_ctrl:1.0",
+        "xci_name": "uart_rx_design_led_ctrl_0_0",
+        "xci_path": "ip/uart_rx_design_led_ctrl_0_0/uart_rx_design_led_ctrl_0_0.xci",
+        "inst_hier_path": "led_controller",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "led_ctrl",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_gen_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "ready": {
+            "direction": "I"
+          },
+          "data": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "led": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "uart_receiver": {
+        "vlnv": "xilinx.com:module_ref:uart_receiver:1.0",
+        "xci_name": "uart_rx_design_uart_receiver_0_0",
+        "xci_path": "ip/uart_rx_design_uart_receiver_0_0/uart_rx_design_uart_receiver_0_0.xci",
+        "inst_hier_path": "uart_receiver",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "uart_receiver",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_gen_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "baud_sel": {
+            "direction": "I",
+            "parameters": {
+              "LAYERED_METADATA": {
+                "value": "undef",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rx": {
+            "direction": "I",
+            "parameters": {
+              "LAYERED_METADATA": {
+                "value": "undef",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "data": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "ready": {
+            "direction": "O"
+          }
+        }
       }
     },
     "nets": {
+      "BAUD_SELECT_1": {
+        "ports": [
+          "BAUD_SELECT",
+          "uart_receiver/baud_sel"
+        ]
+      },
+      "CLK_1": {
+        "ports": [
+          "CLK",
+          "clk_gen/clk_in1"
+        ]
+      },
       "RESET_1": {
         "ports": [
           "RESET",
-          "clk_gen/reset"
+          "uart_receiver/rst",
+          "led_controller/rst"
         ]
       },
-      "sys_clock_1": {
+      "TX_1": {
         "ports": [
-          "CLK100MHZ",
-          "clk_gen/clk_in1"
+          "TX",
+          "uart_receiver/rx"
+        ]
+      },
+      "clk_gen_sys_clk": {
+        "ports": [
+          "clk_gen/sys_clk",
+          "uart_receiver/clk",
+          "led_controller/clk"
+        ]
+      },
+      "led_ctrl_0_led": {
+        "ports": [
+          "led_controller/led",
+          "LED"
+        ]
+      },
+      "uart_receiver_0_data": {
+        "ports": [
+          "uart_receiver/data",
+          "led_controller/data"
+        ]
+      },
+      "uart_receiver_0_ready": {
+        "ports": [
+          "uart_receiver/ready",
+          "led_controller/ready"
         ]
       }
     }
