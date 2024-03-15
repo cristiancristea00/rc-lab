@@ -58,7 +58,7 @@ task reset_dut();
 endtask
 
 task wait_clock(input int count);
-    repeat (count) @ (negedge clock);
+    repeat (count) @ (posedge clock);
 endtask
 
 task send_byte(input bit [7:0] value);
@@ -83,6 +83,10 @@ initial begin
     reset_dut();
     wait_clock(1000);
     send_byte(8'hAA);
+    wait_clock(1000);
+    send_byte(8'h55);
+    send_byte(8'h69);
+    send_byte(8'hFF);
     wait_clock(1000);
     $stop;
 end

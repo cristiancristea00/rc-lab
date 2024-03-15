@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1.1 (lin64) Build 3900603 Fri Jun 16 19:30:25 MDT 2023
-| Date         : Wed Mar 13 10:30:34 2024
+| Date         : Fri Mar 15 11:22:27 2024
 | Host         : Hephaestion running 64-bit Ubuntu 23.10
 | Command      : report_drc -file uart_rx_design_wrapper_drc_opted.rpt -pb uart_rx_design_wrapper_drc_opted.pb -rpx uart_rx_design_wrapper_drc_opted.rpx
 | Design       : uart_rx_design_wrapper

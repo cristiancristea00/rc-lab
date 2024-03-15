@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1.1 (lin64) Build 3900603 Fri Jun 16 19:30:25 MDT 2023
-| Date             : Wed Mar 13 10:31:02 2024
+| Date             : Fri Mar 15 11:22:56 2024
 | Host             : Hephaestion running 64-bit Ubuntu 23.10
 | Command          : report_power -file uart_rx_design_wrapper_power_routed.rpt -pb uart_rx_design_wrapper_power_summary_routed.pb -rpx uart_rx_design_wrapper_power_routed.rpx
 | Design           : uart_rx_design_wrapper
@@ -52,13 +52,13 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.002 |        8 |       --- |             --- |
-| Slice Logic    |    <0.001 |      185 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       74 |     63400 |            0.12 |
+| Clocks         |     0.001 |        8 |       --- |             --- |
+| Slice Logic    |    <0.001 |      190 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       82 |     63400 |            0.13 |
 |   CARRY4       |    <0.001 |        8 |     15850 |            0.05 |
 |   Register     |    <0.001 |       76 |    126800 |            0.06 |
 |   Others       |     0.000 |        6 |       --- |             --- |
-| Signals        |    <0.001 |      151 |       --- |             --- |
+| Signals        |    <0.001 |      154 |       --- |             --- |
 | MMCM           |     0.135 |        1 |         6 |           16.67 |
 | I/O            |    <0.001 |       12 |       210 |            5.71 |
 | Static Power   |     0.097 |          |           |                 |
@@ -150,8 +150,6 @@ Table of Contents
 |   uart_rx_design_i     |     0.137 |
 |     clk_gen            |     0.136 |
 |       inst             |     0.136 |
-|     uart_receiver      |     0.001 |
-|       inst             |     0.001 |
 +------------------------+-----------+
 
 

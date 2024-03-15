@@ -8,7 +8,7 @@ module led_ctrl
 );
 
 
-always @(posedge clk) begin
+always @ (posedge clk) begin
     if (rst) begin
         led <= 8'b0;
     end 

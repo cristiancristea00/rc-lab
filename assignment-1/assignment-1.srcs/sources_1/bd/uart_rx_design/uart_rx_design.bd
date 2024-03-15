@@ -383,8 +383,8 @@
       "RESET_1": {
         "ports": [
           "RESET",
-          "uart_receiver/rst",
-          "led_controller/rst"
+          "led_controller/rst",
+          "uart_receiver/rst"
         ]
       },
       "TX_1": {
@@ -396,8 +396,8 @@
       "clk_gen_sys_clk": {
         "ports": [
           "clk_gen/sys_clk",
-          "uart_receiver/clk",
-          "led_controller/clk"
+          "led_controller/clk",
+          "uart_receiver/clk"
         ]
       },
       "led_ctrl_0_led": {

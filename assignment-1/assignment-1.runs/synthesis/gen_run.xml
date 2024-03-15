@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synthesis" LaunchPart="xc7a100tcsg324-1" LaunchTime="1710318536">
+<GenRun Id="synthesis" LaunchPart="xc7a100tcsg324-1" LaunchTime="1710494447" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/uart_rx_design_wrapper.dcp">
   <File Type="VDS-TIMINGSUMMARY" Name="uart_rx_design_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="uart_rx_design_wrapper.dcp"/>
   <File Type="RDS-UTIL-PB" Name="uart_rx_design_wrapper_utilization_synth.pb"/>
@@ -64,6 +64,14 @@
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
     <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/uart_rx_design_wrapper.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synthesis"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
@@ -72,7 +80,9 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
       <Desc>Vivado Synthesis Defaults</Desc>
     </StratHandle>
-    <Step Id="synth_design"/>
+    <Step Id="synth_design">
+      <Option Id="FsmExtraction">4</Option>
+    </Step>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="uart_rx_design_uart_receiver_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="uart_rx_design_led_ctrl_0_0"/>

@@ -24,10 +24,10 @@ localparam VAL_START = 1'b0;
 // FSM States
 typedef enum logic [1:0] 
 {
-    STATE_IDLE  = 2'b00,
-    STATE_START = 2'b01,
-    STATE_DATA  = 2'b11,
-    STATE_STOP  = 2'b10
+    IDLE  = 2'b00,
+    START = 2'b01,
+    DATA  = 2'b11,
+    STOP  = 2'b10
 } 
 fsm_state_t;
 
@@ -55,49 +55,42 @@ logic [7:0] next_data;
 // Next State Combinational Logic
 always_comb begin
     case (state)
-        STATE_IDLE: begin
+        IDLE: begin
             if (rx == VAL_START) begin
-                if (ticks == BIT_HALF_LENGTH) begin
-                    next_state = STATE_START;
-                end
-                else begin
-                    next_state = state;
-                end
-
-                next_ticks = ticks + 16'b1;
+                next_state = START;
             end
             else begin
                 next_state = state;
-                next_ticks = 16'b0;
             end
     
             next_curr_bit = 4'b0;
-            next_data = data;
+            next_ticks    = 16'b0;
+            next_data     = data;
         end
 
-        STATE_START: begin
-            if (ticks == BIT_LENGTH) begin
-                next_state    = STATE_DATA;
+        START: begin
+            if (ticks == BIT_HALF_LENGTH) begin
+                next_state    = DATA;
                 next_ticks    = 16'b0;
-                next_curr_bit = 4'b1;
                 next_data     = 8'b0;
             end
             else begin
                 next_state    = state;
-                next_curr_bit = curr_bit;
                 next_ticks    = ticks + 16'b1;
                 next_data     = data;
             end
+            
+            next_curr_bit = 4'b0;
         end
 
-        STATE_DATA: begin
+        DATA: begin
             if (ticks == BIT_LENGTH) begin
                 next_ticks    = 16'b0;
                 next_curr_bit = curr_bit + 4'b1;
-                next_data     = {rx, data[7:1]};
+                next_data     = {data[6:0], rx};
 
-                if (curr_bit == DATA_SIZE) begin
-                    next_state    = STATE_STOP;
+                if (curr_bit == DATA_SIZE - 1) begin
+                    next_state    = STOP;
                     next_curr_bit = 4'b0;
                     next_ticks    = 16'b0;
                 end
@@ -113,9 +106,9 @@ always_comb begin
             end
         end
 
-        STATE_STOP: begin
-            if (ticks == BIT_LENGTH) begin
-                next_state = STATE_IDLE;
+        STOP: begin
+            if (ticks == BIT_HALF_LENGTH) begin
+                next_state = IDLE;
             end
             else begin
                 next_state = state;
@@ -132,7 +125,7 @@ end
 // Sequential Logic
 always_ff @ (posedge clk) begin
     if (rst) begin
-        state     <= STATE_IDLE;
+        state     <= IDLE;
         ticks     <= 16'b0;
         curr_bit  <= 4'b0;
         data      <= 8'b0;
@@ -155,19 +148,19 @@ end
 // Output Combinational Logic
 always_comb begin
     case (state)
-        STATE_IDLE: begin
+        IDLE: begin
             ready = READY;
         end
 
-        STATE_START: begin
+        START: begin
             ready = READY;
         end
 
-        STATE_DATA: begin
+        DATA: begin
             ready = NOT_READY;
         end
 
-        STATE_STOP: begin
+        STOP: begin
             ready = READY;
         end
     endcase

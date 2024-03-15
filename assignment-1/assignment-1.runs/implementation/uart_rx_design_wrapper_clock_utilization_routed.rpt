@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1.1 (lin64) Build 3900603 Fri Jun 16 19:30:25 MDT 2023
-| Date         : Wed Mar 13 10:31:02 2024
+| Date         : Fri Mar 15 11:22:56 2024
 | Host         : Hephaestion running 64-bit Ubuntu 23.10
 | Command      : report_clock_utilization -file uart_rx_design_wrapper_clock_utilization_routed.rpt
 | Design       : uart_rx_design_wrapper
@@ -48,8 +48,8 @@ Table of Contents
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+--------------------------------------+------------------------------------------------+-------------------------------------------------------------------------+
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site           | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock                                | Driver Pin                                     | Net                                                                     |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+--------------------------------------+------------------------------------------------+-------------------------------------------------------------------------+
-| g0        | src0      | BUFGCTRL/O      | None       | BUFGCTRL_X0Y16 | n/a          |                 2 |          68 |               0 |       10.000 | sys_clk_uart_rx_design_clk_wiz_0_0_1 | uart_rx_design_i/clk_gen/inst/clkout1_buf/O    | uart_rx_design_i/clk_gen/inst/sys_clk                                   |
-| g0        | src1      | BUFGCTRL/O      | None       | BUFGCTRL_X0Y16 | n/a          |                 2 |          68 |               0 |       10.000 |                                      | uart_rx_design_i/clk_gen/inst/clkout1_buf/O    | uart_rx_design_i/clk_gen/inst/sys_clk                                   |
+| g0        | src0      | BUFGCTRL/O      | None       | BUFGCTRL_X0Y16 | n/a          |                 1 |          68 |               0 |       10.000 | sys_clk_uart_rx_design_clk_wiz_0_0_1 | uart_rx_design_i/clk_gen/inst/clkout1_buf/O    | uart_rx_design_i/clk_gen/inst/sys_clk                                   |
+| g0        | src1      | BUFGCTRL/O      | None       | BUFGCTRL_X0Y16 | n/a          |                 1 |          68 |               0 |       10.000 |                                      | uart_rx_design_i/clk_gen/inst/clkout1_buf/O    | uart_rx_design_i/clk_gen/inst/sys_clk                                   |
 | g1        | src0      | BUFH/O          | None       | BUFHCE_X0Y24   | X0Y2         |                 1 |           8 |               0 |       10.000 | sys_clk_uart_rx_design_clk_wiz_0_0_1 | uart_rx_design_i/clk_gen/inst/clkout1_buf_en/O | uart_rx_design_i/clk_gen/inst/sys_clk_uart_rx_design_clk_wiz_0_0_en_clk |
 | g2        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y17 | n/a          |                 1 |           1 |               0 |       10.000 | clkfbout_uart_rx_design_clk_wiz_0_0  | uart_rx_design_i/clk_gen/inst/clkf_buf/O       | uart_rx_design_i/clk_gen/inst/clkfbout_buf_uart_rx_design_clk_wiz_0_0   |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+--------------------------------------+------------------------------------------------+-------------------------------------------------------------------------+
@@ -82,9 +82,9 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | X0Y0              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  2600 |    0 |   600 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y0              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |  1500 |    0 |   550 |    0 |    40 |    0 |    20 |    0 |    40 |
-| X0Y1              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   64 |  2000 |   17 |   600 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X0Y1              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   68 |  2000 |   11 |   600 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  1900 |    0 |   650 |    0 |    60 |    0 |    30 |    0 |    40 |
-| X0Y2              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   12 |  2000 |    4 |   600 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X0Y2              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    8 |  2000 |    0 |   600 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y2              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  1900 |    0 |   650 |    0 |    60 |    0 |    30 |    0 |    40 |
 | X0Y3              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  2600 |    0 |   600 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y3              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |  1350 |    0 |   500 |    0 |    30 |    0 |    15 |    0 |    40 |
@@ -124,8 +124,8 @@ All Modules
 |    | X0  | X1 | HORIZONTAL PROG DELAY |
 +----+-----+----+-----------------------+
 | Y3 |   0 |  0 |                     - |
-| Y2 |   4 |  0 |                     0 |
-| Y1 |  64 |  0 |                     0 |
+| Y2 |   0 |  0 |                     - |
+| Y1 |  68 |  0 |                     0 |
 | Y0 |   0 |  0 |                     - |
 +----+-----+----+-----------------------+
 
@@ -184,7 +184,7 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+----+-------------+------+-----+----+------+-----+---------+---------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                   |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+-------------+------+-----+----+------+-----+---------+---------------------------------------+
-| g0        | n/a   | BUFGCTRL/O      | None       |          64 |               0 | 64 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | uart_rx_design_i/clk_gen/inst/sys_clk |
+| g0        | n/a   | BUFGCTRL/O      | None       |          68 |               0 | 68 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | uart_rx_design_i/clk_gen/inst/sys_clk |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+-------------+------+-----+----+------+-----+---------+---------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
@@ -197,7 +197,6 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                     |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------+
-| g0        | n/a   | BUFGCTRL/O      | None       |           4 |               0 |  4 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | uart_rx_design_i/clk_gen/inst/sys_clk                                   |
 | g1        | n/a   | BUFH/O          | None       |           8 |               0 |  8 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | uart_rx_design_i/clk_gen/inst/sys_clk_uart_rx_design_clk_wiz_0_0_en_clk |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
@@ -242,5 +241,5 @@ resize_pblock [get_pblocks {CLKAG_uart_rx_design_i/clk_gen/inst/sys_clk_uart_rx_
 #startgroup
 create_pblock {CLKAG_uart_rx_design_i/clk_gen/inst/sys_clk}
 add_cells_to_pblock [get_pblocks  {CLKAG_uart_rx_design_i/clk_gen/inst/sys_clk}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -leaf -filter {DIRECTION==IN} -of_objects [get_nets {uart_rx_design_i/clk_gen/inst/sys_clk}]]]
-resize_pblock [get_pblocks {CLKAG_uart_rx_design_i/clk_gen/inst/sys_clk}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2}
+resize_pblock [get_pblocks {CLKAG_uart_rx_design_i/clk_gen/inst/sys_clk}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup

@@ -70,12 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "uart_rx_design_led_ctrl_0_0_synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-45860-Hephaestion/incrSyn
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL-1065} -limit 10000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 set_param ips.modRefOverrideMrefDirPath /home/cristian/Documents/ACES/RC/assignment-1/assignment-1.gen/sources_1/bd/mref

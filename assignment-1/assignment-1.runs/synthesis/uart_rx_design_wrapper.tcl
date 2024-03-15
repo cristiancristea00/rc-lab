@@ -70,9 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synthesis" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 3
 set_param checkpoint.writeSynthRtdsInDcp 1
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-45860-Hephaestion/incrSyn
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
@@ -116,10 +115,12 @@ set_property used_in_implementation false [get_files /home/cristian/Documents/AC
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental /home/cristian/Documents/ACES/RC/assignment-1/assignment-1.srcs/utils_1/imports/synth_1/uart_rx_design_wrapper.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top uart_rx_design_wrapper -part xc7a100tcsg324-1
+synth_design -top uart_rx_design_wrapper -part xc7a100tcsg324-1 -fsm_extraction gray
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"

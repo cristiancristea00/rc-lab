@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1.1 (lin64) Build 3900603 Fri Jun 16 19:30:25 MDT 2023
-//Date        : Wed Mar 13 10:15:26 2024
+//Date        : Fri Mar 15 11:15:10 2024
 //Host        : Hephaestion running 64-bit Ubuntu 23.10
 //Command     : generate_target uart_rx_design_wrapper.bd
 //Design      : uart_rx_design_wrapper

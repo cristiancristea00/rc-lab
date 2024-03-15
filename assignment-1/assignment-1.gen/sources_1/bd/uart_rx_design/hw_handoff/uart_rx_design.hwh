@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Mar 13 10:15:27 2024" VIVADOVERSION="2023.1.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Mar 15 11:15:10 2024" VIVADOVERSION="2023.1.1">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys-a7-100t:part0:1.3" DEVICE="7a100t" NAME="uart_rx_design" PACKAGE="csg324" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
     <PORT DIR="I" NAME="RESET" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_RESET">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="uart_receiver" PORT="rst"/>
         <CONNECTION INSTANCE="led_controller" PORT="rst"/>
+        <CONNECTION INSTANCE="uart_receiver" PORT="rst"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="BAUD_SELECT" SIGIS="data" SIGNAME="External_Ports_BAUD_SELECT">
@@ -622,8 +622,8 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="sys_clk" SIGIS="clk" SIGNAME="clk_gen_sys_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="uart_receiver" PORT="clk"/>
             <CONNECTION INSTANCE="led_controller" PORT="clk"/>
+            <CONNECTION INSTANCE="uart_receiver" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
