@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Mar 15 11:15:10 2024" VIVADOVERSION="2023.1.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Mar 24 11:30:03 2024" VIVADOVERSION="2023.1.1">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys-a7-100t:part0:1.3" DEVICE="7a100t" NAME="uart_rx_design" PACKAGE="csg324" SPEEDGRADE="-1"/>
 
@@ -28,6 +28,11 @@
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="External_Ports_CLK">
       <CONNECTIONS>
         <CONNECTION INSTANCE="clk_gen" PORT="clk_in1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="PARITY" SIGIS="data" SIGNAME="External_Ports_PARITY">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="uart_receiver" PORT="parity"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -689,6 +694,11 @@
         <PORT DIR="I" NAME="rx" SIGIS="undef" SIGNAME="External_Ports_TX">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="TX"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="parity" SIGIS="undef" SIGNAME="External_Ports_PARITY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="PARITY"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="data" RIGHT="0" SIGIS="undef" SIGNAME="uart_receiver_data">

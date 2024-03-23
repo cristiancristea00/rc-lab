@@ -1,7 +1,0 @@
-0.7
-2020.2
-Jun 16 2023
-19:36:26
-/home/cristian/Documents/ACES/RC/assignment-1/assignment-1.sim/sim/behav/xsim/glbl.v,1683266558,verilog,,,,glbl,,uvm,,,,,,
-/home/cristian/Documents/ACES/RC/assignment-1/assignment-1.srcs/sim/new/uart_rx_tb.sv,1710493877,systemVerilog,,,,uart_rx_tb,,uvm,../../../../assignment-1.gen/sources_1/bd/uart_rx_design/ipshared/30ef,,,,,
-/home/cristian/Documents/ACES/RC/assignment-1/assignment-1.srcs/sources_1/new/uart_rx.sv,1710493982,systemVerilog,,/home/cristian/Documents/ACES/RC/assignment-1/assignment-1.srcs/sim/new/uart_rx_tb.sv,,uart_rx,,uvm,../../../../assignment-1.gen/sources_1/bd/uart_rx_design/ipshared/30ef,,,,,

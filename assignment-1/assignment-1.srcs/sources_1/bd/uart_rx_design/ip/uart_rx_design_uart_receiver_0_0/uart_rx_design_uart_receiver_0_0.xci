@@ -40,6 +40,7 @@
         "rst": [ { "direction": "in" } ],
         "baud_sel": [ { "direction": "in" } ],
         "rx": [ { "direction": "in" } ],
+        "parity": [ { "direction": "in" } ],
         "data": [ { "direction": "out", "size_left": "7", "size_right": "0" } ],
         "ready": [ { "direction": "out" } ]
       },

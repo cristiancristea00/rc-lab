@@ -13,6 +13,7 @@ module uart_rx_tb;
 bit       clock;
 bit       reset;
 bit       tx;
+bit       parity;
 bit [7:0] data;
 bit       ready;
 
@@ -27,6 +28,7 @@ uart_rx #(.BAUD_RATE(115200)) uart_rx_dut (
     .clk    (clock),
     .rst    (reset),
     .enable (1'b1),
+    .parity (parity),
     .rx     (tx),
     .data   (data),
     .ready  (ready)
@@ -54,6 +56,7 @@ end
 task reset_dut();
     tx = 1;
     reset = 1;
+    parity = 0; // => Even parity
     #5 reset = 0;
 endtask
 
@@ -62,12 +65,23 @@ task wait_clock(input int count);
 endtask
 
 task send_byte(input bit [7:0] value);
+    static bit data_parity = ^value;
+
     tx = 0;
     wait_clock(868);
     foreach (value[i]) begin
         tx = value[i];
         wait_clock(868);
     end
+
+    if (parity == 0) begin
+        tx = ~data_parity;
+    end
+    else begin
+        tx = data_parity;
+    end
+    wait_clock(868);
+
     tx = 1;
     wait_clock(868);
 endtask

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x9F17625C5922DF56",
+      "boundary_crc": "0xD004353B210AF8AF",
       "device": "xc7a100tcsg324-1",
       "gen_directory": "../../../../assignment-1.gen/sources_1/bd/uart_rx_design",
       "name": "uart_rx_design",
@@ -82,6 +82,16 @@
           },
           "PHASE": {
             "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "PARITY": {
+        "type": "data",
+        "direction": "I",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
             "value_src": "default"
           }
         }
@@ -356,6 +366,15 @@
               }
             }
           },
+          "parity": {
+            "direction": "I",
+            "parameters": {
+              "LAYERED_METADATA": {
+                "value": "undef",
+                "value_src": "default_prop"
+              }
+            }
+          },
           "data": {
             "direction": "O",
             "left": "7",
@@ -378,6 +397,12 @@
         "ports": [
           "CLK",
           "clk_gen/clk_in1"
+        ]
+      },
+      "PARITY_1": {
+        "ports": [
+          "PARITY",
+          "uart_receiver/parity"
         ]
       },
       "RESET_1": {

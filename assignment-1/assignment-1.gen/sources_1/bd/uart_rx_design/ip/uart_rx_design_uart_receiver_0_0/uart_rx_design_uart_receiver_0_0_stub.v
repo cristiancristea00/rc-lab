@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1.1 (lin64) Build 3900603 Fri Jun 16 19:30:25 MDT 2023
-// Date        : Fri Mar 15 11:15:50 2024
+// Date        : Sun Mar 24 11:30:59 2024
 // Host        : Hephaestion running 64-bit Ubuntu 23.10
 // Command     : write_verilog -force -mode synth_stub
 //               /home/cristian/Documents/ACES/RC/assignment-1/assignment-1.gen/sources_1/bd/uart_rx_design/ip/uart_rx_design_uart_receiver_0_0/uart_rx_design_uart_receiver_0_0_stub.v
@@ -15,13 +15,14 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* X_CORE_INFO = "uart_receiver,Vivado 2023.1.1" *)
-module uart_rx_design_uart_receiver_0_0(clk, rst, baud_sel, rx, data, ready)
-/* synthesis syn_black_box black_box_pad_pin="rst,baud_sel,rx,data[7:0],ready" */
+module uart_rx_design_uart_receiver_0_0(clk, rst, baud_sel, rx, parity, data, ready)
+/* synthesis syn_black_box black_box_pad_pin="rst,baud_sel,rx,parity,data[7:0],ready" */
 /* synthesis syn_force_seq_prim="clk" */;
   input clk /* synthesis syn_isclock = 1 */;
   input rst;
   input baud_sel;
   input rx;
+  input parity;
   output [7:0]data;
   output ready;
 endmodule

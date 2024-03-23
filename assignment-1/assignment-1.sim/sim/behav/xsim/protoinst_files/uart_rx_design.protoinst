@@ -1,9 +1,0 @@
-{
-	"version": "1.0",
-	"modules": {
-		"uart_rx_design": {
-			"proto_instances": {
-			}
-		}
-	}
-}

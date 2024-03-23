@@ -59,6 +59,7 @@ module uart_rx_design_uart_receiver_0_0 (
   rst,
   baud_sel,
   rx,
+  parity,
   data,
   ready
 );
@@ -71,6 +72,7 @@ input wire clk;
 input wire rst;
 input wire baud_sel;
 input wire rx;
+input wire parity;
 output wire [7 : 0] data;
 output wire ready;
 
@@ -79,6 +81,7 @@ output wire ready;
     .rst(rst),
     .baud_sel(baud_sel),
     .rx(rx),
+    .parity(parity),
     .data(data),
     .ready(ready)
   );

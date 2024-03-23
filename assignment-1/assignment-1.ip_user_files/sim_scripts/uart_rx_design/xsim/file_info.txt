@@ -1,3 +1,4 @@
+uart_rx_design_clk_wiz_0_0_sim_netlist.v,verilog,xil_defaultlib,../../../bd/uart_rx_design/ip/uart_rx_design_clk_wiz_0_0/uart_rx_design_clk_wiz_0_0_sim_netlist.v,incdir="../../../../assignment-1.gen/sources_1/bd/uart_rx_design/ipshared/30ef"
 uart_rx_design_led_ctrl_0_0.v,verilog,xil_defaultlib,../../../bd/uart_rx_design/ip/uart_rx_design_led_ctrl_0_0/sim/uart_rx_design_led_ctrl_0_0.v,incdir="../../../../assignment-1.gen/sources_1/bd/uart_rx_design/ipshared/30ef"
 uart_rx_design_uart_receiver_0_0.v,verilog,xil_defaultlib,../../../bd/uart_rx_design/ip/uart_rx_design_uart_receiver_0_0/sim/uart_rx_design_uart_receiver_0_0.v,incdir="../../../../assignment-1.gen/sources_1/bd/uart_rx_design/ipshared/30ef"
 uart_rx_design.v,verilog,xil_defaultlib,../../../bd/uart_rx_design/sim/uart_rx_design.v,incdir="../../../../assignment-1.gen/sources_1/bd/uart_rx_design/ipshared/30ef"
