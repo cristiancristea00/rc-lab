@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xD004353B210AF8AF",
+      "boundary_crc": "0x707F95DFC75869DB",
       "device": "xc7a100tcsg324-1",
       "gen_directory": "../../../../assignment-1.gen/sources_1/bd/uart_rx_design",
       "name": "uart_rx_design",
@@ -13,7 +13,8 @@
     "design_tree": {
       "clk_gen": "",
       "led_controller": "",
-      "uart_receiver": ""
+      "uart_receiver": "",
+      "fifo": ""
     },
     "ports": {
       "RESET": {
@@ -89,6 +90,26 @@
       "PARITY": {
         "type": "data",
         "direction": "I",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "EMPTY": {
+        "type": "data",
+        "direction": "O",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "FULL": {
+        "type": "data",
+        "direction": "O",
         "parameters": {
           "LAYERED_METADATA": {
             "value": "undef",
@@ -384,6 +405,73 @@
             "direction": "O"
           }
         }
+      },
+      "fifo": {
+        "vlnv": "xilinx.com:module_ref:fifo:1.0",
+        "xci_name": "uart_rx_design_fifo_0_1",
+        "xci_path": "ip/uart_rx_design_fifo_0_1/uart_rx_design_fifo_0_1.xci",
+        "inst_hier_path": "fifo",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "fifo",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_gen_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "write_enable": {
+            "direction": "I"
+          },
+          "read_enable": {
+            "direction": "I"
+          },
+          "data_in": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "full": {
+            "direction": "O"
+          },
+          "empty": {
+            "direction": "O"
+          }
+        }
       }
     },
     "nets": {
@@ -409,7 +497,8 @@
         "ports": [
           "RESET",
           "led_controller/rst",
-          "uart_receiver/rst"
+          "uart_receiver/rst",
+          "fifo/rst"
         ]
       },
       "TX_1": {
@@ -422,7 +511,20 @@
         "ports": [
           "clk_gen/sys_clk",
           "led_controller/clk",
-          "uart_receiver/clk"
+          "uart_receiver/clk",
+          "fifo/clk"
+        ]
+      },
+      "fifo_0_empty": {
+        "ports": [
+          "fifo/empty",
+          "EMPTY"
+        ]
+      },
+      "fifo_0_full": {
+        "ports": [
+          "fifo/full",
+          "FULL"
         ]
       },
       "led_ctrl_0_led": {
@@ -434,13 +536,15 @@
       "uart_receiver_0_data": {
         "ports": [
           "uart_receiver/data",
-          "led_controller/data"
+          "led_controller/data",
+          "fifo/data_in"
         ]
       },
       "uart_receiver_0_ready": {
         "ports": [
           "uart_receiver/ready",
-          "led_controller/ready"
+          "led_controller/ready",
+          "fifo/write_enable"
         ]
       }
     }

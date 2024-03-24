@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Mar 24 11:30:03 2024" VIVADOVERSION="2023.1.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Mar 24 20:03:10 2024" VIVADOVERSION="2023.1.1">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys-a7-100t:part0:1.3" DEVICE="7a100t" NAME="uart_rx_design" PACKAGE="csg324" SPEEDGRADE="-1"/>
 
@@ -8,6 +8,7 @@
       <CONNECTIONS>
         <CONNECTION INSTANCE="led_controller" PORT="rst"/>
         <CONNECTION INSTANCE="uart_receiver" PORT="rst"/>
+        <CONNECTION INSTANCE="fifo" PORT="rst"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="BAUD_SELECT" SIGIS="data" SIGNAME="External_Ports_BAUD_SELECT">
@@ -33,6 +34,16 @@
     <PORT DIR="I" NAME="PARITY" SIGIS="data" SIGNAME="External_Ports_PARITY">
       <CONNECTIONS>
         <CONNECTION INSTANCE="uart_receiver" PORT="parity"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="EMPTY" SIGIS="data" SIGNAME="fifo_empty">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="fifo" PORT="empty"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="FULL" SIGIS="data" SIGNAME="fifo_full">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="fifo" PORT="full"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -629,6 +640,51 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="led_controller" PORT="clk"/>
             <CONNECTION INSTANCE="uart_receiver" PORT="clk"/>
+            <CONNECTION INSTANCE="fifo" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/fifo" HWVERSION="1.0" INSTANCE="fifo" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="fifo" VLNV="xilinx.com:module_ref:fifo:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DATA_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="SIZE" VALUE="32"/>
+        <PARAMETER NAME="Component_Name" VALUE="uart_rx_design_fifo_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_gen_sys_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_gen" PORT="sys_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_RESET">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="RESET"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="write_enable" SIGIS="undef" SIGNAME="uart_receiver_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="uart_receiver" PORT="ready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="read_enable" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="data_in" RIGHT="0" SIGIS="undef" SIGNAME="uart_receiver_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="uart_receiver" PORT="data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="data_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="full" SIGIS="undef" SIGNAME="fifo_full">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="FULL"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="empty" SIGIS="undef" SIGNAME="fifo_empty">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="EMPTY"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -704,11 +760,13 @@
         <PORT DIR="O" LEFT="7" NAME="data" RIGHT="0" SIGIS="undef" SIGNAME="uart_receiver_data">
           <CONNECTIONS>
             <CONNECTION INSTANCE="led_controller" PORT="data"/>
+            <CONNECTION INSTANCE="fifo" PORT="data_in"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="ready" SIGIS="undef" SIGNAME="uart_receiver_ready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="led_controller" PORT="ready"/>
+            <CONNECTION INSTANCE="fifo" PORT="write_enable"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

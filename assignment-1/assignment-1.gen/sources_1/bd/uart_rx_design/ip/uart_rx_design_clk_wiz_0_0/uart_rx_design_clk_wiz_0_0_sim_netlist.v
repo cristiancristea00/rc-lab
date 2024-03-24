@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1.1 (lin64) Build 3900603 Fri Jun 16 19:30:25 MDT 2023
-// Date        : Wed Mar 13 10:16:50 2024
+// Date        : Sun Mar 24 13:43:26 2024
 // Host        : Hephaestion running 64-bit Ubuntu 23.10
 // Command     : write_verilog -force -mode funcsim
 //               /home/cristian/Documents/ACES/RC/assignment-1/assignment-1.gen/sources_1/bd/uart_rx_design/ip/uart_rx_design_clk_wiz_0_0/uart_rx_design_clk_wiz_0_0_sim_netlist.v
