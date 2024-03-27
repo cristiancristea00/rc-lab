@@ -30,10 +30,10 @@ vcom -work xpm -93  -incr \
 vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../assignment-2.gen/sources_1/bd/system_with_simple_alu/ipshared/ec67/hdl" "+incdir+../../../../assignment-2.gen/sources_1/bd/system_with_simple_alu/ipshared/aed8/hdl" "+incdir+/home/cristian/Xilinx/Vivado/2023.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib \
 "../../../bd/system_with_simple_alu/ip/system_with_simple_alu_processing_system7_0_0/system_with_simple_alu_processing_system7_0_0_sim_netlist.v" \
 "../../../bd/system_with_simple_alu/ip/system_with_simple_alu_rst_ps7_0_100M_0/system_with_simple_alu_rst_ps7_0_100M_0_sim_netlist.v" \
-"../../../bd/system_with_simple_alu/ipshared/7426/hdl/simple_alu_v0_1_0_S_AXI.v" \
-"../../../bd/system_with_simple_alu/ipshared/7426/hdl/simple_alu_v0_1_0.v" \
+"../../../bd/system_with_simple_alu/ipshared/b63d/hdl/simple_alu_v0_1_0_S_AXI.v" \
+"../../../bd/system_with_simple_alu/ipshared/b63d/hdl/simple_alu_v0_1_0.v" \
 "../../../bd/system_with_simple_alu/ip/system_with_simple_alu_simple_alu_0_1/sim/system_with_simple_alu_simple_alu_0_1.v" \
-"../../../bd/system_with_simple_alu/ip/system_with_simple_alu_auto_pc_0/system_with_simple_alu_auto_pc_0_sim_netlist.v" \
+"/home/cristian/Documents/ACES/RC/assignment-2/assignment-2.gen/sources_1/bd/system_with_simple_alu/ip/system_with_simple_alu_auto_pc_0/system_with_simple_alu_auto_pc_0_sim_netlist.v" \
 "../../../bd/system_with_simple_alu/sim/system_with_simple_alu.v" \
 
 vlog -work xil_defaultlib \

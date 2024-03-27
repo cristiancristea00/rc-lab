@@ -1,0 +1,41 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1.1 (lin64) Build 3900603 Fri Jun 16 19:30:25 MDT 2023
+| Date         : Wed Mar 27 19:15:47 2024
+| Host         : Hephaestion running 64-bit Ubuntu 23.10
+| Command      : report_drc -file system_with_simple_alu_wrapper_drc_routed.rpt -pb system_with_simple_alu_wrapper_drc_routed.pb -rpx system_with_simple_alu_wrapper_drc_routed.rpx
+| Design       : system_with_simple_alu_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 1
++----------+----------+-------------------+------------+
+| Rule     | Severity | Description       | Violations |
++----------+----------+-------------------+------------+
+| PDRC-153 | Warning  | Gated clock check | 1          |
++----------+----------+-------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PDRC-153#1 Warning
+Gated clock check  
+Net system_with_simple_alu_i/simple_alu/inst/simple_alu_v0_1_0_S_AXI_inst/p_0_out[0] is a gated clock net sourced by a combinational pin system_with_simple_alu_i/simple_alu/inst/simple_alu_v0_1_0_S_AXI_inst/next_flags_reg[0]_i_2/O, cell system_with_simple_alu_i/simple_alu/inst/simple_alu_v0_1_0_S_AXI_inst/next_flags_reg[0]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+

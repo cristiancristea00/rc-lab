@@ -48,7 +48,7 @@
 
 
 // IP VLNV: cristi.ro:cristi:simple_alu:0.1.0
-// IP Revision: 2
+// IP Revision: 5
 
 `timescale 1ns/1ps
 

@@ -48,7 +48,7 @@
 
 
 // IP VLNV: cristi.ro:cristi:simple_alu:0.1.0
-// IP Revision: 2
+// IP Revision: 5
 
 (* X_CORE_INFO = "simple_alu_v0_1_0,Vivado 2023.1.1" *)
 (* CHECK_LICENSE_TYPE = "system_with_simple_alu_simple_alu_0_1,simple_alu_v0_1_0,{}" *)

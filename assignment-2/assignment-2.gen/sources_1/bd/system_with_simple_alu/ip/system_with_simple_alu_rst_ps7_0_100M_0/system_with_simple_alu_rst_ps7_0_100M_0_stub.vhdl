@@ -2,7 +2,7 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1.1 (lin64) Build 3900603 Fri Jun 16 19:30:25 MDT 2023
--- Date        : Mon Mar 25 15:28:27 2024
+-- Date        : Wed Mar 27 18:24:15 2024
 -- Host        : Hephaestion running 64-bit Ubuntu 23.10
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/cristian/Documents/ACES/RC/assignment-2/assignment-2.gen/sources_1/bd/system_with_simple_alu/ip/system_with_simple_alu_rst_ps7_0_100M_0/system_with_simple_alu_rst_ps7_0_100M_0_stub.vhdl

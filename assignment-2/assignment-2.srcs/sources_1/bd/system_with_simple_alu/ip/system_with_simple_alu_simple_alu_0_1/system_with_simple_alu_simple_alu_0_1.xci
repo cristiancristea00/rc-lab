@@ -4,7 +4,7 @@
     "xci_name": "system_with_simple_alu_simple_alu_0_1",
     "cell_name": "simple_alu",
     "component_reference": "cristi.ro:cristi:simple_alu:0.1.0",
-    "ip_revision": "2",
+    "ip_revision": "5",
     "gen_directory": "../../../../../../assignment-2.gen/sources_1/bd/system_with_simple_alu/ip/system_with_simple_alu_simple_alu_0_1",
     "parameters": {
       "component_parameters": {
@@ -33,7 +33,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "2" } ],
+        "IPREVISION": [ { "value": "5" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../assignment-2.gen/sources_1/bd/system_with_simple_alu/ip/system_with_simple_alu_simple_alu_0_1" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],

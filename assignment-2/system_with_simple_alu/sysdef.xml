@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<Project Version="1" Minor="7" DIGEST="">
+	<TOOL_VERSION Version="2023.1.1"/>
+	<MODE Name="Post-Synthesis"/>
+	<SYSTEMINFO BOARD="tul.com.tw:pynq-z2:1.0" PART="xc7z020clg400-1" ARCH="zynq" PACKAGE="clg400" DEVICE="7z020" SPEED="-1"/>
+	<PART Name="xc7z020clg400-1">
+		<SSIT IS_SSIT="0"/>
+		<NUM_OF_SLRS Value="1"/>
+	</PART>
+	<HIERARCHY Name="system_with_simple_alu_wrapper"/>
+	<File Type="HW_HANDOFF" Name="system_with_simple_alu.hwh" src_db="system_with_simple_alu.hwdef" DESIGN_HIERARCHY="system_with_simple_alu_i" BD_TYPE="DEFAULT_BD">
+	</File>
+	<File Type="BDA" Name="system_with_simple_alu.bda" src_db="system_with_simple_alu.hwdef">
+	</File>
+	<File Type="PS_FSBL_INIT" Name="ps7_init.c" src_db="system_with_simple_alu_processing_system7_0_0.hwdef">
+	</File>
+	<File Type="PS_FSBL_INIT" Name="ps7_init.h" src_db="system_with_simple_alu_processing_system7_0_0.hwdef">
+	</File>
+	<File Type="PS_FSBL_INIT_GPL" Name="ps7_init_gpl.c" src_db="system_with_simple_alu_processing_system7_0_0.hwdef">
+	</File>
+	<File Type="PS_FSBL_INIT_GPL" Name="ps7_init_gpl.h" src_db="system_with_simple_alu_processing_system7_0_0.hwdef">
+	</File>
+	<File Type="PS_INIT_HELP" Name="ps7_init.html" src_db="system_with_simple_alu_processing_system7_0_0.hwdef">
+	</File>
+	<File Type="PS_XMD_INIT" Name="ps7_init.tcl" src_db="system_with_simple_alu_processing_system7_0_0.hwdef">
+	</File>
+	<File Type="BIT" Name="system_with_simple_alu.bit" src_db="temp.hdf">
+	</File>
+	<DRIVERS>
+		<DRIVER IP_VLNV="cristi.ro:cristi:simple_alu:0.1.0">
+			<File PATH="drivers/simple_alu_v1_0/data/simple_alu.mdd"/>
+			<File PATH="drivers/simple_alu_v1_0/data/simple_alu.tcl"/>
+			<File PATH="drivers/simple_alu_v1_0/src/Makefile"/>
+			<File PATH="drivers/simple_alu_v1_0/src/simple_alu.h"/>
+			<File PATH="drivers/simple_alu_v1_0/src/simple_alu.c"/>
+			<File PATH="drivers/simple_alu_v1_0/src/simple_alu_selftest.c"/>
+		</DRIVER>
+	</DRIVERS>
+	<USEDRESOURCES/>
+</Project>
+

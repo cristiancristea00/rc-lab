@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xCC6CFA539DDF0AAD",
+      "boundary_crc": "0xCC6CFA535221FB6E",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../assignment-2.gen/sources_1/bd/system_with_simple_alu",
       "name": "system_with_simple_alu",

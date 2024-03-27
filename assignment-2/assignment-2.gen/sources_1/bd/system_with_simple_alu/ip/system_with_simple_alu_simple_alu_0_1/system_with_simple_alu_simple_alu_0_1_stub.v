@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1.1 (lin64) Build 3900603 Fri Jun 16 19:30:25 MDT 2023
-// Date        : Mon Mar 25 18:22:20 2024
+// Date        : Wed Mar 27 19:13:34 2024
 // Host        : Hephaestion running 64-bit Ubuntu 23.10
 // Command     : write_verilog -force -mode synth_stub
 //               /home/cristian/Documents/ACES/RC/assignment-2/assignment-2.gen/sources_1/bd/system_with_simple_alu/ip/system_with_simple_alu_simple_alu_0_1/system_with_simple_alu_simple_alu_0_1_stub.v

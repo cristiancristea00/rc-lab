@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER simple_alu
+	OPTION supported_peripherals = (simple_alu);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = simple_alu;
+END DRIVER
