@@ -1,0 +1,167 @@
+--- !Failure
+Pass:            generate-ir-wrapper
+Name:            MAXIDepthUnspecified
+DebugLoc:        { File: image_linear_contrast/solution/code/LinearContrastStretching.cpp, 
+                   Line: 13, Column: 0 }
+Function:        _Z24LinearContrastStretchingPhPKhjhhhhh
+Args:            
+  - String:          'A depth specification is required for MAXI interface port '''
+  - Name:            image_out
+  - String:          ''' for cosimulation.'
+...
+--- !Failure
+Pass:            generate-ir-wrapper
+Name:            MAXIDepthUnspecified
+DebugLoc:        { File: image_linear_contrast/solution/code/LinearContrastStretching.cpp, 
+                   Line: 13, Column: 0 }
+Function:        _Z24LinearContrastStretchingPhPKhjhhhhh
+Args:            
+  - String:          'A depth specification is required for MAXI interface port '''
+  - Name:            image_in
+  - String:          ''' for cosimulation.'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: image_linear_contrast/solution/code/LinearContrastStretching.cpp, 
+                   Line: 13, Column: 0 }
+Function:        _Z24LinearContrastStretchingPhPKhjhhhhh
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_24_1
+  - String:          ''' ('
+  - LoopLoc:         'image_linear_contrast/solution/code/LinearContrastStretching.cpp:24:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          LinearContrastStretching
+  - String:          ''' partially '
+  - String:          '(and skipping exit check) '
+  - String:          'with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: image_linear_contrast/solution/code/LinearContrastStretching.cpp, 
+                   Line: 28, Column: 6 }
+Function:        _Z24LinearContrastStretchingPhPKhjhhhhh
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep5seq
+  - ArrayName:       image_in
+  - String:          ' '
+  - BundleName:      image_in
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_1
+  - String:          ' '
+  - LoopLoc:         'image_linear_contrast/solution/code/LinearContrastStretching.cpp:24:19'
+  - String:          ' '
+  - Function:        'LinearContrastStretching(unsigned char*, unsigned char const*, unsigned int, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char)'
+    DebugLoc:        { File: image_linear_contrast/solution/code/LinearContrastStretching.cpp, 
+                       Line: 13, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: image_linear_contrast/solution/code/LinearContrastStretching.cpp, 
+                       Line: 28, Column: 6 }
+  - OrigDirection:   read
+  - OrigID:          for.body.load.15
+  - OrigAccess:      load
+    DebugLoc:        { File: image_linear_contrast/solution/code/LinearContrastStretching.cpp, 
+                       Line: 28, Column: 6 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.5
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: image_linear_contrast/solution/code/LinearContrastStretching.cpp, 
+                   Line: 24, Column: 19 }
+Function:        _Z24LinearContrastStretchingPhPKhjhhhhh
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_24_1
+  - String:          ' '
+  - LoopLoc:         'image_linear_contrast/solution/code/LinearContrastStretching.cpp:24:19'
+  - String:          ' '
+  - Function:        'LinearContrastStretching(unsigned char*, unsigned char const*, unsigned int, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char)'
+    DebugLoc:        { File: image_linear_contrast/solution/code/LinearContrastStretching.cpp, 
+                       Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: image_linear_contrast/solution/code/LinearContrastStretching.cpp, 
+                   Line: 28, Column: 6 }
+Function:        _Z24LinearContrastStretchingPhPKhjhhhhh
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: image_linear_contrast/solution/code/LinearContrastStretching.cpp, 
+                       Line: 28, Column: 6 }
+  - OrigDirection:   read
+  - OrigID:          scevgep5seq
+  - ArrayName:       image_in
+  - String:          ' '
+  - BundleName:      image_in
+  - String:          ' '
+  - Function:        'LinearContrastStretching(unsigned char*, unsigned char const*, unsigned int, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char)'
+    DebugLoc:        { File: image_linear_contrast/solution/code/LinearContrastStretching.cpp, 
+                       Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: image_linear_contrast/solution/code/LinearContrastStretching.cpp, 
+                   Line: 28, Column: 6 }
+Function:        _Z24LinearContrastStretchingPhPKhjhhhhh
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      image_in
+  - String:          ' '
+  - Function:        'LinearContrastStretching(unsigned char*, unsigned char const*, unsigned int, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char)'
+    DebugLoc:        { File: image_linear_contrast/solution/code/LinearContrastStretching.cpp, 
+                       Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: image_linear_contrast/solution/code/LinearContrastStretching.cpp, 
+                   Line: 28, Column: 6 }
+Function:        _Z24LinearContrastStretchingPhPKhjhhhhh
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      image_in
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

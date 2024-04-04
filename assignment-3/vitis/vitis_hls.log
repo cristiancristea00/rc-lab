@@ -1,0 +1,50 @@
+INFO: [HLS 200-10] Running '/home/cristian/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'root' on host 'hephaestion' (Linux_x86_64 version 6.5.0-26-generic) on Thu Apr 04 16:23:50 EEST 2024
+INFO: [HLS 200-10] On os Ubuntu 23.10
+INFO: [HLS 200-10] In directory '/home/cristian/Documents/ACES/RC/assignment-3/vitis'
+Sourcing Tcl script '/home/cristian/Documents/ACES/RC/assignment-3/vitis/image_linear_contrast/solution/export.tcl'
+INFO: [HLS 200-1510] Running: source /home/cristian/Documents/ACES/RC/assignment-3/vitis/image_linear_contrast/solution/export.tcl
+INFO: [HLS 200-1510] Running: open_project image_linear_contrast 
+INFO: [HLS 200-10] Opening project '/home/cristian/Documents/ACES/RC/assignment-3/vitis/image_linear_contrast'.
+INFO: [HLS 200-1510] Running: set_top LinearContrastStretching 
+INFO: [HLS 200-1510] Running: add_files image_linear_contrast/solution/code/LinearContrastStretching.cpp 
+INFO: [HLS 200-10] Adding design file 'image_linear_contrast/solution/code/LinearContrastStretching.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/cristian/Documents/ACES/RC/assignment-3/vitis/image_linear_contrast/solution'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_export -description {Module that applies Linear Contrast Stretching to an image}
+INFO: [HLS 200-1464] Running solution command: config_export -display_name {Linear Contrast Stretching}
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/cristian/Documents/ACES/RC/assignment-3/vitis/image_linear_contrast
+INFO: [HLS 200-1464] Running solution command: config_export -vendor=Cristi
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.0.0
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_addr64=0
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -description Module that applies Linear Contrast Stretching to an image -display_name Linear Contrast Stretching -output /home/cristian/Documents/ACES/RC/assignment-3/vitis/image_linear_contrast -vendor Cristi -version 1.0.0 -vivado_clock 10 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_addr64=0 
+INFO: [HLS 200-1510] Running: config_cosim -tool xsim 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output /home/cristian/Documents/ACES/RC/assignment-3/vitis/image_linear_contrast 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2023.1.1 (64-bit)
+  **** SW Build 3900603 on Fri Jun 16 19:30:25 MDT 2023
+  **** IP Build 3900379 on Sat Jun 17 05:28:05 MDT 2023
+  **** SharedData Build 3899622 on Fri Jun 16 03:34:24 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+ipx::create_core: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1329.668 ; gain = 23.027 ; free physical = 6708 ; free virtual = 15540
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/cristian/Xilinx/Vivado/2023.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Thu Apr  4 16:24:11 2024...
+INFO: [HLS 200-802] Generated output file image_linear_contrast/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 19.55 seconds. CPU system time: 0.98 seconds. Elapsed time: 22.9 seconds; current allocated memory: 8.547 MB.
+INFO: [HLS 200-112] Total CPU user time: 21.17 seconds. Total CPU system time: 1.22 seconds. Total elapsed time: 24.56 seconds; peak allocated memory: 201.727 MB.

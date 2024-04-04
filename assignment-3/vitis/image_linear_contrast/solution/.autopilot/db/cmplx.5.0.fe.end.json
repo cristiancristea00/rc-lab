@@ -1,0 +1,29 @@
+{
+    "0": {
+        "name": "LinearContrastStretching",
+        "file": "LinearContrastStretching.cpp",
+        "fileloc": "3",
+        "instructions": "47",
+        "total_instructions": "162",
+        "calls": "1",
+        "basicblocks": "1"
+    },
+    "1": {
+        "name": "LinearContrastStretching_Pipeline_VITIS_LOOP_24_1",
+        "file": "LinearContrastStretching.cpp",
+        "fileloc": "0",
+        "instructions": "115",
+        "total_instructions": "115",
+        "calls": "",
+        "basicblocks": "16",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

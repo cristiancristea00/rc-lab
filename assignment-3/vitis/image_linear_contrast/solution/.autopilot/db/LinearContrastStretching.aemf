@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1712234514261">
+  <ports id="1" name="image_out" type="PortType" coreId="9" bitwidth="8" direction="DirOut" iftype="IfTypeFifo">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="2" name="image_in" type="PortType" coreId="50" bitwidth="8" iftype="IfTypeFifo">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="3" name="image_out_offset" type="PortType" originalName="image_out" coreId="32" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="image_in_offset" type="PortType" originalName="image_in" coreId="2775560240" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="image_length" type="PortType" originalName="image_length" coreId="4294967295" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="6" name="low_threshold" type="PortType" originalName="low_threshold" coreId="4145378419" bitwidth="8">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="7" name="high_threshold" type="PortType" originalName="high_threshold" coreId="0" bitwidth="8">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="8" name="low_new_threshold" type="PortType" originalName="low_new_threshold" coreId="0" bitwidth="8">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="9" name="high_new_threshold" type="PortType" originalName="high_new_threshold" coreId="0" bitwidth="8">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="10" name="max_value" type="PortType" originalName="max_value" coreId="0" bitwidth="8">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <edges id="61" source_obj="//@ports.9" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="63" source_obj="//@ports.8" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="65" source_obj="//@ports.7" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="67" source_obj="//@ports.6" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="69" source_obj="//@ports.5" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="72" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="74" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="76" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="77" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="78" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="79" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="80" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="81" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="82" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="83" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="84" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="85" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="86" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="87" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="88" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.16"/>
+  <edges id="89" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.16"/>
+  <edges id="92" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="93" source_obj="//@blocks.0/@node_objs.17" sink_obj="//@ports.0"/>
+  <edges id="94" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="95" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="96" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="97" source_obj="//@blocks.0/@node_objs.16" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="98" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="99" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="100" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="101" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="102" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="103" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="104" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="105" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="106" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="107" source_obj="//@blocks.0/@node_objs.15" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="108" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.17"/>
+  <blocks id="58" name="LinearContrastStretching" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="max_value_read" lineNumber="4" originalName="max_value" fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="LinearContrastStretching" bitwidth="8" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" linenumber="4" fileDirectory="/home/cristian/Documents/ACES/RC/assignment-3/vitis" functionName="LinearContrastStretching"/>
+      <dataInputObjs>max_value</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="high_new_threshold_read" lineNumber="4" originalName="high_new_threshold" fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="LinearContrastStretching" bitwidth="8" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" linenumber="4" fileDirectory="/home/cristian/Documents/ACES/RC/assignment-3/vitis" functionName="LinearContrastStretching"/>
+      <dataInputObjs>high_new_threshold</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="low_new_threshold_read" lineNumber="4" originalName="low_new_threshold" fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="LinearContrastStretching" bitwidth="8" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" linenumber="4" fileDirectory="/home/cristian/Documents/ACES/RC/assignment-3/vitis" functionName="LinearContrastStretching"/>
+      <dataInputObjs>low_new_threshold</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="high_threshold_read" lineNumber="4" originalName="high_threshold" fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="LinearContrastStretching" bitwidth="8" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" linenumber="4" fileDirectory="/home/cristian/Documents/ACES/RC/assignment-3/vitis" functionName="LinearContrastStretching"/>
+      <dataInputObjs>high_threshold</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="low_threshold_read" lineNumber="4" originalName="low_threshold" fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="LinearContrastStretching" bitwidth="8" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" linenumber="4" fileDirectory="/home/cristian/Documents/ACES/RC/assignment-3/vitis" functionName="LinearContrastStretching"/>
+      <dataInputObjs>low_threshold</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="image_length_read" lineNumber="4" originalName="image_length" fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="LinearContrastStretching" bitwidth="32" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" linenumber="4" fileDirectory="/home/cristian/Documents/ACES/RC/assignment-3/vitis" functionName="LinearContrastStretching"/>
+      <dataInputObjs>image_length</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="image_in_offset_read" lineNumber="4" originalName="image_in" fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="LinearContrastStretching" bitwidth="32" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" linenumber="4" fileDirectory="/home/cristian/Documents/ACES/RC/assignment-3/vitis" functionName="LinearContrastStretching"/>
+      <dataInputObjs>image_in_offset</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="image_out_offset_read" lineNumber="4" originalName="image_out" fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="LinearContrastStretching" bitwidth="32" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" linenumber="4" fileDirectory="/home/cristian/Documents/ACES/RC/assignment-3/vitis" functionName="LinearContrastStretching"/>
+      <dataInputObjs>image_out_offset</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="low_new_threshold_cast" lineNumber="4" fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" fileDirectory="../." rtlName="low_new_threshold_cast_fu_156_p1" coreId="1145981250" contextFuncName="LinearContrastStretching" bitwidth="9" opcode="zext" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" linenumber="4" fileDirectory="/home/cristian/Documents/ACES/RC/assignment-3/vitis" functionName="LinearContrastStretching"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="low_threshold_cast7" lineNumber="4" fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" fileDirectory="../." rtlName="low_threshold_cast7_fu_160_p1" coreId="2775693328" contextFuncName="LinearContrastStretching" bitwidth="9" opcode="zext" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" linenumber="4" fileDirectory="/home/cristian/Documents/ACES/RC/assignment-3/vitis" functionName="LinearContrastStretching"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="high_new_threshold_cast" lineNumber="4" fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" fileDirectory="../." rtlName="high_new_threshold_cast_fu_164_p1" coreId="2775694624" contextFuncName="LinearContrastStretching" bitwidth="9" opcode="zext" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" linenumber="4" fileDirectory="/home/cristian/Documents/ACES/RC/assignment-3/vitis" functionName="LinearContrastStretching"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="high_threshold_cast6" lineNumber="4" fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" fileDirectory="../." rtlName="high_threshold_cast6_fu_168_p1" coreId="2775685232" contextFuncName="LinearContrastStretching" bitwidth="9" opcode="zext" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" linenumber="4" fileDirectory="/home/cristian/Documents/ACES/RC/assignment-3/vitis" functionName="LinearContrastStretching"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="max_value_cast" lineNumber="4" fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" fileDirectory="../." rtlName="max_value_cast_fu_172_p1" coreId="2775699328" contextFuncName="LinearContrastStretching" bitwidth="9" opcode="zext" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" linenumber="4" fileDirectory="/home/cristian/Documents/ACES/RC/assignment-3/vitis" functionName="LinearContrastStretching"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="sub24" lineNumber="4" fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" fileDirectory="../." rtlName="sub24_fu_176_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="LinearContrastStretching" bitwidth="9" opcode="sub" m_display="0" m_delay="1.91" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" linenumber="4" fileDirectory="/home/cristian/Documents/ACES/RC/assignment-3/vitis" functionName="LinearContrastStretching"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="sub42" lineNumber="4" fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" fileDirectory="../." rtlName="sub42_fu_183_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="LinearContrastStretching" bitwidth="9" opcode="sub" m_display="0" m_delay="1.91" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" linenumber="4" fileDirectory="/home/cristian/Documents/ACES/RC/assignment-3/vitis" functionName="LinearContrastStretching"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="sub_ln34" lineNumber="34" fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" fileDirectory="../." rtlName="sub_ln34_fu_190_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="LinearContrastStretching" bitwidth="9" opcode="sub" m_display="0" m_delay="1.91" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" linenumber="34" fileDirectory="/home/cristian/Documents/ACES/RC/assignment-3/vitis" functionName="LinearContrastStretching"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="sub_ln38" lineNumber="38" fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" fileDirectory="../." rtlName="sub_ln38_fu_197_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="LinearContrastStretching" bitwidth="9" opcode="sub" m_display="0" m_delay="1.91" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" linenumber="38" fileDirectory="/home/cristian/Documents/ACES/RC/assignment-3/vitis" functionName="LinearContrastStretching"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="_ln4" lineNumber="4" fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" fileDirectory="../." rtlName="grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122" coreId="0" contextFuncName="LinearContrastStretching" opcode="call" nodeLatency="1" m_display="0" m_delay="2.55" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" linenumber="4" fileDirectory="/home/cristian/Documents/ACES/RC/assignment-3/vitis" functionName="LinearContrastStretching"/>
+      <dataInputObjs>image_in</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>image_out</dataOutputObjs>
+      <constName>LinearContrastStretching_Pipeline_VITIS_LOOP_24_1</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="_ln41" lineNumber="41" fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" fileDirectory="../." coreId="0" contextFuncName="LinearContrastStretching" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp" linenumber="41" fileDirectory="/home/cristian/Documents/ACES/RC/assignment-3/vitis" functionName="LinearContrastStretching"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="image_linear_contrast/solution/code/LinearContrastStretching.cpp">
+      <validLinenumbers>4</validLinenumbers>
+      <validLinenumbers>34</validLinenumbers>
+      <validLinenumbers>38</validLinenumbers>
+      <validLinenumbers>41</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <regnodes realName="image_length_read_reg_228">
+    <nodeIds>44</nodeIds>
+  </regnodes>
+  <regnodes realName="sub42_reg_248">
+    <nodeIds>53</nodeIds>
+  </regnodes>
+  <regnodes realName="sub_ln34_reg_253">
+    <nodeIds>54</nodeIds>
+  </regnodes>
+  <regnodes realName="image_in_offset_read_reg_233">
+    <nodeIds>45</nodeIds>
+  </regnodes>
+  <regnodes realName="image_out_offset_read_reg_238">
+    <nodeIds>46</nodeIds>
+  </regnodes>
+  <regnodes realName="sub24_reg_243">
+    <nodeIds>52</nodeIds>
+  </regnodes>
+  <regnodes realName="low_new_threshold_read_reg_209">
+    <nodeIds>41</nodeIds>
+  </regnodes>
+  <regnodes realName="high_threshold_read_reg_215">
+    <nodeIds>42</nodeIds>
+  </regnodes>
+  <regnodes realName="high_new_threshold_read_reg_204">
+    <nodeIds>40</nodeIds>
+  </regnodes>
+  <regnodes realName="low_threshold_read_reg_221">
+    <nodeIds>43</nodeIds>
+  </regnodes>
+  <regnodes realName="sub_ln38_reg_258">
+    <nodeIds>55</nodeIds>
+  </regnodes>
+  <expressionNodes realName="sub42_fu_183">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln34_fu_190">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln38_fu_197">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="max_value_cast_fu_172">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="high_new_threshold_cast_fu_164">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="low_threshold_cast7_fu_160">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub24_fu_176">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="low_new_threshold_cast_fu_156">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="high_threshold_cast6_fu_168">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122">
+    <nodeIds>56</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="high_threshold_read_read_fu_92">
+    <nodeIds>42</nodeIds>
+  </ioNodes>
+  <ioNodes realName="image_in_offset_read_read_fu_110">
+    <nodeIds>45</nodeIds>
+  </ioNodes>
+  <ioNodes realName="max_value_read_read_fu_74">
+    <nodeIds>39</nodeIds>
+  </ioNodes>
+  <ioNodes realName="low_new_threshold_read_read_fu_86">
+    <nodeIds>41</nodeIds>
+  </ioNodes>
+  <ioNodes realName="high_new_threshold_read_read_fu_80">
+    <nodeIds>40</nodeIds>
+  </ioNodes>
+  <ioNodes realName="image_length_read_read_fu_104">
+    <nodeIds>44</nodeIds>
+  </ioNodes>
+  <ioNodes realName="low_threshold_read_read_fu_98">
+    <nodeIds>43</nodeIds>
+  </ioNodes>
+  <ioNodes realName="image_out_offset_read_read_fu_116">
+    <nodeIds>46</nodeIds>
+  </ioNodes>
+  <ioPorts name="high_new_threshold">
+    <contents name="read">
+      <nodeIds>40</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="high_threshold">
+    <contents name="read">
+      <nodeIds>42</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="image_in">
+    <contents name="call">
+      <nodeIds>56</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="image_in_offset">
+    <contents name="read">
+      <nodeIds>45</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="image_length">
+    <contents name="read">
+      <nodeIds>44</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="image_out">
+    <contents name="call">
+      <nodeIds>56</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="image_out_offset">
+    <contents name="read">
+      <nodeIds>46</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="low_new_threshold">
+    <contents name="read">
+      <nodeIds>41</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="low_threshold">
+    <contents name="read">
+      <nodeIds>43</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="max_value">
+    <contents name="read">
+      <nodeIds>39</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="2" latency="2"/>
+    </states>
+    <states id="2">
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="2"/>
+      <operations id="57" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="LinearContrastStretching" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1">
+      <basicBlocks>58</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

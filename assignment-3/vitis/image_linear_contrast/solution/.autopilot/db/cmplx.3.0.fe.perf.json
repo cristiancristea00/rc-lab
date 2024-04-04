@@ -1,0 +1,14 @@
+{
+  "0": {
+    "basicblocks": 16,
+    "calls": "",
+    "file": "LinearContrastStretching.cpp",
+    "fileloc": 3,
+    "instructions": 88,
+    "name": "LinearContrastStretching",
+    "stores": {
+      "T": 4
+    },
+    "total_instructions": 88
+  }
+}

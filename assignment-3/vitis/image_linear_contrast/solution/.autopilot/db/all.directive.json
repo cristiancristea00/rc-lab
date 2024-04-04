@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "LinearContrastStretching",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "LinearContrastStretching"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/cristian/Documents/ACES/RC/assignment-3/vitis/image_linear_contrast/solution/csynth.tcl",
+    "sourceLine": 16,
+    "success": true
+  }
+]

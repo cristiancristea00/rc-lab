@@ -1,0 +1,5 @@
+/home/cristian/Documents/ACES/RC/assignment-3/vitis/image_linear_contrast/solution/.autopilot/db/LinearContrastStretching.pp.0.cpp:500:2: warning: Added loop label VITIS_LOOP_24_1:   [xilinx-label-all-loops]
+ for (unsigned idx = 0; idx < image_length; ++idx)
+ ^~~
+ VITIS_LOOP_24_1: 
+/home/cristian/Documents/ACES/RC/assignment-3/vitis/image_linear_contrast/solution/.autopilot/db/LinearContrastStretching.pp.0.cpp:500:2: note: FIX-IT applied suggested code changes
