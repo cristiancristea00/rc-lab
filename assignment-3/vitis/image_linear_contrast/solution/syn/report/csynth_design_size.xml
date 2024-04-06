@@ -3,7 +3,7 @@
         <hiertable>
             <header size="6" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Performance/Pipeline" col5="Optimizations"/>
             <rows>
-                <row id="0" col0="LinearContrastStretching" col1="LinearContrastStretching.cpp:3" col2="89" col3="139" col4="88" col5="108"/>
+                <row id="0" col0="LinearContrastStretching" col1="LinearContrastStretching.cpp:3" col2="49" col3="52" col4="49" col5="70"/>
             </rows>
             <notes/>
         </hiertable>

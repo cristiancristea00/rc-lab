@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'LinearContrastStretching'
 ================================================================
 + General Information: 
-    * Date:           Thu Apr  4 15:41:54 2024
+    * Date:           Sat Apr  6 10:44:01 2024
     * Version:        2023.1.1 (Build 3869133 on Jun 15 2023)
     * Project:        image_linear_contrast
     * Solution:       solution (Vivado IP Flow Target)
@@ -15,14 +15,14 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +------------------------------------------------------+------+------+---------+--------+----------+---------+------+----------+--------+----+-----------+------------+-----+
-    |                        Modules                       | Issue|      | Latency | Latency| Iteration|         | Trip |          |        |    |           |            |     |
-    |                        & Loops                       | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|  BRAM  | DSP|     FF    |     LUT    | URAM|
-    +------------------------------------------------------+------+------+---------+--------+----------+---------+------+----------+--------+----+-----------+------------+-----+
-    |+ LinearContrastStretching                            |     -|  0.00|        -|       -|         -|        -|     -|        no|  4 (1%)|   -|  7595 (7%)|  6485 (12%)|    -|
-    | + LinearContrastStretching_Pipeline_VITIS_LOOP_24_1  |     -|  0.00|        -|       -|         -|        -|     -|        no|       -|   -|  5476 (5%)|   4350 (8%)|    -|
-    |  o VITIS_LOOP_24_1                                   |    II|  7.30|        -|       -|        40|        2|     -|       yes|       -|   -|          -|           -|    -|
-    +------------------------------------------------------+------+------+---------+--------+----------+---------+------+----------+--------+----+-----------+------------+-----+
+    +------------------------------------------------------+------+------+---------+--------+----------+---------+------+----------+--------+--------+-------------+------------+-----+
+    |                        Modules                       | Issue|      | Latency | Latency| Iteration|         | Trip |          |        |        |             |            |     |
+    |                        & Loops                       | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|  BRAM  |   DSP  |      FF     |     LUT    | URAM|
+    +------------------------------------------------------+------+------+---------+--------+----------+---------+------+----------+--------+--------+-------------+------------+-----+
+    |+ LinearContrastStretching                            |     -|  0.00|        -|       -|         -|        -|     -|        no|  8 (2%)|  6 (2%)|  11456 (10%)|  8241 (15%)|    -|
+    | + LinearContrastStretching_Pipeline_VITIS_LOOP_27_1  |     -|  0.00|        -|       -|         -|        -|     -|        no|       -|  6 (2%)|    9059 (8%)|  5841 (10%)|    -|
+    |  o VITIS_LOOP_27_1                                   |     -|  7.30|        -|       -|        43|        1|     -|       yes|       -|       -|            -|           -|    -|
+    +------------------------------------------------------+------+------+---------+--------+----------+---------+------+----------+--------+--------+-------------+------------+-----+
 
 
 ================================================================
@@ -33,8 +33,8 @@
 | Interface       | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
 |                 | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
 +-----------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
-| m_axi_image_in  | 8 -> 8     | 32            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
-| m_axi_image_out | 8 -> 8     | 32            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
+| m_axi_image_in  | 32 -> 32   | 32            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_image_out | 32 -> 32   | 32            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
 +-----------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
 
 * S_AXILITE Interfaces
@@ -77,18 +77,18 @@
 == SW I/O Information
 ================================================================
 * Top Function Arguments
-+--------------------+-----------+------------------------------+
-| Argument           | Direction | Datatype                     |
-+--------------------+-----------+------------------------------+
-| image_out          | out       | unsigned char* const         |
-| image_in           | in        | unsigned char const * const  |
-| image_length       | in        | unsigned int const           |
-| low_threshold      | in        | unsigned char const          |
-| high_threshold     | in        | unsigned char const          |
-| low_new_threshold  | in        | unsigned char const          |
-| high_new_threshold | in        | unsigned char const          |
-| max_value          | in        | unsigned char const          |
-+--------------------+-----------+------------------------------+
++--------------------+-----------+-----------------------------+
+| Argument           | Direction | Datatype                    |
++--------------------+-----------+-----------------------------+
+| image_out          | out       | unsigned int* const         |
+| image_in           | in        | unsigned int const * const  |
+| image_length       | in        | unsigned int const          |
+| low_threshold      | in        | unsigned int const          |
+| high_threshold     | in        | unsigned int const          |
+| low_new_threshold  | in        | unsigned int const          |
+| high_new_threshold | in        | unsigned int const          |
+| max_value          | in        | unsigned int const          |
++--------------------+-----------+-----------------------------+
 
 * SW-to-HW Mapping
 +--------------------+-----------------+-----------+----------+----------------------------------------------+
@@ -113,53 +113,46 @@
  Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
 
 * Inferred Burst Summary
-+----------------+-----------+--------+-------+
-| HW Interface   | Direction | Length | Width |
-+----------------+-----------+--------+-------+
-| m_axi_image_in | read      | 2      | 8     |
-+----------------+-----------+--------+-------+
++-----------------+-----------+----------+-------+-----------------+------------------------------------------------------------------------+
+| HW Interface    | Direction | Length   | Width | Loop            | Loop Location                                                          |
++-----------------+-----------+----------+-------+-----------------+------------------------------------------------------------------------+
+| m_axi_image_in  | read      | variable | 32    | VITIS_LOOP_27_1 | image_linear_contrast/solution/code/LinearContrastStretching.cpp:27:22 |
+| m_axi_image_out | write     | variable | 32    | VITIS_LOOP_27_1 | image_linear_contrast/solution/code/LinearContrastStretching.cpp:27:22 |
++-----------------+-----------+----------+-------+-----------------+------------------------------------------------------------------------+
 
 * All M_AXI Variable Accesses
-+----------------+----------+-----------------------------------------------------------------------+-----------+--------------+--------+-----------------+------------------------------------------------------------------------+------------+------------------------------------------------------------------------------------------------------+
-| HW Interface   | Variable | Access Location                                                       | Direction | Burst Status | Length | Loop            | Loop Location                                                          | Resolution | Problem                                                                                              |
-+----------------+----------+-----------------------------------------------------------------------+-----------+--------------+--------+-----------------+------------------------------------------------------------------------+------------+------------------------------------------------------------------------------------------------------+
-| m_axi_image_in | image_in | image_linear_contrast/solution/code/LinearContrastStretching.cpp:28:6 | read      | Widen Fail   |        |                 |                                                                        | 214-353    | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_image_in | image_in | image_linear_contrast/solution/code/LinearContrastStretching.cpp:28:6 | read      | Inferred     | 2      | VITIS_LOOP_24_1 | image_linear_contrast/solution/code/LinearContrastStretching.cpp:24:19 |            |                                                                                                      |
-+----------------+----------+-----------------------------------------------------------------------+-----------+--------------+--------+-----------------+------------------------------------------------------------------------+------------+------------------------------------------------------------------------------------------------------+
++-----------------+-----------+------------------------------------------------------------------------+-----------+--------------+----------+-----------------+------------------------------------------------------------------------+------------+-------------------------------------------------------------------------------------------------------+
+| HW Interface    | Variable  | Access Location                                                        | Direction | Burst Status | Length   | Loop            | Loop Location                                                          | Resolution | Problem                                                                                               |
++-----------------+-----------+------------------------------------------------------------------------+-----------+--------------+----------+-----------------+------------------------------------------------------------------------+------------+-------------------------------------------------------------------------------------------------------+
+| m_axi_image_in  | image_in  | image_linear_contrast/solution/code/LinearContrastStretching.cpp:29:15 | read      | Widen Fail   |          | VITIS_LOOP_27_1 | image_linear_contrast/solution/code/LinearContrastStretching.cpp:27:22 | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_image_in  | image_in  | image_linear_contrast/solution/code/LinearContrastStretching.cpp:29:15 | read      | Inferred     | variable | VITIS_LOOP_27_1 | image_linear_contrast/solution/code/LinearContrastStretching.cpp:27:22 |            |                                                                                                       |
+| m_axi_image_out | image_out | image_linear_contrast/solution/code/LinearContrastStretching.cpp:44:24 | write     | Widen Fail   |          | VITIS_LOOP_27_1 | image_linear_contrast/solution/code/LinearContrastStretching.cpp:27:22 | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_image_out | image_out | image_linear_contrast/solution/code/LinearContrastStretching.cpp:44:24 | write     | Inferred     | variable | VITIS_LOOP_27_1 | image_linear_contrast/solution/code/LinearContrastStretching.cpp:27:22 |            |                                                                                                       |
++-----------------+-----------+------------------------------------------------------------------------+-----------+--------------+----------+-----------------+------------------------------------------------------------------------+------------+-------------------------------------------------------------------------------------------------------+
 
     * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
 
 ================================================================
 == Bind Op Report
 ================================================================
-+------------------------------------------------------+-----+--------+------------+-----+--------+---------+
-| Name                                                 | DSP | Pragma | Variable   | Op  | Impl   | Latency |
-+------------------------------------------------------+-----+--------+------------+-----+--------+---------+
-| + LinearContrastStretching                           | 0   |        |            |     |        |         |
-|   sub24_fu_176_p2                                    | -   |        | sub24      | sub | fabric | 0       |
-|   sub42_fu_183_p2                                    | -   |        | sub42      | sub | fabric | 0       |
-|   sub_ln34_fu_190_p2                                 | -   |        | sub_ln34   | sub | fabric | 0       |
-|   sub_ln38_fu_197_p2                                 | -   |        | sub_ln38   | sub | fabric | 0       |
-|  + LinearContrastStretching_Pipeline_VITIS_LOOP_24_1 | 0   |        |            |     |        |         |
-|    add_ln28_fu_360_p2                                | -   |        | add_ln28   | add | fabric | 0       |
-|    add_ln28_1_fu_423_p2                              | -   |        | add_ln28_1 | add | fabric | 0       |
-|    add_ln28_2_fu_433_p2                              | -   |        | add_ln28_2 | add | fabric | 0       |
-|    sub_ln38_fu_390_p2                                | -   |        | sub_ln38   | sub | fabric | 0       |
-|    mul_9s_9s_17_1_1_U1                               | -   |        | mul_ln38   | mul | auto   | 0       |
-|    add_ln38_fu_507_p2                                | -   |        | add_ln38   | add | fabric | 0       |
-|    sub_ln34_fu_404_p2                                | -   |        | sub_ln34   | sub | fabric | 0       |
-|    mul_9s_9s_17_1_1_U2                               | -   |        | mul_ln34   | mul | auto   | 0       |
-|    add_ln34_fu_515_p2                                | -   |        | add_ln34   | add | fabric | 0       |
-|    mul_8ns_8ns_16_1_1_U3                             | -   |        | mul_ln30   | mul | auto   | 0       |
-|    sub_ln38_1_fu_459_p2                              | -   |        | sub_ln38_1 | sub | fabric | 0       |
-|    mul_9s_9s_17_1_1_U7                               | -   |        | mul_ln38_1 | mul | auto   | 0       |
-|    add_ln38_1_fu_524_p2                              | -   |        | add_ln38_1 | add | fabric | 0       |
-|    sub_ln34_1_fu_473_p2                              | -   |        | sub_ln34_1 | sub | fabric | 0       |
-|    mul_9s_9s_17_1_1_U8                               | -   |        | mul_ln34_1 | mul | auto   | 0       |
-|    add_ln34_1_fu_533_p2                              | -   |        | add_ln34_1 | add | fabric | 0       |
-|    mul_8ns_8ns_16_1_1_U9                             | -   |        | mul_ln30_1 | mul | auto   | 0       |
-|    idx_5_fu_372_p2                                   | -   |        | idx_5      | add | fabric | 0       |
-+------------------------------------------------------+-----+--------+------------+-----+--------+---------+
++------------------------------------------------------+-----+--------+----------+-----+--------+---------+
+| Name                                                 | DSP | Pragma | Variable | Op  | Impl   | Latency |
++------------------------------------------------------+-----+--------+----------+-----+--------+---------+
+| + LinearContrastStretching                           | 6   |        |          |     |        |         |
+|   sub4_fu_204_p2                                     | -   |        | sub4     | sub | fabric | 0       |
+|   sub6_fu_209_p2                                     | -   |        | sub6     | sub | fabric | 0       |
+|   sub10_fu_214_p2                                    | -   |        | sub10    | sub | fabric | 0       |
+|   sub12_fu_219_p2                                    | -   |        | sub12    | sub | fabric | 0       |
+|  + LinearContrastStretching_Pipeline_VITIS_LOOP_27_1 | 6   |        |          |     |        |         |
+|    add_ln27_fu_195_p2                                | -   |        | add_ln27 | add | fabric | 0       |
+|    sub_ln41_fu_220_p2                                | -   |        | sub_ln41 | sub | fabric | 0       |
+|    mul_32s_32s_32_2_1_U2                             | 3   |        | mul_ln41 | mul | auto   | 1       |
+|    after_3_fu_242_p2                                 | -   |        | after_3  | add | fabric | 0       |
+|    sub_ln37_fu_224_p2                                | -   |        | sub_ln37 | sub | fabric | 0       |
+|    mul_32s_32s_32_2_1_U2                             | 3   |        | mul_ln37 | mul | auto   | 1       |
+|    after_2_fu_247_p2                                 | -   |        | after_2  | add | fabric | 0       |
+|    mul_32s_32s_32_2_1_U1                             | 3   |        | mul_ln33 | mul | auto   | 1       |
++------------------------------------------------------+-----+--------+----------+-----+--------+---------+
 
 
 ================================================================
@@ -183,7 +176,6 @@
 | interface | mode = s_axilite port = high_new_threshold                      | image_linear_contrast/solution/code/LinearContrastStretching.cpp:20 in linearcontraststretching |
 | interface | mode = s_axilite port = max_value                               | image_linear_contrast/solution/code/LinearContrastStretching.cpp:21 in linearcontraststretching |
 | interface | mode = s_axilite port = return                                  | image_linear_contrast/solution/code/LinearContrastStretching.cpp:22 in linearcontraststretching |
-| unroll    | factor = 2 skip_exit_check                                      | image_linear_contrast/solution/code/LinearContrastStretching.cpp:26 in linearcontraststretching |
 +-----------+-----------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
 
 

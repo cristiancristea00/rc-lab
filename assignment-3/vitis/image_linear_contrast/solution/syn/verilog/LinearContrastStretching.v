@@ -6,7 +6,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="LinearContrastStretching_LinearContrastStretching,hls_ip_2023_1_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=4,HLS_SYN_DSP=0,HLS_SYN_FF=7595,HLS_SYN_LUT=6485,HLS_VERSION=2023_1_1}" *)
+(* CORE_GENERATION_INFO="LinearContrastStretching_LinearContrastStretching,hls_ip_2023_1_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=8,HLS_SYN_DSP=0,HLS_SYN_FF=11456,HLS_SYN_LUT=8241,HLS_VERSION=2023_1_1}" *)
 
 module LinearContrastStretching (
         ap_clk,
@@ -121,8 +121,22 @@ module LinearContrastStretching (
         interrupt
 );
 
-parameter    ap_ST_fsm_state1 = 2'd1;
-parameter    ap_ST_fsm_state2 = 2'd2;
+parameter    ap_ST_fsm_state1 = 16'd1;
+parameter    ap_ST_fsm_state2 = 16'd2;
+parameter    ap_ST_fsm_state3 = 16'd4;
+parameter    ap_ST_fsm_state4 = 16'd8;
+parameter    ap_ST_fsm_state5 = 16'd16;
+parameter    ap_ST_fsm_state6 = 16'd32;
+parameter    ap_ST_fsm_state7 = 16'd64;
+parameter    ap_ST_fsm_state8 = 16'd128;
+parameter    ap_ST_fsm_state9 = 16'd256;
+parameter    ap_ST_fsm_state10 = 16'd512;
+parameter    ap_ST_fsm_state11 = 16'd1024;
+parameter    ap_ST_fsm_state12 = 16'd2048;
+parameter    ap_ST_fsm_state13 = 16'd4096;
+parameter    ap_ST_fsm_state14 = 16'd8192;
+parameter    ap_ST_fsm_state15 = 16'd16384;
+parameter    ap_ST_fsm_state16 = 16'd32768;
 parameter    C_S_AXI_CONTROL_DATA_WIDTH = 32;
 parameter    C_S_AXI_CONTROL_ADDR_WIDTH = 7;
 parameter    C_S_AXI_DATA_WIDTH = 32;
@@ -271,179 +285,202 @@ output   interrupt;
 wire    ap_start;
 reg    ap_done;
 reg    ap_idle;
-(* fsm_encoding = "none" *) reg   [1:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [15:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
 reg    ap_ready;
 wire   [31:0] image_out_offset;
 wire   [31:0] image_in_offset;
 wire   [31:0] image_length;
-wire   [7:0] low_threshold;
-wire   [7:0] high_threshold;
-wire   [7:0] low_new_threshold;
-wire   [7:0] high_new_threshold;
-wire   [7:0] max_value;
-reg   [7:0] high_new_threshold_read_reg_204;
-reg   [7:0] low_new_threshold_read_reg_209;
-reg   [7:0] high_threshold_read_reg_215;
-reg   [7:0] low_threshold_read_reg_221;
-reg   [31:0] image_length_read_reg_228;
-reg   [31:0] image_in_offset_read_reg_233;
-reg   [31:0] image_out_offset_read_reg_238;
-wire   [8:0] sub24_fu_176_p2;
-reg   [8:0] sub24_reg_243;
-wire   [8:0] sub42_fu_183_p2;
-reg   [8:0] sub42_reg_248;
-wire   [8:0] sub_ln34_fu_190_p2;
-reg   [8:0] sub_ln34_reg_253;
-wire   [8:0] sub_ln38_fu_197_p2;
-reg   [8:0] sub_ln38_reg_258;
-wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_ap_start;
-wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_ap_done;
-wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_ap_idle;
-wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_ap_ready;
-wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_AWVALID;
-wire   [31:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_AWADDR;
-wire   [0:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_AWID;
-wire   [31:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_AWLEN;
-wire   [2:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_AWSIZE;
-wire   [1:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_AWBURST;
-wire   [1:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_AWLOCK;
-wire   [3:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_AWCACHE;
-wire   [2:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_AWPROT;
-wire   [3:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_AWQOS;
-wire   [3:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_AWREGION;
-wire   [0:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_AWUSER;
-wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_WVALID;
-wire   [7:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_WDATA;
-wire   [0:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_WSTRB;
-wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_WLAST;
-wire   [0:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_WID;
-wire   [0:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_WUSER;
-wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_ARVALID;
-wire   [31:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_ARADDR;
-wire   [0:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_ARID;
-wire   [31:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_ARLEN;
-wire   [2:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_ARSIZE;
-wire   [1:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_ARBURST;
-wire   [1:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_ARLOCK;
-wire   [3:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_ARCACHE;
-wire   [2:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_ARPROT;
-wire   [3:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_ARQOS;
-wire   [3:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_ARREGION;
-wire   [0:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_ARUSER;
-wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_RREADY;
-wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_BREADY;
-wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_AWVALID;
-wire   [31:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_AWADDR;
-wire   [0:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_AWID;
-wire   [31:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_AWLEN;
-wire   [2:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_AWSIZE;
-wire   [1:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_AWBURST;
-wire   [1:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_AWLOCK;
-wire   [3:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_AWCACHE;
-wire   [2:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_AWPROT;
-wire   [3:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_AWQOS;
-wire   [3:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_AWREGION;
-wire   [0:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_AWUSER;
-wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_WVALID;
-wire   [7:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_WDATA;
-wire   [0:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_WSTRB;
-wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_WLAST;
-wire   [0:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_WID;
-wire   [0:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_WUSER;
-wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_ARVALID;
-wire   [31:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_ARADDR;
-wire   [0:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_ARID;
-wire   [31:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_ARLEN;
-wire   [2:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_ARSIZE;
-wire   [1:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_ARBURST;
-wire   [1:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_ARLOCK;
-wire   [3:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_ARCACHE;
-wire   [2:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_ARPROT;
-wire   [3:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_ARQOS;
-wire   [3:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_ARREGION;
-wire   [0:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_ARUSER;
-wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_RREADY;
-wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_BREADY;
+wire   [31:0] low_threshold;
+wire   [31:0] high_threshold;
+wire   [31:0] low_new_threshold;
+wire   [31:0] high_new_threshold;
+wire   [31:0] max_value;
+reg    image_out_blk_n_AW;
+wire    ap_CS_fsm_state9;
+reg    image_out_blk_n_B;
+wire    ap_CS_fsm_state16;
+reg    image_in_blk_n_AR;
+wire    ap_CS_fsm_state2;
+reg   [31:0] max_value_read_reg_224;
+reg   [31:0] high_new_threshold_read_reg_230;
+reg   [31:0] low_new_threshold_read_reg_237;
+reg   [31:0] high_threshold_read_reg_243;
+reg   [31:0] low_threshold_read_reg_250;
+reg   [31:0] image_length_read_reg_256;
+reg   [29:0] trunc_ln_reg_263;
+reg   [29:0] trunc_ln27_1_reg_269;
+wire   [31:0] sub4_fu_204_p2;
+reg   [31:0] sub4_reg_285;
+wire    ap_CS_fsm_state10;
+wire   [31:0] sub6_fu_209_p2;
+reg   [31:0] sub6_reg_290;
+wire   [31:0] sub10_fu_214_p2;
+reg   [31:0] sub10_reg_295;
+wire   [31:0] sub12_fu_219_p2;
+reg   [31:0] sub12_reg_300;
+wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_ap_start;
+wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_ap_done;
+wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_ap_idle;
+wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_ap_ready;
+wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_AWVALID;
+wire   [31:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_AWADDR;
+wire   [0:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_AWID;
+wire   [31:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_AWLEN;
+wire   [2:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_AWSIZE;
+wire   [1:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_AWBURST;
+wire   [1:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_AWLOCK;
+wire   [3:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_AWCACHE;
+wire   [2:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_AWPROT;
+wire   [3:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_AWQOS;
+wire   [3:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_AWREGION;
+wire   [0:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_AWUSER;
+wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_WVALID;
+wire   [31:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_WDATA;
+wire   [3:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_WSTRB;
+wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_WLAST;
+wire   [0:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_WID;
+wire   [0:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_WUSER;
+wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_ARVALID;
+wire   [31:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_ARADDR;
+wire   [0:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_ARID;
+wire   [31:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_ARLEN;
+wire   [2:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_ARSIZE;
+wire   [1:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_ARBURST;
+wire   [1:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_ARLOCK;
+wire   [3:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_ARCACHE;
+wire   [2:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_ARPROT;
+wire   [3:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_ARQOS;
+wire   [3:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_ARREGION;
+wire   [0:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_ARUSER;
+wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_RREADY;
+wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_BREADY;
+wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_AWVALID;
+wire   [31:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_AWADDR;
+wire   [0:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_AWID;
+wire   [31:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_AWLEN;
+wire   [2:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_AWSIZE;
+wire   [1:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_AWBURST;
+wire   [1:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_AWLOCK;
+wire   [3:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_AWCACHE;
+wire   [2:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_AWPROT;
+wire   [3:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_AWQOS;
+wire   [3:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_AWREGION;
+wire   [0:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_AWUSER;
+wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_WVALID;
+wire   [31:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_WDATA;
+wire   [3:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_WSTRB;
+wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_WLAST;
+wire   [0:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_WID;
+wire   [0:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_WUSER;
+wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_ARVALID;
+wire   [31:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_ARADDR;
+wire   [0:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_ARID;
+wire   [31:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_ARLEN;
+wire   [2:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_ARSIZE;
+wire   [1:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_ARBURST;
+wire   [1:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_ARLOCK;
+wire   [3:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_ARCACHE;
+wire   [2:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_ARPROT;
+wire   [3:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_ARQOS;
+wire   [3:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_ARREGION;
+wire   [0:0] grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_ARUSER;
+wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_RREADY;
+wire    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_BREADY;
 wire    image_in_AWREADY;
 wire    image_in_WREADY;
 reg    image_in_ARVALID;
 wire    image_in_ARREADY;
+reg   [31:0] image_in_ARADDR;
+reg   [31:0] image_in_ARLEN;
 wire    image_in_RVALID;
 reg    image_in_RREADY;
-wire   [7:0] image_in_RDATA;
-wire   [10:0] image_in_RFIFONUM;
+wire   [31:0] image_in_RDATA;
+wire   [8:0] image_in_RFIFONUM;
 wire    image_in_BVALID;
 reg    image_out_AWVALID;
 wire    image_out_AWREADY;
+reg   [31:0] image_out_AWADDR;
+reg   [31:0] image_out_AWLEN;
 reg    image_out_WVALID;
 wire    image_out_WREADY;
 wire    image_out_ARREADY;
 wire    image_out_RVALID;
-wire   [7:0] image_out_RDATA;
-wire   [10:0] image_out_RFIFONUM;
+wire   [31:0] image_out_RDATA;
+wire   [8:0] image_out_RFIFONUM;
 wire    image_out_BVALID;
 reg    image_out_BREADY;
-reg    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_ap_start_reg;
-wire    ap_CS_fsm_state2;
-wire   [8:0] max_value_cast_fu_172_p1;
-wire   [8:0] high_new_threshold_cast_fu_164_p1;
-wire   [8:0] low_new_threshold_cast_fu_156_p1;
-wire   [8:0] high_threshold_cast6_fu_168_p1;
-wire   [8:0] low_threshold_cast7_fu_160_p1;
-reg   [1:0] ap_NS_fsm;
+reg    grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_ap_start_reg;
+wire    ap_CS_fsm_state11;
+wire  signed [31:0] sext_ln27_fu_184_p1;
+wire  signed [31:0] sext_ln27_1_fu_194_p1;
+reg   [15:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 reg    ap_ST_fsm_state2_blk;
+wire    ap_ST_fsm_state3_blk;
+wire    ap_ST_fsm_state4_blk;
+wire    ap_ST_fsm_state5_blk;
+wire    ap_ST_fsm_state6_blk;
+wire    ap_ST_fsm_state7_blk;
+wire    ap_ST_fsm_state8_blk;
+reg    ap_ST_fsm_state9_blk;
+wire    ap_ST_fsm_state10_blk;
+reg    ap_ST_fsm_state11_blk;
+wire    ap_ST_fsm_state12_blk;
+wire    ap_ST_fsm_state13_blk;
+wire    ap_ST_fsm_state14_blk;
+wire    ap_ST_fsm_state15_blk;
+reg    ap_ST_fsm_state16_blk;
 wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
-#0 ap_CS_fsm = 2'd1;
-#0 grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_ap_start_reg = 1'b0;
+#0 ap_CS_fsm = 16'd1;
+#0 grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_ap_start_reg = 1'b0;
 end
 
-LinearContrastStretching_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1 grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122(
+LinearContrastStretching_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1 grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_ap_start),
-    .ap_done(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_ap_done),
-    .ap_idle(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_ap_idle),
-    .ap_ready(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_ap_ready),
-    .m_axi_image_in_AWVALID(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_AWVALID),
+    .ap_start(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_ap_start),
+    .ap_done(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_ap_done),
+    .ap_idle(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_ap_idle),
+    .ap_ready(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_ap_ready),
+    .m_axi_image_in_AWVALID(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_AWVALID),
     .m_axi_image_in_AWREADY(1'b0),
-    .m_axi_image_in_AWADDR(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_AWADDR),
-    .m_axi_image_in_AWID(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_AWID),
-    .m_axi_image_in_AWLEN(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_AWLEN),
-    .m_axi_image_in_AWSIZE(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_AWSIZE),
-    .m_axi_image_in_AWBURST(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_AWBURST),
-    .m_axi_image_in_AWLOCK(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_AWLOCK),
-    .m_axi_image_in_AWCACHE(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_AWCACHE),
-    .m_axi_image_in_AWPROT(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_AWPROT),
-    .m_axi_image_in_AWQOS(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_AWQOS),
-    .m_axi_image_in_AWREGION(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_AWREGION),
-    .m_axi_image_in_AWUSER(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_AWUSER),
-    .m_axi_image_in_WVALID(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_WVALID),
+    .m_axi_image_in_AWADDR(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_AWADDR),
+    .m_axi_image_in_AWID(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_AWID),
+    .m_axi_image_in_AWLEN(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_AWLEN),
+    .m_axi_image_in_AWSIZE(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_AWSIZE),
+    .m_axi_image_in_AWBURST(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_AWBURST),
+    .m_axi_image_in_AWLOCK(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_AWLOCK),
+    .m_axi_image_in_AWCACHE(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_AWCACHE),
+    .m_axi_image_in_AWPROT(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_AWPROT),
+    .m_axi_image_in_AWQOS(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_AWQOS),
+    .m_axi_image_in_AWREGION(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_AWREGION),
+    .m_axi_image_in_AWUSER(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_AWUSER),
+    .m_axi_image_in_WVALID(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_WVALID),
     .m_axi_image_in_WREADY(1'b0),
-    .m_axi_image_in_WDATA(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_WDATA),
-    .m_axi_image_in_WSTRB(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_WSTRB),
-    .m_axi_image_in_WLAST(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_WLAST),
-    .m_axi_image_in_WID(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_WID),
-    .m_axi_image_in_WUSER(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_WUSER),
-    .m_axi_image_in_ARVALID(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_ARVALID),
+    .m_axi_image_in_WDATA(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_WDATA),
+    .m_axi_image_in_WSTRB(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_WSTRB),
+    .m_axi_image_in_WLAST(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_WLAST),
+    .m_axi_image_in_WID(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_WID),
+    .m_axi_image_in_WUSER(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_WUSER),
+    .m_axi_image_in_ARVALID(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_ARVALID),
     .m_axi_image_in_ARREADY(image_in_ARREADY),
-    .m_axi_image_in_ARADDR(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_ARADDR),
-    .m_axi_image_in_ARID(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_ARID),
-    .m_axi_image_in_ARLEN(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_ARLEN),
-    .m_axi_image_in_ARSIZE(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_ARSIZE),
-    .m_axi_image_in_ARBURST(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_ARBURST),
-    .m_axi_image_in_ARLOCK(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_ARLOCK),
-    .m_axi_image_in_ARCACHE(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_ARCACHE),
-    .m_axi_image_in_ARPROT(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_ARPROT),
-    .m_axi_image_in_ARQOS(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_ARQOS),
-    .m_axi_image_in_ARREGION(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_ARREGION),
-    .m_axi_image_in_ARUSER(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_ARUSER),
+    .m_axi_image_in_ARADDR(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_ARADDR),
+    .m_axi_image_in_ARID(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_ARID),
+    .m_axi_image_in_ARLEN(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_ARLEN),
+    .m_axi_image_in_ARSIZE(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_ARSIZE),
+    .m_axi_image_in_ARBURST(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_ARBURST),
+    .m_axi_image_in_ARLOCK(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_ARLOCK),
+    .m_axi_image_in_ARCACHE(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_ARCACHE),
+    .m_axi_image_in_ARPROT(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_ARPROT),
+    .m_axi_image_in_ARQOS(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_ARQOS),
+    .m_axi_image_in_ARREGION(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_ARREGION),
+    .m_axi_image_in_ARUSER(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_ARUSER),
     .m_axi_image_in_RVALID(image_in_RVALID),
-    .m_axi_image_in_RREADY(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_RREADY),
+    .m_axi_image_in_RREADY(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_RREADY),
     .m_axi_image_in_RDATA(image_in_RDATA),
     .m_axi_image_in_RLAST(1'b0),
     .m_axi_image_in_RID(1'd0),
@@ -451,71 +488,67 @@ LinearContrastStretching_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1 grp_L
     .m_axi_image_in_RUSER(1'd0),
     .m_axi_image_in_RRESP(2'd0),
     .m_axi_image_in_BVALID(1'b0),
-    .m_axi_image_in_BREADY(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_BREADY),
+    .m_axi_image_in_BREADY(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_BREADY),
     .m_axi_image_in_BRESP(2'd0),
     .m_axi_image_in_BID(1'd0),
     .m_axi_image_in_BUSER(1'd0),
-    .m_axi_image_out_AWVALID(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_AWVALID),
+    .m_axi_image_out_AWVALID(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_AWVALID),
     .m_axi_image_out_AWREADY(image_out_AWREADY),
-    .m_axi_image_out_AWADDR(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_AWADDR),
-    .m_axi_image_out_AWID(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_AWID),
-    .m_axi_image_out_AWLEN(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_AWLEN),
-    .m_axi_image_out_AWSIZE(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_AWSIZE),
-    .m_axi_image_out_AWBURST(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_AWBURST),
-    .m_axi_image_out_AWLOCK(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_AWLOCK),
-    .m_axi_image_out_AWCACHE(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_AWCACHE),
-    .m_axi_image_out_AWPROT(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_AWPROT),
-    .m_axi_image_out_AWQOS(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_AWQOS),
-    .m_axi_image_out_AWREGION(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_AWREGION),
-    .m_axi_image_out_AWUSER(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_AWUSER),
-    .m_axi_image_out_WVALID(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_WVALID),
+    .m_axi_image_out_AWADDR(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_AWADDR),
+    .m_axi_image_out_AWID(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_AWID),
+    .m_axi_image_out_AWLEN(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_AWLEN),
+    .m_axi_image_out_AWSIZE(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_AWSIZE),
+    .m_axi_image_out_AWBURST(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_AWBURST),
+    .m_axi_image_out_AWLOCK(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_AWLOCK),
+    .m_axi_image_out_AWCACHE(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_AWCACHE),
+    .m_axi_image_out_AWPROT(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_AWPROT),
+    .m_axi_image_out_AWQOS(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_AWQOS),
+    .m_axi_image_out_AWREGION(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_AWREGION),
+    .m_axi_image_out_AWUSER(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_AWUSER),
+    .m_axi_image_out_WVALID(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_WVALID),
     .m_axi_image_out_WREADY(image_out_WREADY),
-    .m_axi_image_out_WDATA(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_WDATA),
-    .m_axi_image_out_WSTRB(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_WSTRB),
-    .m_axi_image_out_WLAST(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_WLAST),
-    .m_axi_image_out_WID(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_WID),
-    .m_axi_image_out_WUSER(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_WUSER),
-    .m_axi_image_out_ARVALID(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_ARVALID),
+    .m_axi_image_out_WDATA(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_WDATA),
+    .m_axi_image_out_WSTRB(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_WSTRB),
+    .m_axi_image_out_WLAST(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_WLAST),
+    .m_axi_image_out_WID(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_WID),
+    .m_axi_image_out_WUSER(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_WUSER),
+    .m_axi_image_out_ARVALID(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_ARVALID),
     .m_axi_image_out_ARREADY(1'b0),
-    .m_axi_image_out_ARADDR(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_ARADDR),
-    .m_axi_image_out_ARID(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_ARID),
-    .m_axi_image_out_ARLEN(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_ARLEN),
-    .m_axi_image_out_ARSIZE(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_ARSIZE),
-    .m_axi_image_out_ARBURST(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_ARBURST),
-    .m_axi_image_out_ARLOCK(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_ARLOCK),
-    .m_axi_image_out_ARCACHE(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_ARCACHE),
-    .m_axi_image_out_ARPROT(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_ARPROT),
-    .m_axi_image_out_ARQOS(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_ARQOS),
-    .m_axi_image_out_ARREGION(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_ARREGION),
-    .m_axi_image_out_ARUSER(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_ARUSER),
+    .m_axi_image_out_ARADDR(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_ARADDR),
+    .m_axi_image_out_ARID(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_ARID),
+    .m_axi_image_out_ARLEN(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_ARLEN),
+    .m_axi_image_out_ARSIZE(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_ARSIZE),
+    .m_axi_image_out_ARBURST(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_ARBURST),
+    .m_axi_image_out_ARLOCK(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_ARLOCK),
+    .m_axi_image_out_ARCACHE(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_ARCACHE),
+    .m_axi_image_out_ARPROT(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_ARPROT),
+    .m_axi_image_out_ARQOS(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_ARQOS),
+    .m_axi_image_out_ARREGION(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_ARREGION),
+    .m_axi_image_out_ARUSER(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_ARUSER),
     .m_axi_image_out_RVALID(1'b0),
-    .m_axi_image_out_RREADY(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_RREADY),
-    .m_axi_image_out_RDATA(8'd0),
+    .m_axi_image_out_RREADY(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_RREADY),
+    .m_axi_image_out_RDATA(32'd0),
     .m_axi_image_out_RLAST(1'b0),
     .m_axi_image_out_RID(1'd0),
-    .m_axi_image_out_RFIFONUM(11'd0),
+    .m_axi_image_out_RFIFONUM(9'd0),
     .m_axi_image_out_RUSER(1'd0),
     .m_axi_image_out_RRESP(2'd0),
     .m_axi_image_out_BVALID(image_out_BVALID),
-    .m_axi_image_out_BREADY(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_BREADY),
+    .m_axi_image_out_BREADY(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_BREADY),
     .m_axi_image_out_BRESP(2'd0),
     .m_axi_image_out_BID(1'd0),
     .m_axi_image_out_BUSER(1'd0),
-    .image_length(image_length_read_reg_228),
-    .low_threshold_cast7(low_threshold_read_reg_221),
-    .sext_ln38_2(sub42_reg_248),
-    .sext_ln24(sub_ln38_reg_258),
-    .low_new_threshold(low_new_threshold_read_reg_209),
-    .high_threshold(high_threshold_read_reg_215),
-    .low_threshold(low_threshold_read_reg_221),
-    .low_new_threshold_cast3(low_new_threshold_read_reg_209),
-    .low_threshold_cast4(low_threshold_read_reg_221),
-    .image_in_offset(image_in_offset_read_reg_233),
-    .image_out_offset(image_out_offset_read_reg_238),
-    .high_threshold_cast6(high_threshold_read_reg_215),
-    .sext_ln34_1(sub24_reg_243),
-    .sext_ln38(sub_ln34_reg_253),
-    .high_new_threshold(high_new_threshold_read_reg_204)
+    .sext_ln27(trunc_ln_reg_263),
+    .sext_ln27_1(trunc_ln27_1_reg_269),
+    .image_length(image_length_read_reg_256),
+    .low_new_threshold(low_new_threshold_read_reg_237),
+    .low_threshold(low_threshold_read_reg_250),
+    .high_threshold(high_threshold_read_reg_243),
+    .sub4(sub4_reg_285),
+    .sub6(sub6_reg_290),
+    .high_new_threshold(high_new_threshold_read_reg_230),
+    .sub10(sub10_reg_295),
+    .sub12(sub12_reg_300)
 );
 
 LinearContrastStretching_control_s_axi #(
@@ -573,8 +606,8 @@ LinearContrastStretching_image_in_m_axi #(
     .C_USER_VALUE( C_M_AXI_IMAGE_IN_USER_VALUE ),
     .C_PROT_VALUE( C_M_AXI_IMAGE_IN_PROT_VALUE ),
     .C_CACHE_VALUE( C_M_AXI_IMAGE_IN_CACHE_VALUE ),
-    .USER_RFIFONUM_WIDTH( 11 ),
-    .USER_DW( 8 ),
+    .USER_RFIFONUM_WIDTH( 9 ),
+    .USER_DW( 32 ),
     .USER_AW( 32 ),
     .NUM_READ_OUTSTANDING( 16 ),
     .NUM_WRITE_OUTSTANDING( 16 ))
@@ -629,8 +662,8 @@ image_in_m_axi_U(
     .ACLK_EN(1'b1),
     .I_ARVALID(image_in_ARVALID),
     .I_ARREADY(image_in_ARREADY),
-    .I_ARADDR(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_ARADDR),
-    .I_ARLEN(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_ARLEN),
+    .I_ARADDR(image_in_ARADDR),
+    .I_ARLEN(image_in_ARLEN),
     .I_RVALID(image_in_RVALID),
     .I_RREADY(image_in_RREADY),
     .I_RDATA(image_in_RDATA),
@@ -641,8 +674,8 @@ image_in_m_axi_U(
     .I_AWLEN(32'd0),
     .I_WVALID(1'b0),
     .I_WREADY(image_in_WREADY),
-    .I_WDATA(8'd0),
-    .I_WSTRB(1'd0),
+    .I_WDATA(32'd0),
+    .I_WSTRB(4'd0),
     .I_BVALID(image_in_BVALID),
     .I_BREADY(1'b0)
 );
@@ -663,8 +696,8 @@ LinearContrastStretching_image_out_m_axi #(
     .C_USER_VALUE( C_M_AXI_IMAGE_OUT_USER_VALUE ),
     .C_PROT_VALUE( C_M_AXI_IMAGE_OUT_PROT_VALUE ),
     .C_CACHE_VALUE( C_M_AXI_IMAGE_OUT_CACHE_VALUE ),
-    .USER_RFIFONUM_WIDTH( 11 ),
-    .USER_DW( 8 ),
+    .USER_RFIFONUM_WIDTH( 9 ),
+    .USER_DW( 32 ),
     .USER_AW( 32 ),
     .NUM_READ_OUTSTANDING( 16 ),
     .NUM_WRITE_OUTSTANDING( 16 ))
@@ -727,12 +760,12 @@ image_out_m_axi_U(
     .I_RFIFONUM(image_out_RFIFONUM),
     .I_AWVALID(image_out_AWVALID),
     .I_AWREADY(image_out_AWREADY),
-    .I_AWADDR(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_AWADDR),
-    .I_AWLEN(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_AWLEN),
+    .I_AWADDR(image_out_AWADDR),
+    .I_AWLEN(image_out_AWLEN),
     .I_WVALID(image_out_WVALID),
     .I_WREADY(image_out_WREADY),
-    .I_WDATA(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_WDATA),
-    .I_WSTRB(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_WSTRB),
+    .I_WDATA(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_WDATA),
+    .I_WSTRB(grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_WSTRB),
     .I_BVALID(image_out_BVALID),
     .I_BREADY(image_out_BREADY)
 );
@@ -747,29 +780,61 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_ap_start_reg <= 1'b0;
+        grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_ap_start_reg <= 1'b0;
     end else begin
-        if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-            grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_ap_start_reg <= 1'b1;
-        end else if ((grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_ap_ready == 1'b1)) begin
-            grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_ap_start_reg <= 1'b0;
+        if ((1'b1 == ap_CS_fsm_state10)) begin
+            grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_ap_start_reg <= 1'b1;
+        end else if ((grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_ap_ready == 1'b1)) begin
+            grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state1)) begin
-        high_new_threshold_read_reg_204 <= high_new_threshold;
-        high_threshold_read_reg_215 <= high_threshold;
-        image_in_offset_read_reg_233 <= image_in_offset;
-        image_length_read_reg_228 <= image_length;
-        image_out_offset_read_reg_238 <= image_out_offset;
-        low_new_threshold_read_reg_209 <= low_new_threshold;
-        low_threshold_read_reg_221 <= low_threshold;
-        sub24_reg_243 <= sub24_fu_176_p2;
-        sub42_reg_248 <= sub42_fu_183_p2;
-        sub_ln34_reg_253 <= sub_ln34_fu_190_p2;
-        sub_ln38_reg_258 <= sub_ln38_fu_197_p2;
+        high_new_threshold_read_reg_230 <= high_new_threshold;
+        high_threshold_read_reg_243 <= high_threshold;
+        image_length_read_reg_256 <= image_length;
+        low_new_threshold_read_reg_237 <= low_new_threshold;
+        low_threshold_read_reg_250 <= low_threshold;
+        max_value_read_reg_224 <= max_value;
+        trunc_ln27_1_reg_269 <= {{image_out_offset[31:2]}};
+        trunc_ln_reg_263 <= {{image_in_offset[31:2]}};
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        sub10_reg_295 <= sub10_fu_214_p2;
+        sub12_reg_300 <= sub12_fu_219_p2;
+        sub4_reg_285 <= sub4_fu_204_p2;
+        sub6_reg_290 <= sub6_fu_209_p2;
+    end
+end
+
+assign ap_ST_fsm_state10_blk = 1'b0;
+
+always @ (*) begin
+    if ((grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_ap_done == 1'b0)) begin
+        ap_ST_fsm_state11_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state11_blk = 1'b0;
+    end
+end
+
+assign ap_ST_fsm_state12_blk = 1'b0;
+
+assign ap_ST_fsm_state13_blk = 1'b0;
+
+assign ap_ST_fsm_state14_blk = 1'b0;
+
+assign ap_ST_fsm_state15_blk = 1'b0;
+
+always @ (*) begin
+    if ((image_out_BVALID == 1'b0)) begin
+        ap_ST_fsm_state16_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state16_blk = 1'b0;
     end
 end
 
@@ -782,15 +847,35 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_ap_done == 1'b0)) begin
+    if ((image_in_ARREADY == 1'b0)) begin
         ap_ST_fsm_state2_blk = 1'b1;
     end else begin
         ap_ST_fsm_state2_blk = 1'b0;
     end
 end
 
+assign ap_ST_fsm_state3_blk = 1'b0;
+
+assign ap_ST_fsm_state4_blk = 1'b0;
+
+assign ap_ST_fsm_state5_blk = 1'b0;
+
+assign ap_ST_fsm_state6_blk = 1'b0;
+
+assign ap_ST_fsm_state7_blk = 1'b0;
+
+assign ap_ST_fsm_state8_blk = 1'b0;
+
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state2) & (grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_ap_done == 1'b1))) begin
+    if ((image_out_AWREADY == 1'b0)) begin
+        ap_ST_fsm_state9_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state9_blk = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((image_out_BVALID == 1'b1) & (1'b1 == ap_CS_fsm_state16))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -806,7 +891,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state2) & (grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_ap_done == 1'b1))) begin
+    if (((image_out_BVALID == 1'b1) & (1'b1 == ap_CS_fsm_state16))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -814,42 +899,112 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        image_in_ARVALID = grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_ARVALID;
+    if (((image_in_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+        image_in_ARADDR = sext_ln27_fu_184_p1;
+    end else if (((1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state10))) begin
+        image_in_ARADDR = grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_ARADDR;
+    end else begin
+        image_in_ARADDR = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((image_in_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+        image_in_ARLEN = image_length_read_reg_256;
+    end else if (((1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state10))) begin
+        image_in_ARLEN = grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_ARLEN;
+    end else begin
+        image_in_ARLEN = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((image_in_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+        image_in_ARVALID = 1'b1;
+    end else if (((1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state10))) begin
+        image_in_ARVALID = grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_ARVALID;
     end else begin
         image_in_ARVALID = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        image_in_RREADY = grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_in_RREADY;
+    if (((1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state10))) begin
+        image_in_RREADY = grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_in_RREADY;
     end else begin
         image_in_RREADY = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        image_out_AWVALID = grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_AWVALID;
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        image_in_blk_n_AR = m_axi_image_in_ARREADY;
+    end else begin
+        image_in_blk_n_AR = 1'b1;
+    end
+end
+
+always @ (*) begin
+    if (((image_out_AWREADY == 1'b1) & (1'b1 == ap_CS_fsm_state9))) begin
+        image_out_AWADDR = sext_ln27_1_fu_194_p1;
+    end else if (((1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state10))) begin
+        image_out_AWADDR = grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_AWADDR;
+    end else begin
+        image_out_AWADDR = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((image_out_AWREADY == 1'b1) & (1'b1 == ap_CS_fsm_state9))) begin
+        image_out_AWLEN = image_length_read_reg_256;
+    end else if (((1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state10))) begin
+        image_out_AWLEN = grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_AWLEN;
+    end else begin
+        image_out_AWLEN = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((image_out_AWREADY == 1'b1) & (1'b1 == ap_CS_fsm_state9))) begin
+        image_out_AWVALID = 1'b1;
+    end else if (((1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state10))) begin
+        image_out_AWVALID = grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_AWVALID;
     end else begin
         image_out_AWVALID = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        image_out_BREADY = grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_BREADY;
+    if (((image_out_BVALID == 1'b1) & (1'b1 == ap_CS_fsm_state16))) begin
+        image_out_BREADY = 1'b1;
+    end else if (((1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state10))) begin
+        image_out_BREADY = grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_BREADY;
     end else begin
         image_out_BREADY = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        image_out_WVALID = grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_m_axi_image_out_WVALID;
+    if (((1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state10))) begin
+        image_out_WVALID = grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_m_axi_image_out_WVALID;
     end else begin
         image_out_WVALID = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state9)) begin
+        image_out_blk_n_AW = m_axi_image_out_AWREADY;
+    end else begin
+        image_out_blk_n_AW = 1'b1;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        image_out_blk_n_B = m_axi_image_out_BVALID;
+    end else begin
+        image_out_blk_n_B = 1'b1;
     end
 end
 
@@ -863,10 +1018,64 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state2 : begin
-            if (((1'b1 == ap_CS_fsm_state2) & (grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_ap_done == 1'b1))) begin
-                ap_NS_fsm = ap_ST_fsm_state1;
+            if (((image_in_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+                ap_NS_fsm = ap_ST_fsm_state3;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state2;
+            end
+        end
+        ap_ST_fsm_state3 : begin
+            ap_NS_fsm = ap_ST_fsm_state4;
+        end
+        ap_ST_fsm_state4 : begin
+            ap_NS_fsm = ap_ST_fsm_state5;
+        end
+        ap_ST_fsm_state5 : begin
+            ap_NS_fsm = ap_ST_fsm_state6;
+        end
+        ap_ST_fsm_state6 : begin
+            ap_NS_fsm = ap_ST_fsm_state7;
+        end
+        ap_ST_fsm_state7 : begin
+            ap_NS_fsm = ap_ST_fsm_state8;
+        end
+        ap_ST_fsm_state8 : begin
+            ap_NS_fsm = ap_ST_fsm_state9;
+        end
+        ap_ST_fsm_state9 : begin
+            if (((image_out_AWREADY == 1'b1) & (1'b1 == ap_CS_fsm_state9))) begin
+                ap_NS_fsm = ap_ST_fsm_state10;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state9;
+            end
+        end
+        ap_ST_fsm_state10 : begin
+            ap_NS_fsm = ap_ST_fsm_state11;
+        end
+        ap_ST_fsm_state11 : begin
+            if (((grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state11))) begin
+                ap_NS_fsm = ap_ST_fsm_state12;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state11;
+            end
+        end
+        ap_ST_fsm_state12 : begin
+            ap_NS_fsm = ap_ST_fsm_state13;
+        end
+        ap_ST_fsm_state13 : begin
+            ap_NS_fsm = ap_ST_fsm_state14;
+        end
+        ap_ST_fsm_state14 : begin
+            ap_NS_fsm = ap_ST_fsm_state15;
+        end
+        ap_ST_fsm_state15 : begin
+            ap_NS_fsm = ap_ST_fsm_state16;
+        end
+        ap_ST_fsm_state16 : begin
+            if (((image_out_BVALID == 1'b1) & (1'b1 == ap_CS_fsm_state16))) begin
+                ap_NS_fsm = ap_ST_fsm_state1;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state16;
             end
         end
         default : begin
@@ -877,30 +1086,32 @@ end
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
+assign ap_CS_fsm_state10 = ap_CS_fsm[32'd9];
+
+assign ap_CS_fsm_state11 = ap_CS_fsm[32'd10];
+
+assign ap_CS_fsm_state16 = ap_CS_fsm[32'd15];
+
 assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
+
+assign ap_CS_fsm_state9 = ap_CS_fsm[32'd8];
 
 always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;
 end
 
-assign grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_ap_start = grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_ap_start_reg;
+assign grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_ap_start = grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_ap_start_reg;
 
-assign high_new_threshold_cast_fu_164_p1 = high_new_threshold;
+assign sext_ln27_1_fu_194_p1 = $signed(trunc_ln27_1_reg_269);
 
-assign high_threshold_cast6_fu_168_p1 = high_threshold;
+assign sext_ln27_fu_184_p1 = $signed(trunc_ln_reg_263);
 
-assign low_new_threshold_cast_fu_156_p1 = low_new_threshold;
+assign sub10_fu_214_p2 = (high_new_threshold_read_reg_230 - low_new_threshold_read_reg_237);
 
-assign low_threshold_cast7_fu_160_p1 = low_threshold;
+assign sub12_fu_219_p2 = (high_threshold_read_reg_243 - low_threshold_read_reg_250);
 
-assign max_value_cast_fu_172_p1 = max_value;
+assign sub4_fu_204_p2 = (max_value_read_reg_224 - high_new_threshold_read_reg_230);
 
-assign sub24_fu_176_p2 = (max_value_cast_fu_172_p1 - high_new_threshold_cast_fu_164_p1);
-
-assign sub42_fu_183_p2 = (high_new_threshold_cast_fu_164_p1 - low_new_threshold_cast_fu_156_p1);
-
-assign sub_ln34_fu_190_p2 = (max_value_cast_fu_172_p1 - high_threshold_cast6_fu_168_p1);
-
-assign sub_ln38_fu_197_p2 = (high_threshold_cast6_fu_168_p1 - low_threshold_cast7_fu_160_p1);
+assign sub6_fu_209_p2 = (max_value_read_reg_224 - high_threshold_read_reg_243);
 
 endmodule //LinearContrastStretching

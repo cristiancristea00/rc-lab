@@ -38,11 +38,11 @@ port (
     image_out_offset      :out  STD_LOGIC_VECTOR(31 downto 0);
     image_in_offset       :out  STD_LOGIC_VECTOR(31 downto 0);
     image_length          :out  STD_LOGIC_VECTOR(31 downto 0);
-    low_threshold         :out  STD_LOGIC_VECTOR(7 downto 0);
-    high_threshold        :out  STD_LOGIC_VECTOR(7 downto 0);
-    low_new_threshold     :out  STD_LOGIC_VECTOR(7 downto 0);
-    high_new_threshold    :out  STD_LOGIC_VECTOR(7 downto 0);
-    max_value             :out  STD_LOGIC_VECTOR(7 downto 0);
+    low_threshold         :out  STD_LOGIC_VECTOR(31 downto 0);
+    high_threshold        :out  STD_LOGIC_VECTOR(31 downto 0);
+    low_new_threshold     :out  STD_LOGIC_VECTOR(31 downto 0);
+    high_new_threshold    :out  STD_LOGIC_VECTOR(31 downto 0);
+    max_value             :out  STD_LOGIC_VECTOR(31 downto 0);
     ap_start              :out  STD_LOGIC;
     ap_done               :in   STD_LOGIC;
     ap_ready              :in   STD_LOGIC;
@@ -80,24 +80,19 @@ end entity LinearContrastStretching_control_s_axi;
 --        bit 31~0 - image_length[31:0] (Read/Write)
 -- 0x24 : reserved
 -- 0x28 : Data signal of low_threshold
---        bit 7~0 - low_threshold[7:0] (Read/Write)
---        others  - reserved
+--        bit 31~0 - low_threshold[31:0] (Read/Write)
 -- 0x2c : reserved
 -- 0x30 : Data signal of high_threshold
---        bit 7~0 - high_threshold[7:0] (Read/Write)
---        others  - reserved
+--        bit 31~0 - high_threshold[31:0] (Read/Write)
 -- 0x34 : reserved
 -- 0x38 : Data signal of low_new_threshold
---        bit 7~0 - low_new_threshold[7:0] (Read/Write)
---        others  - reserved
+--        bit 31~0 - low_new_threshold[31:0] (Read/Write)
 -- 0x3c : reserved
 -- 0x40 : Data signal of high_new_threshold
---        bit 7~0 - high_new_threshold[7:0] (Read/Write)
---        others  - reserved
+--        bit 31~0 - high_new_threshold[31:0] (Read/Write)
 -- 0x44 : reserved
 -- 0x48 : Data signal of max_value
---        bit 7~0 - max_value[7:0] (Read/Write)
---        others  - reserved
+--        bit 31~0 - max_value[31:0] (Read/Write)
 -- 0x4c : reserved
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
@@ -157,11 +152,11 @@ architecture behave of LinearContrastStretching_control_s_axi is
     signal int_image_out_offset : UNSIGNED(31 downto 0) := (others => '0');
     signal int_image_in_offset : UNSIGNED(31 downto 0) := (others => '0');
     signal int_image_length    : UNSIGNED(31 downto 0) := (others => '0');
-    signal int_low_threshold   : UNSIGNED(7 downto 0) := (others => '0');
-    signal int_high_threshold  : UNSIGNED(7 downto 0) := (others => '0');
-    signal int_low_new_threshold : UNSIGNED(7 downto 0) := (others => '0');
-    signal int_high_new_threshold : UNSIGNED(7 downto 0) := (others => '0');
-    signal int_max_value       : UNSIGNED(7 downto 0) := (others => '0');
+    signal int_low_threshold   : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_high_threshold  : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_low_new_threshold : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_high_new_threshold : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_max_value       : UNSIGNED(31 downto 0) := (others => '0');
 
 
 begin
@@ -297,15 +292,15 @@ begin
                     when ADDR_IMAGE_LENGTH_DATA_0 =>
                         rdata_data <= RESIZE(int_image_length(31 downto 0), 32);
                     when ADDR_LOW_THRESHOLD_DATA_0 =>
-                        rdata_data <= RESIZE(int_low_threshold(7 downto 0), 32);
+                        rdata_data <= RESIZE(int_low_threshold(31 downto 0), 32);
                     when ADDR_HIGH_THRESHOLD_DATA_0 =>
-                        rdata_data <= RESIZE(int_high_threshold(7 downto 0), 32);
+                        rdata_data <= RESIZE(int_high_threshold(31 downto 0), 32);
                     when ADDR_LOW_NEW_THRESHOLD_DATA_0 =>
-                        rdata_data <= RESIZE(int_low_new_threshold(7 downto 0), 32);
+                        rdata_data <= RESIZE(int_low_new_threshold(31 downto 0), 32);
                     when ADDR_HIGH_NEW_THRESHOLD_DATA_0 =>
-                        rdata_data <= RESIZE(int_high_new_threshold(7 downto 0), 32);
+                        rdata_data <= RESIZE(int_high_new_threshold(31 downto 0), 32);
                     when ADDR_MAX_VALUE_DATA_0 =>
-                        rdata_data <= RESIZE(int_max_value(7 downto 0), 32);
+                        rdata_data <= RESIZE(int_max_value(31 downto 0), 32);
                     when others =>
                         NULL;
                     end case;
@@ -537,7 +532,7 @@ begin
         if (ACLK'event and ACLK = '1') then
             if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_LOW_THRESHOLD_DATA_0) then
-                    int_low_threshold(7 downto 0) <= (UNSIGNED(WDATA(7 downto 0)) and wmask(7 downto 0)) or ((not wmask(7 downto 0)) and int_low_threshold(7 downto 0));
+                    int_low_threshold(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_low_threshold(31 downto 0));
                 end if;
             end if;
         end if;
@@ -548,7 +543,7 @@ begin
         if (ACLK'event and ACLK = '1') then
             if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_HIGH_THRESHOLD_DATA_0) then
-                    int_high_threshold(7 downto 0) <= (UNSIGNED(WDATA(7 downto 0)) and wmask(7 downto 0)) or ((not wmask(7 downto 0)) and int_high_threshold(7 downto 0));
+                    int_high_threshold(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_high_threshold(31 downto 0));
                 end if;
             end if;
         end if;
@@ -559,7 +554,7 @@ begin
         if (ACLK'event and ACLK = '1') then
             if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_LOW_NEW_THRESHOLD_DATA_0) then
-                    int_low_new_threshold(7 downto 0) <= (UNSIGNED(WDATA(7 downto 0)) and wmask(7 downto 0)) or ((not wmask(7 downto 0)) and int_low_new_threshold(7 downto 0));
+                    int_low_new_threshold(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_low_new_threshold(31 downto 0));
                 end if;
             end if;
         end if;
@@ -570,7 +565,7 @@ begin
         if (ACLK'event and ACLK = '1') then
             if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_HIGH_NEW_THRESHOLD_DATA_0) then
-                    int_high_new_threshold(7 downto 0) <= (UNSIGNED(WDATA(7 downto 0)) and wmask(7 downto 0)) or ((not wmask(7 downto 0)) and int_high_new_threshold(7 downto 0));
+                    int_high_new_threshold(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_high_new_threshold(31 downto 0));
                 end if;
             end if;
         end if;
@@ -581,7 +576,7 @@ begin
         if (ACLK'event and ACLK = '1') then
             if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_MAX_VALUE_DATA_0) then
-                    int_max_value(7 downto 0) <= (UNSIGNED(WDATA(7 downto 0)) and wmask(7 downto 0)) or ((not wmask(7 downto 0)) and int_max_value(7 downto 0));
+                    int_max_value(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_max_value(31 downto 0));
                 end if;
             end if;
         end if;

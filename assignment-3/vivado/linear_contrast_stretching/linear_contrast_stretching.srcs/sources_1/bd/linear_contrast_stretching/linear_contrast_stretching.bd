@@ -1,17 +1,17 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xCC6CFA539DDF0AAD",
+      "boundary_crc": "0xCC6CFA535221FB6E",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../linear_contrast_stretching.gen/sources_1/bd/linear_contrast_stretching",
       "name": "linear_contrast_stretching",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.1.1"
+      "tool_version": "2023.1.1",
+      "validated": "true"
     },
     "design_tree": {
       "processing_system7_0": "",
-      "linear_contrast_stretching": "",
       "ps7_0_axi_periph": {
         "s00_couplers": {
           "auto_pc": ""
@@ -25,7 +25,8 @@
         "m00_couplers": {
           "auto_pc": ""
         }
-      }
+      },
+      "LinearContrastStretc_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -1928,46 +1929,6 @@
           }
         }
       },
-      "linear_contrast_stretching": {
-        "vlnv": "Cristi:hls:LinearContrastStretching:1.0",
-        "xci_name": "linear_contrast_stretching_LinearContrastStretc_0_1",
-        "xci_path": "ip/linear_contrast_stretching_LinearContrastStretc_0_1/linear_contrast_stretching_LinearContrastStretc_0_1.xci",
-        "inst_hier_path": "linear_contrast_stretching",
-        "interface_ports": {
-          "m_axi_image_out": {
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "mode": "Master",
-            "address_space_ref": "Data_m_axi_image_out",
-            "base_address": {
-              "minimum": "0x00000000",
-              "maximum": "0xFFFFFFFF",
-              "width": "32"
-            }
-          },
-          "m_axi_image_in": {
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "mode": "Master",
-            "address_space_ref": "Data_m_axi_image_in",
-            "base_address": {
-              "minimum": "0x00000000",
-              "maximum": "0xFFFFFFFF",
-              "width": "32"
-            }
-          }
-        },
-        "addressing": {
-          "address_spaces": {
-            "Data_m_axi_image_out": {
-              "range": "4G",
-              "width": "32"
-            },
-            "Data_m_axi_image_in": {
-              "range": "4G",
-              "width": "32"
-            }
-          }
-        }
-      },
       "ps7_0_axi_periph": {
         "vlnv": "xilinx.com:ip:axi_interconnect:2.1",
         "xci_path": "ip/linear_contrast_stretching_ps7_0_axi_periph_1/linear_contrast_stretching_ps7_0_axi_periph_1.xci",
@@ -2592,18 +2553,58 @@
             ]
           }
         }
+      },
+      "LinearContrastStretc_0": {
+        "vlnv": "Cristi:hls:LinearContrastStretching:1.0",
+        "xci_name": "linear_contrast_stretching_LinearContrastStretc_0_2",
+        "xci_path": "ip/linear_contrast_stretching_LinearContrastStretc_0_2/linear_contrast_stretching_LinearContrastStretc_0_2.xci",
+        "inst_hier_path": "LinearContrastStretc_0",
+        "interface_ports": {
+          "m_axi_image_out": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "Data_m_axi_image_out",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFF",
+              "width": "32"
+            }
+          },
+          "m_axi_image_in": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "Data_m_axi_image_in",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFF",
+              "width": "32"
+            }
+          }
+        },
+        "addressing": {
+          "address_spaces": {
+            "Data_m_axi_image_out": {
+              "range": "4G",
+              "width": "32"
+            },
+            "Data_m_axi_image_in": {
+              "range": "4G",
+              "width": "32"
+            }
+          }
+        }
       }
     },
     "interface_nets": {
       "LinearContrastStretc_0_m_axi_image_in": {
         "interface_ports": [
-          "linear_contrast_stretching/m_axi_image_in",
+          "LinearContrastStretc_0/m_axi_image_in",
           "axi_mem_intercon/S00_AXI"
         ]
       },
       "LinearContrastStretc_0_m_axi_image_out": {
         "interface_ports": [
-          "linear_contrast_stretching/m_axi_image_out",
+          "LinearContrastStretc_0/m_axi_image_out",
           "axi_mem_intercon/S01_AXI"
         ]
       },
@@ -2634,7 +2635,7 @@
       "ps7_0_axi_periph_M00_AXI": {
         "interface_ports": [
           "ps7_0_axi_periph/M00_AXI",
-          "linear_contrast_stretching/s_axi_control"
+          "LinearContrastStretc_0/s_axi_control"
         ]
       }
     },
@@ -2645,14 +2646,14 @@
           "processing_system7_0/M_AXI_GP0_ACLK",
           "ps7_0_axi_periph/S00_ACLK",
           "rst_ps7_0_100M/slowest_sync_clk",
-          "linear_contrast_stretching/ap_clk",
           "ps7_0_axi_periph/M00_ACLK",
           "ps7_0_axi_periph/ACLK",
           "axi_mem_intercon/S00_ACLK",
           "processing_system7_0/S_AXI_HP0_ACLK",
           "axi_mem_intercon/M00_ACLK",
           "axi_mem_intercon/ACLK",
-          "axi_mem_intercon/S01_ACLK"
+          "axi_mem_intercon/S01_ACLK",
+          "LinearContrastStretc_0/ap_clk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -2665,13 +2666,13 @@
         "ports": [
           "rst_ps7_0_100M/peripheral_aresetn",
           "ps7_0_axi_periph/S00_ARESETN",
-          "linear_contrast_stretching/ap_rst_n",
           "ps7_0_axi_periph/M00_ARESETN",
           "ps7_0_axi_periph/ARESETN",
           "axi_mem_intercon/S00_ARESETN",
           "axi_mem_intercon/M00_ARESETN",
           "axi_mem_intercon/ARESETN",
-          "axi_mem_intercon/S01_ARESETN"
+          "axi_mem_intercon/S01_ARESETN",
+          "LinearContrastStretc_0/ap_rst_n"
         ]
       }
     },
@@ -2681,7 +2682,7 @@
           "Data": {
             "segments": {
               "SEG_LinearContrastStretc_0_Reg": {
-                "address_block": "/linear_contrast_stretching/s_axi_control/Reg",
+                "address_block": "/LinearContrastStretc_0/s_axi_control/Reg",
                 "offset": "0x40000000",
                 "range": "64K",
                 "offset_base_param": "C_S_AXI_CONTROL_BASEADDR",
@@ -2691,7 +2692,7 @@
           }
         }
       },
-      "/linear_contrast_stretching": {
+      "/LinearContrastStretc_0": {
         "address_spaces": {
           "Data_m_axi_image_out": {
             "segments": {

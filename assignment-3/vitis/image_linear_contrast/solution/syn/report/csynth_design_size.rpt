@@ -6,7 +6,7 @@
 +----------------------------+--------------------------------+--------------+---------------+----------------------+---------------+
 | Function                   | Location                       | Compile/Link | Unroll/Inline | Performance/Pipeline | Optimizations |
 +----------------------------+--------------------------------+--------------+---------------+----------------------+---------------+
-|   LinearContrastStretching | LinearContrastStretching.cpp:3 | 89           | 139           | 88                   | 108           |
+|   LinearContrastStretching | LinearContrastStretching.cpp:3 | 49           | 52            | 49                   | 70            |
 +----------------------------+--------------------------------+--------------+---------------+----------------------+---------------+
 
 * Description of Compilation Phases

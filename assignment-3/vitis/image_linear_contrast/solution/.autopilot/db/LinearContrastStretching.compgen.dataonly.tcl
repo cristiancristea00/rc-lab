@@ -28,7 +28,7 @@ image_length {
 }
 low_threshold { 
 	dir I
-	width 8
+	width 32
 	depth 1
 	mode ap_none
 	offset 40
@@ -36,7 +36,7 @@ low_threshold {
 }
 high_threshold { 
 	dir I
-	width 8
+	width 32
 	depth 1
 	mode ap_none
 	offset 48
@@ -44,7 +44,7 @@ high_threshold {
 }
 low_new_threshold { 
 	dir I
-	width 8
+	width 32
 	depth 1
 	mode ap_none
 	offset 56
@@ -52,7 +52,7 @@ low_new_threshold {
 }
 high_new_threshold { 
 	dir I
-	width 8
+	width 32
 	depth 1
 	mode ap_none
 	offset 64
@@ -60,7 +60,7 @@ high_new_threshold {
 }
 max_value { 
 	dir I
-	width 8
+	width 32
 	depth 1
 	mode ap_none
 	offset 72

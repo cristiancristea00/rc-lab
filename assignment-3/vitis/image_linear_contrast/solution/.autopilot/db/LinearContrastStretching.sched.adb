@@ -34,10 +34,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>9</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<direction>1</direction>
 				<if_type>4</if_type>
@@ -70,10 +70,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>50</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>4</if_type>
@@ -106,7 +106,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>32</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -142,7 +142,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2775560240</coreId>
+						<coreId>38</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -214,10 +214,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4145378419</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>0</if_type>
@@ -250,10 +250,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>3177396768</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>0</if_type>
@@ -286,10 +286,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>3177428592</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>0</if_type>
@@ -322,10 +322,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>3177435680</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>0</if_type>
@@ -358,10 +358,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1397508187</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>0</if_type>
@@ -373,7 +373,7 @@
 			</item>
 		</ports>
 		<nodes class_id="8" tracking_level="0" version="0">
-			<count>19</count>
+			<count>23</count>
 			<item_version>0</item_version>
 			<item class_id="9" tracking_level="1" version="0" object_id="_11">
 				<Value>
@@ -412,16 +412,16 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2775703888</coreId>
+						<coreId>3177427904</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>60</item>
-					<item>61</item>
+					<item>64</item>
+					<item>65</item>
 				</oprand_edges>
 				<opcode>read</opcode>
 				<m_Display>0</m_Display>
@@ -469,16 +469,16 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>3177431680</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>62</item>
-					<item>63</item>
+					<item>66</item>
+					<item>67</item>
 				</oprand_edges>
 				<opcode>read</opcode>
 				<m_Display>0</m_Display>
@@ -526,16 +526,16 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2775648016</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>64</item>
-					<item>65</item>
+					<item>68</item>
+					<item>69</item>
 				</oprand_edges>
 				<opcode>read</opcode>
 				<m_Display>0</m_Display>
@@ -583,16 +583,16 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>3177426928</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>66</item>
-					<item>67</item>
+					<item>70</item>
+					<item>71</item>
 				</oprand_edges>
 				<opcode>read</opcode>
 				<m_Display>0</m_Display>
@@ -640,16 +640,16 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4144724546</coreId>
+						<coreId>304</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>68</item>
-					<item>69</item>
+					<item>72</item>
+					<item>73</item>
 				</oprand_edges>
 				<opcode>read</opcode>
 				<m_Display>0</m_Display>
@@ -697,7 +697,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4144654659</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -705,8 +705,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>71</item>
-					<item>72</item>
+					<item>74</item>
+					<item>75</item>
 				</oprand_edges>
 				<opcode>read</opcode>
 				<m_Display>0</m_Display>
@@ -754,7 +754,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4144654580</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -762,8 +762,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>73</item>
-					<item>74</item>
+					<item>76</item>
+					<item>77</item>
 				</oprand_edges>
 				<opcode>read</opcode>
 				<m_Display>0</m_Display>
@@ -811,7 +811,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2775680576</coreId>
+						<coreId>3177428592</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -819,8 +819,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>75</item>
-					<item>76</item>
+					<item>78</item>
+					<item>79</item>
 				</oprand_edges>
 				<opcode>read</opcode>
 				<m_Display>0</m_Display>
@@ -836,7 +836,7 @@
 					<Obj>
 						<type>0</type>
 						<id>47</id>
-						<name>low_new_threshold_cast</name>
+						<name>sub4</name>
 						<fileName>image_linear_contrast/solution/code/LinearContrastStretching.cpp</fileName>
 						<fileDirectory>/home/cristian/Documents/ACES/RC/assignment-3/vitis</fileDirectory>
 						<lineNumber>4</lineNumber>
@@ -868,23 +868,24 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1145981250</coreId>
+						<coreId>1668641396</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>9</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<oprand_edges>
-					<count>1</count>
+					<count>2</count>
 					<item_version>0</item_version>
-					<item>77</item>
+					<item>80</item>
+					<item>81</item>
 				</oprand_edges>
-				<opcode>zext</opcode>
+				<opcode>sub</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>9</m_topoIndex>
+				<m_delay>2.55</m_delay>
+				<m_topoIndex>17</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_20">
@@ -892,7 +893,7 @@
 					<Obj>
 						<type>0</type>
 						<id>48</id>
-						<name>low_threshold_cast7</name>
+						<name>sub6</name>
 						<fileName>image_linear_contrast/solution/code/LinearContrastStretching.cpp</fileName>
 						<fileDirectory>/home/cristian/Documents/ACES/RC/assignment-3/vitis</fileDirectory>
 						<lineNumber>4</lineNumber>
@@ -924,234 +925,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2775693328</coreId>
+						<coreId>3177490752</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>9</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>78</item>
-				</oprand_edges>
-				<opcode>zext</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>10</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_21">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>49</id>
-						<name>high_new_threshold_cast</name>
-						<fileName>image_linear_contrast/solution/code/LinearContrastStretching.cpp</fileName>
-						<fileDirectory>/home/cristian/Documents/ACES/RC/assignment-3/vitis</fileDirectory>
-						<lineNumber>4</lineNumber>
-						<contextFuncName>LinearContrastStretching</contextFuncName>
-						<contextNormFuncName>LinearContrastStretching</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/cristian/Documents/ACES/RC/assignment-3/vitis</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>image_linear_contrast/solution/code/LinearContrastStretching.cpp</first>
-											<second>LinearContrastStretching</second>
-										</first>
-										<second>4</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>2775694624</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>9</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>79</item>
-				</oprand_edges>
-				<opcode>zext</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>11</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_22">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>50</id>
-						<name>high_threshold_cast6</name>
-						<fileName>image_linear_contrast/solution/code/LinearContrastStretching.cpp</fileName>
-						<fileDirectory>/home/cristian/Documents/ACES/RC/assignment-3/vitis</fileDirectory>
-						<lineNumber>4</lineNumber>
-						<contextFuncName>LinearContrastStretching</contextFuncName>
-						<contextNormFuncName>LinearContrastStretching</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/cristian/Documents/ACES/RC/assignment-3/vitis</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>image_linear_contrast/solution/code/LinearContrastStretching.cpp</first>
-											<second>LinearContrastStretching</second>
-										</first>
-										<second>4</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>2775685232</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>9</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>80</item>
-				</oprand_edges>
-				<opcode>zext</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>12</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_23">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>51</id>
-						<name>max_value_cast</name>
-						<fileName>image_linear_contrast/solution/code/LinearContrastStretching.cpp</fileName>
-						<fileDirectory>/home/cristian/Documents/ACES/RC/assignment-3/vitis</fileDirectory>
-						<lineNumber>4</lineNumber>
-						<contextFuncName>LinearContrastStretching</contextFuncName>
-						<contextNormFuncName>LinearContrastStretching</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/cristian/Documents/ACES/RC/assignment-3/vitis</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>image_linear_contrast/solution/code/LinearContrastStretching.cpp</first>
-											<second>LinearContrastStretching</second>
-										</first>
-										<second>4</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>2775699328</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>9</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>81</item>
-				</oprand_edges>
-				<opcode>zext</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>13</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_24">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>52</id>
-						<name>sub24</name>
-						<fileName>image_linear_contrast/solution/code/LinearContrastStretching.cpp</fileName>
-						<fileDirectory>/home/cristian/Documents/ACES/RC/assignment-3/vitis</fileDirectory>
-						<lineNumber>4</lineNumber>
-						<contextFuncName>LinearContrastStretching</contextFuncName>
-						<contextNormFuncName>LinearContrastStretching</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/cristian/Documents/ACES/RC/assignment-3/vitis</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>image_linear_contrast/solution/code/LinearContrastStretching.cpp</first>
-											<second>LinearContrastStretching</second>
-										</first>
-										<second>4</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>9</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -1164,16 +941,16 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.91</m_delay>
-				<m_topoIndex>14</m_topoIndex>
+				<m_delay>2.55</m_delay>
+				<m_topoIndex>18</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_25">
+			<item class_id_reference="9" object_id="_21">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>53</id>
-						<name>sub42</name>
+						<id>49</id>
+						<name>sub10</name>
 						<fileName>image_linear_contrast/solution/code/LinearContrastStretching.cpp</fileName>
 						<fileDirectory>/home/cristian/Documents/ACES/RC/assignment-3/vitis</fileDirectory>
 						<lineNumber>4</lineNumber>
@@ -1205,10 +982,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>3177495872</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>9</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -1221,130 +998,16 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.91</m_delay>
-				<m_topoIndex>15</m_topoIndex>
+				<m_delay>2.55</m_delay>
+				<m_topoIndex>19</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_26">
+			<item class_id_reference="9" object_id="_22">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>54</id>
-						<name>sub_ln34</name>
-						<fileName>image_linear_contrast/solution/code/LinearContrastStretching.cpp</fileName>
-						<fileDirectory>/home/cristian/Documents/ACES/RC/assignment-3/vitis</fileDirectory>
-						<lineNumber>34</lineNumber>
-						<contextFuncName>LinearContrastStretching</contextFuncName>
-						<contextNormFuncName>LinearContrastStretching</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/cristian/Documents/ACES/RC/assignment-3/vitis</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>image_linear_contrast/solution/code/LinearContrastStretching.cpp</first>
-											<second>LinearContrastStretching</second>
-										</first>
-										<second>34</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>2775648016</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>9</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>86</item>
-					<item>87</item>
-				</oprand_edges>
-				<opcode>sub</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.91</m_delay>
-				<m_topoIndex>16</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_27">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>55</id>
-						<name>sub_ln38</name>
-						<fileName>image_linear_contrast/solution/code/LinearContrastStretching.cpp</fileName>
-						<fileDirectory>/home/cristian/Documents/ACES/RC/assignment-3/vitis</fileDirectory>
-						<lineNumber>38</lineNumber>
-						<contextFuncName>LinearContrastStretching</contextFuncName>
-						<contextNormFuncName>LinearContrastStretching</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/cristian/Documents/ACES/RC/assignment-3/vitis</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>image_linear_contrast/solution/code/LinearContrastStretching.cpp</first>
-											<second>LinearContrastStretching</second>
-										</first>
-										<second>38</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>9</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>88</item>
-					<item>89</item>
-				</oprand_edges>
-				<opcode>sub</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.91</m_delay>
-				<m_topoIndex>17</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_28">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>56</id>
-						<name>_ln4</name>
+						<id>50</id>
+						<name>sub12</name>
 						<fileName>image_linear_contrast/solution/code/LinearContrastStretching.cpp</fileName>
 						<fileDirectory>/home/cristian/Documents/ACES/RC/assignment-3/vitis</fileDirectory>
 						<lineNumber>4</lineNumber>
@@ -1376,51 +1039,35 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>3177490752</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>0</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<oprand_edges>
-					<count>18</count>
+					<count>2</count>
 					<item_version>0</item_version>
-					<item>91</item>
-					<item>92</item>
-					<item>93</item>
-					<item>94</item>
-					<item>95</item>
-					<item>96</item>
-					<item>97</item>
-					<item>98</item>
-					<item>99</item>
-					<item>100</item>
-					<item>101</item>
-					<item>102</item>
-					<item>103</item>
-					<item>104</item>
-					<item>105</item>
-					<item>106</item>
-					<item>107</item>
-					<item>108</item>
+					<item>86</item>
+					<item>87</item>
 				</oprand_edges>
-				<opcode>call</opcode>
+				<opcode>sub</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>2.55</m_delay>
-				<m_topoIndex>18</m_topoIndex>
+				<m_topoIndex>20</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_29">
+			<item class_id_reference="9" object_id="_23">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>57</id>
-						<name>_ln41</name>
+						<id>51</id>
+						<name>trunc_ln</name>
 						<fileName>image_linear_contrast/solution/code/LinearContrastStretching.cpp</fileName>
 						<fileDirectory>/home/cristian/Documents/ACES/RC/assignment-3/vitis</fileDirectory>
-						<lineNumber>41</lineNumber>
+						<lineNumber>27</lineNumber>
 						<contextFuncName>LinearContrastStretching</contextFuncName>
 						<contextNormFuncName>LinearContrastStretching</contextNormFuncName>
 						<inlineStackInfo>
@@ -1436,7 +1083,7 @@
 											<first>image_linear_contrast/solution/code/LinearContrastStretching.cpp</first>
 											<second>LinearContrastStretching</second>
 										</first>
-										<second>41</second>
+										<second>27</second>
 									</item>
 								</second>
 							</item>
@@ -1450,6 +1097,595 @@
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
 						<coreId>0</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>30</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>4</count>
+					<item_version>0</item_version>
+					<item>89</item>
+					<item>90</item>
+					<item>92</item>
+					<item>94</item>
+				</oprand_edges>
+				<opcode>partselect</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>9</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_24">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>52</id>
+						<name>sext_ln27</name>
+						<fileName>image_linear_contrast/solution/code/LinearContrastStretching.cpp</fileName>
+						<fileDirectory>/home/cristian/Documents/ACES/RC/assignment-3/vitis</fileDirectory>
+						<lineNumber>27</lineNumber>
+						<contextFuncName>LinearContrastStretching</contextFuncName>
+						<contextNormFuncName>LinearContrastStretching</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/cristian/Documents/ACES/RC/assignment-3/vitis</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>image_linear_contrast/solution/code/LinearContrastStretching.cpp</first>
+											<second>LinearContrastStretching</second>
+										</first>
+										<second>27</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>3177516112</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>95</item>
+				</oprand_edges>
+				<opcode>sext</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>11</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_25">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>53</id>
+						<name>image_in_addr</name>
+						<fileName>image_linear_contrast/solution/code/LinearContrastStretching.cpp</fileName>
+						<fileDirectory>/home/cristian/Documents/ACES/RC/assignment-3/vitis</fileDirectory>
+						<lineNumber>27</lineNumber>
+						<contextFuncName>LinearContrastStretching</contextFuncName>
+						<contextNormFuncName>LinearContrastStretching</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/cristian/Documents/ACES/RC/assignment-3/vitis</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>image_linear_contrast/solution/code/LinearContrastStretching.cpp</first>
+											<second>LinearContrastStretching</second>
+										</first>
+										<second>27</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>3177527904</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>96</item>
+					<item>97</item>
+				</oprand_edges>
+				<opcode>getelementptr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>12</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_26">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>54</id>
+						<name>empty</name>
+						<fileName>image_linear_contrast/solution/code/LinearContrastStretching.cpp</fileName>
+						<fileDirectory>/home/cristian/Documents/ACES/RC/assignment-3/vitis</fileDirectory>
+						<lineNumber>27</lineNumber>
+						<contextFuncName>LinearContrastStretching</contextFuncName>
+						<contextNormFuncName>LinearContrastStretching</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/cristian/Documents/ACES/RC/assignment-3/vitis</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>image_linear_contrast/solution/code/LinearContrastStretching.cpp</first>
+											<second>LinearContrastStretching</second>
+										</first>
+										<second>27</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>0</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>99</item>
+					<item>100</item>
+					<item>101</item>
+				</oprand_edges>
+				<opcode>readreq</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>7.30</m_delay>
+				<m_topoIndex>13</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_27">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>55</id>
+						<name>trunc_ln27_1</name>
+						<fileName>image_linear_contrast/solution/code/LinearContrastStretching.cpp</fileName>
+						<fileDirectory>/home/cristian/Documents/ACES/RC/assignment-3/vitis</fileDirectory>
+						<lineNumber>27</lineNumber>
+						<contextFuncName>LinearContrastStretching</contextFuncName>
+						<contextNormFuncName>LinearContrastStretching</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/cristian/Documents/ACES/RC/assignment-3/vitis</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>image_linear_contrast/solution/code/LinearContrastStretching.cpp</first>
+											<second>LinearContrastStretching</second>
+										</first>
+										<second>27</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>0</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>30</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>4</count>
+					<item_version>0</item_version>
+					<item>102</item>
+					<item>103</item>
+					<item>104</item>
+					<item>105</item>
+				</oprand_edges>
+				<opcode>partselect</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>10</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_28">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>56</id>
+						<name>sext_ln27_1</name>
+						<fileName>image_linear_contrast/solution/code/LinearContrastStretching.cpp</fileName>
+						<fileDirectory>/home/cristian/Documents/ACES/RC/assignment-3/vitis</fileDirectory>
+						<lineNumber>27</lineNumber>
+						<contextFuncName>LinearContrastStretching</contextFuncName>
+						<contextNormFuncName>LinearContrastStretching</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/cristian/Documents/ACES/RC/assignment-3/vitis</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>image_linear_contrast/solution/code/LinearContrastStretching.cpp</first>
+											<second>LinearContrastStretching</second>
+										</first>
+										<second>27</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>0</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>106</item>
+				</oprand_edges>
+				<opcode>sext</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>14</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_29">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>57</id>
+						<name>image_out_addr</name>
+						<fileName>image_linear_contrast/solution/code/LinearContrastStretching.cpp</fileName>
+						<fileDirectory>/home/cristian/Documents/ACES/RC/assignment-3/vitis</fileDirectory>
+						<lineNumber>27</lineNumber>
+						<contextFuncName>LinearContrastStretching</contextFuncName>
+						<contextNormFuncName>LinearContrastStretching</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/cristian/Documents/ACES/RC/assignment-3/vitis</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>image_linear_contrast/solution/code/LinearContrastStretching.cpp</first>
+											<second>LinearContrastStretching</second>
+										</first>
+										<second>27</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>0</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>107</item>
+					<item>108</item>
+				</oprand_edges>
+				<opcode>getelementptr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>15</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_30">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>58</id>
+						<name>empty_24</name>
+						<fileName>image_linear_contrast/solution/code/LinearContrastStretching.cpp</fileName>
+						<fileDirectory>/home/cristian/Documents/ACES/RC/assignment-3/vitis</fileDirectory>
+						<lineNumber>27</lineNumber>
+						<contextFuncName>LinearContrastStretching</contextFuncName>
+						<contextNormFuncName>LinearContrastStretching</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/cristian/Documents/ACES/RC/assignment-3/vitis</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>image_linear_contrast/solution/code/LinearContrastStretching.cpp</first>
+											<second>LinearContrastStretching</second>
+										</first>
+										<second>27</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>1330007625</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>110</item>
+					<item>111</item>
+					<item>112</item>
+				</oprand_edges>
+				<opcode>writereq</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>7.30</m_delay>
+				<m_topoIndex>16</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_31">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>59</id>
+						<name>_ln27</name>
+						<fileName>image_linear_contrast/solution/code/LinearContrastStretching.cpp</fileName>
+						<fileDirectory>/home/cristian/Documents/ACES/RC/assignment-3/vitis</fileDirectory>
+						<lineNumber>27</lineNumber>
+						<contextFuncName>LinearContrastStretching</contextFuncName>
+						<contextNormFuncName>LinearContrastStretching</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/cristian/Documents/ACES/RC/assignment-3/vitis</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>image_linear_contrast/solution/code/LinearContrastStretching.cpp</first>
+											<second>LinearContrastStretching</second>
+										</first>
+										<second>27</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>3177516112</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>0</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>16</count>
+					<item_version>0</item_version>
+					<item>114</item>
+					<item>115</item>
+					<item>116</item>
+					<item>117</item>
+					<item>118</item>
+					<item>119</item>
+					<item>120</item>
+					<item>121</item>
+					<item>122</item>
+					<item>123</item>
+					<item>124</item>
+					<item>125</item>
+					<item>126</item>
+					<item>127</item>
+					<item>535</item>
+					<item>536</item>
+				</oprand_edges>
+				<opcode>call</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>4.14</m_delay>
+				<m_topoIndex>21</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_32">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>60</id>
+						<name>empty_25</name>
+						<fileName>image_linear_contrast/solution/code/LinearContrastStretching.cpp</fileName>
+						<fileDirectory>/home/cristian/Documents/ACES/RC/assignment-3/vitis</fileDirectory>
+						<lineNumber>46</lineNumber>
+						<contextFuncName>LinearContrastStretching</contextFuncName>
+						<contextNormFuncName>LinearContrastStretching</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/cristian/Documents/ACES/RC/assignment-3/vitis</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>image_linear_contrast/solution/code/LinearContrastStretching.cpp</first>
+											<second>LinearContrastStretching</second>
+										</first>
+										<second>46</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>0</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>129</item>
+					<item>130</item>
+					<item>534</item>
+				</oprand_edges>
+				<opcode>writeresp</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>7.30</m_delay>
+				<m_topoIndex>22</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_33">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>61</id>
+						<name>_ln46</name>
+						<fileName>image_linear_contrast/solution/code/LinearContrastStretching.cpp</fileName>
+						<fileDirectory>/home/cristian/Documents/ACES/RC/assignment-3/vitis</fileDirectory>
+						<lineNumber>46</lineNumber>
+						<contextFuncName>LinearContrastStretching</contextFuncName>
+						<contextNormFuncName>LinearContrastStretching</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/cristian/Documents/ACES/RC/assignment-3/vitis</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>image_linear_contrast/solution/code/LinearContrastStretching.cpp</first>
+											<second>LinearContrastStretching</second>
+										</first>
+										<second>46</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>3177531824</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1464,19 +1700,19 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>19</m_topoIndex>
+				<m_topoIndex>23</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 		</nodes>
 		<consts class_id="15" tracking_level="0" version="0">
-			<count>1</count>
+			<count>3</count>
 			<item_version>0</item_version>
-			<item class_id="16" tracking_level="1" version="0" object_id="_30">
+			<item class_id="16" tracking_level="1" version="0" object_id="_34">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>90</id>
-						<name>LinearContrastStretching_Pipeline_VITIS_LOOP_24_1</name>
+						<id>91</id>
+						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -1494,22 +1730,84 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2775648016</coreId>
+						<coreId>3177532784</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<const_type>0</const_type>
+				<content>2</content>
+			</item>
+			<item class_id_reference="16" object_id="_35">
+				<Value>
+					<Obj>
+						<type>2</type>
+						<id>93</id>
+						<name>empty</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<contextNormFuncName></contextNormFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>128</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<const_type>0</const_type>
+				<content>31</content>
+			</item>
+			<item class_id_reference="16" object_id="_36">
+				<Value>
+					<Obj>
+						<type>2</type>
+						<id>113</id>
+						<name>LinearContrastStretching_Pipeline_VITIS_LOOP_27_1</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<contextNormFuncName></contextNormFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
 				<const_type>6</const_type>
-				<content>&lt;constant:LinearContrastStretching_Pipeline_VITIS_LOOP_24_1&gt;</content>
+				<content>&lt;constant:LinearContrastStretching_Pipeline_VITIS_LOOP_27_1&gt;</content>
 			</item>
 		</consts>
 		<blocks class_id="17" tracking_level="0" version="0">
 			<count>1</count>
 			<item_version>0</item_version>
-			<item class_id="18" tracking_level="1" version="0" object_id="_31">
+			<item class_id="18" tracking_level="1" version="0" object_id="_37">
 				<Obj>
 					<type>3</type>
-					<id>58</id>
+					<id>62</id>
 					<name>LinearContrastStretching</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
@@ -1528,11 +1826,11 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2775507088</coreId>
+					<coreId>28</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
-					<count>19</count>
+					<count>23</count>
 					<item_version>0</item_version>
 					<item>39</item>
 					<item>40</item>
@@ -1553,283 +1851,364 @@
 					<item>55</item>
 					<item>56</item>
 					<item>57</item>
+					<item>58</item>
+					<item>59</item>
+					<item>60</item>
+					<item>61</item>
 				</node_objs>
 			</item>
 		</blocks>
 		<edges class_id="19" tracking_level="0" version="0">
-			<count>39</count>
+			<count>50</count>
 			<item_version>0</item_version>
-			<item class_id="20" tracking_level="1" version="0" object_id="_32">
-				<id>61</id>
+			<item class_id="20" tracking_level="1" version="0" object_id="_38">
+				<id>65</id>
 				<edge_type>1</edge_type>
 				<source_obj>10</source_obj>
 				<sink_obj>39</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_33">
-				<id>63</id>
+			<item class_id_reference="20" object_id="_39">
+				<id>67</id>
 				<edge_type>1</edge_type>
 				<source_obj>9</source_obj>
 				<sink_obj>40</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_34">
-				<id>65</id>
+			<item class_id_reference="20" object_id="_40">
+				<id>69</id>
 				<edge_type>1</edge_type>
 				<source_obj>8</source_obj>
 				<sink_obj>41</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_35">
-				<id>67</id>
+			<item class_id_reference="20" object_id="_41">
+				<id>71</id>
 				<edge_type>1</edge_type>
 				<source_obj>7</source_obj>
 				<sink_obj>42</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_36">
-				<id>69</id>
+			<item class_id_reference="20" object_id="_42">
+				<id>73</id>
 				<edge_type>1</edge_type>
 				<source_obj>6</source_obj>
 				<sink_obj>43</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_37">
-				<id>72</id>
+			<item class_id_reference="20" object_id="_43">
+				<id>75</id>
 				<edge_type>1</edge_type>
 				<source_obj>5</source_obj>
 				<sink_obj>44</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_38">
-				<id>74</id>
+			<item class_id_reference="20" object_id="_44">
+				<id>77</id>
 				<edge_type>1</edge_type>
 				<source_obj>4</source_obj>
 				<sink_obj>45</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_39">
-				<id>76</id>
+			<item class_id_reference="20" object_id="_45">
+				<id>79</id>
 				<edge_type>1</edge_type>
 				<source_obj>3</source_obj>
 				<sink_obj>46</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_40">
-				<id>77</id>
+			<item class_id_reference="20" object_id="_46">
+				<id>80</id>
 				<edge_type>1</edge_type>
-				<source_obj>41</source_obj>
+				<source_obj>39</source_obj>
 				<sink_obj>47</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_41">
-				<id>78</id>
+			<item class_id_reference="20" object_id="_47">
+				<id>81</id>
 				<edge_type>1</edge_type>
-				<source_obj>43</source_obj>
+				<source_obj>40</source_obj>
+				<sink_obj>47</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_48">
+				<id>82</id>
+				<edge_type>1</edge_type>
+				<source_obj>39</source_obj>
 				<sink_obj>48</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_42">
-				<id>79</id>
+			<item class_id_reference="20" object_id="_49">
+				<id>83</id>
+				<edge_type>1</edge_type>
+				<source_obj>42</source_obj>
+				<sink_obj>48</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_50">
+				<id>84</id>
 				<edge_type>1</edge_type>
 				<source_obj>40</source_obj>
 				<sink_obj>49</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_43">
-				<id>80</id>
+			<item class_id_reference="20" object_id="_51">
+				<id>85</id>
+				<edge_type>1</edge_type>
+				<source_obj>41</source_obj>
+				<sink_obj>49</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_52">
+				<id>86</id>
 				<edge_type>1</edge_type>
 				<source_obj>42</source_obj>
 				<sink_obj>50</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_44">
-				<id>81</id>
-				<edge_type>1</edge_type>
-				<source_obj>39</source_obj>
-				<sink_obj>51</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_45">
-				<id>82</id>
-				<edge_type>1</edge_type>
-				<source_obj>51</source_obj>
-				<sink_obj>52</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_46">
-				<id>83</id>
-				<edge_type>1</edge_type>
-				<source_obj>49</source_obj>
-				<sink_obj>52</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_47">
-				<id>84</id>
-				<edge_type>1</edge_type>
-				<source_obj>49</source_obj>
-				<sink_obj>53</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_48">
-				<id>85</id>
-				<edge_type>1</edge_type>
-				<source_obj>47</source_obj>
-				<sink_obj>53</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_49">
-				<id>86</id>
-				<edge_type>1</edge_type>
-				<source_obj>51</source_obj>
-				<sink_obj>54</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_50">
+			<item class_id_reference="20" object_id="_53">
 				<id>87</id>
 				<edge_type>1</edge_type>
-				<source_obj>50</source_obj>
-				<sink_obj>54</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_51">
-				<id>88</id>
-				<edge_type>1</edge_type>
-				<source_obj>50</source_obj>
-				<sink_obj>55</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_52">
-				<id>89</id>
-				<edge_type>1</edge_type>
-				<source_obj>48</source_obj>
-				<sink_obj>55</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_53">
-				<id>91</id>
-				<edge_type>1</edge_type>
-				<source_obj>90</source_obj>
-				<sink_obj>56</sink_obj>
+				<source_obj>43</source_obj>
+				<sink_obj>50</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_54">
-				<id>92</id>
+				<id>90</id>
 				<edge_type>1</edge_type>
-				<source_obj>2</source_obj>
-				<sink_obj>56</sink_obj>
+				<source_obj>45</source_obj>
+				<sink_obj>51</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_55">
-				<id>93</id>
+				<id>92</id>
 				<edge_type>1</edge_type>
-				<source_obj>1</source_obj>
-				<sink_obj>56</sink_obj>
+				<source_obj>91</source_obj>
+				<sink_obj>51</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_56">
 				<id>94</id>
 				<edge_type>1</edge_type>
-				<source_obj>44</source_obj>
-				<sink_obj>56</sink_obj>
+				<source_obj>93</source_obj>
+				<sink_obj>51</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_57">
 				<id>95</id>
 				<edge_type>1</edge_type>
-				<source_obj>43</source_obj>
-				<sink_obj>56</sink_obj>
+				<source_obj>51</source_obj>
+				<sink_obj>52</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_58">
 				<id>96</id>
 				<edge_type>1</edge_type>
-				<source_obj>53</source_obj>
-				<sink_obj>56</sink_obj>
+				<source_obj>2</source_obj>
+				<sink_obj>53</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_59">
 				<id>97</id>
 				<edge_type>1</edge_type>
+				<source_obj>52</source_obj>
+				<sink_obj>53</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_60">
+				<id>100</id>
+				<edge_type>1</edge_type>
+				<source_obj>53</source_obj>
+				<sink_obj>54</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_61">
+				<id>101</id>
+				<edge_type>1</edge_type>
+				<source_obj>44</source_obj>
+				<sink_obj>54</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_62">
+				<id>103</id>
+				<edge_type>1</edge_type>
+				<source_obj>46</source_obj>
+				<sink_obj>55</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_63">
+				<id>104</id>
+				<edge_type>1</edge_type>
+				<source_obj>91</source_obj>
+				<sink_obj>55</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_64">
+				<id>105</id>
+				<edge_type>1</edge_type>
+				<source_obj>93</source_obj>
+				<sink_obj>55</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_65">
+				<id>106</id>
+				<edge_type>1</edge_type>
 				<source_obj>55</source_obj>
 				<sink_obj>56</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_60">
-				<id>98</id>
-				<edge_type>1</edge_type>
-				<source_obj>41</source_obj>
-				<sink_obj>56</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_61">
-				<id>99</id>
-				<edge_type>1</edge_type>
-				<source_obj>42</source_obj>
-				<sink_obj>56</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_62">
-				<id>100</id>
-				<edge_type>1</edge_type>
-				<source_obj>43</source_obj>
-				<sink_obj>56</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_63">
-				<id>101</id>
-				<edge_type>1</edge_type>
-				<source_obj>41</source_obj>
-				<sink_obj>56</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_64">
-				<id>102</id>
-				<edge_type>1</edge_type>
-				<source_obj>43</source_obj>
-				<sink_obj>56</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_65">
-				<id>103</id>
-				<edge_type>1</edge_type>
-				<source_obj>45</source_obj>
-				<sink_obj>56</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
 			<item class_id_reference="20" object_id="_66">
-				<id>104</id>
+				<id>107</id>
 				<edge_type>1</edge_type>
-				<source_obj>46</source_obj>
-				<sink_obj>56</sink_obj>
+				<source_obj>1</source_obj>
+				<sink_obj>57</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_67">
-				<id>105</id>
+				<id>108</id>
 				<edge_type>1</edge_type>
-				<source_obj>42</source_obj>
-				<sink_obj>56</sink_obj>
+				<source_obj>56</source_obj>
+				<sink_obj>57</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_68">
-				<id>106</id>
+				<id>111</id>
 				<edge_type>1</edge_type>
-				<source_obj>52</source_obj>
-				<sink_obj>56</sink_obj>
+				<source_obj>57</source_obj>
+				<sink_obj>58</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_69">
-				<id>107</id>
+				<id>112</id>
 				<edge_type>1</edge_type>
-				<source_obj>54</source_obj>
-				<sink_obj>56</sink_obj>
+				<source_obj>44</source_obj>
+				<sink_obj>58</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_70">
-				<id>108</id>
+				<id>114</id>
+				<edge_type>1</edge_type>
+				<source_obj>113</source_obj>
+				<sink_obj>59</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_71">
+				<id>115</id>
+				<edge_type>1</edge_type>
+				<source_obj>2</source_obj>
+				<sink_obj>59</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_72">
+				<id>116</id>
+				<edge_type>1</edge_type>
+				<source_obj>1</source_obj>
+				<sink_obj>59</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_73">
+				<id>117</id>
+				<edge_type>1</edge_type>
+				<source_obj>51</source_obj>
+				<sink_obj>59</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_74">
+				<id>118</id>
+				<edge_type>1</edge_type>
+				<source_obj>55</source_obj>
+				<sink_obj>59</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_75">
+				<id>119</id>
+				<edge_type>1</edge_type>
+				<source_obj>44</source_obj>
+				<sink_obj>59</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_76">
+				<id>120</id>
+				<edge_type>1</edge_type>
+				<source_obj>41</source_obj>
+				<sink_obj>59</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_77">
+				<id>121</id>
+				<edge_type>1</edge_type>
+				<source_obj>43</source_obj>
+				<sink_obj>59</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_78">
+				<id>122</id>
+				<edge_type>1</edge_type>
+				<source_obj>42</source_obj>
+				<sink_obj>59</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_79">
+				<id>123</id>
+				<edge_type>1</edge_type>
+				<source_obj>47</source_obj>
+				<sink_obj>59</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_80">
+				<id>124</id>
+				<edge_type>1</edge_type>
+				<source_obj>48</source_obj>
+				<sink_obj>59</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_81">
+				<id>125</id>
 				<edge_type>1</edge_type>
 				<source_obj>40</source_obj>
-				<sink_obj>56</sink_obj>
+				<sink_obj>59</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_82">
+				<id>126</id>
+				<edge_type>1</edge_type>
+				<source_obj>49</source_obj>
+				<sink_obj>59</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_83">
+				<id>127</id>
+				<edge_type>1</edge_type>
+				<source_obj>50</source_obj>
+				<sink_obj>59</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_84">
+				<id>130</id>
+				<edge_type>1</edge_type>
+				<source_obj>57</source_obj>
+				<sink_obj>60</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_85">
+				<id>534</id>
+				<edge_type>4</edge_type>
+				<source_obj>59</source_obj>
+				<sink_obj>60</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_86">
+				<id>535</id>
+				<edge_type>4</edge_type>
+				<source_obj>58</source_obj>
+				<sink_obj>59</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_87">
+				<id>536</id>
+				<edge_type>4</edge_type>
+				<source_obj>54</source_obj>
+				<sink_obj>59</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 		</edges>
@@ -1837,7 +2216,7 @@
 	<cdfg_regions class_id="21" tracking_level="0" version="0">
 		<count>1</count>
 		<item_version>0</item_version>
-		<item class_id="22" tracking_level="1" version="0" object_id="_71">
+		<item class_id="22" tracking_level="1" version="0" object_id="_88">
 			<mId>1</mId>
 			<mTag>LinearContrastStretching</mTag>
 			<mNormTag>LinearContrastStretching</mNormTag>
@@ -1849,7 +2228,7 @@
 			<basic_blocks>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>58</item>
+				<item>62</item>
 			</basic_blocks>
 			<mII>-1</mII>
 			<mDepth>-1</mDepth>
@@ -1864,7 +2243,7 @@
 	<fsm class_id="-1"></fsm>
 	<res class_id="-1"></res>
 	<node_label_latency class_id="26" tracking_level="0" version="0">
-		<count>19</count>
+		<count>23</count>
 		<item_version>0</item_version>
 		<item class_id="27" tracking_level="0" version="0">
 			<first>39</first>
@@ -1925,28 +2304,28 @@
 		<item>
 			<first>47</first>
 			<second>
-				<first>0</first>
+				<first>9</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>48</first>
 			<second>
-				<first>0</first>
+				<first>9</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>49</first>
 			<second>
-				<first>0</first>
+				<first>9</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>50</first>
 			<second>
-				<first>0</first>
+				<first>9</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -1960,22 +2339,22 @@
 		<item>
 			<first>52</first>
 			<second>
-				<first>0</first>
+				<first>1</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>53</first>
 			<second>
-				<first>0</first>
+				<first>1</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>54</first>
 			<second>
-				<first>0</first>
-				<second>0</second>
+				<first>1</first>
+				<second>7</second>
 			</second>
 		</item>
 		<item>
@@ -1988,14 +2367,42 @@
 		<item>
 			<first>56</first>
 			<second>
-				<first>0</first>
-				<second>1</second>
+				<first>8</first>
+				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>57</first>
 			<second>
-				<first>1</first>
+				<first>8</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>58</first>
+			<second>
+				<first>8</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>59</first>
+			<second>
+				<first>9</first>
+				<second>1</second>
+			</second>
+		</item>
+		<item>
+			<first>60</first>
+			<second>
+				<first>11</first>
+				<second>4</second>
+			</second>
+		</item>
+		<item>
+			<first>61</first>
+			<second>
+				<first>15</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -2004,10 +2411,10 @@
 		<count>1</count>
 		<item_version>0</item_version>
 		<item class_id="30" tracking_level="0" version="0">
-			<first>58</first>
+			<first>62</first>
 			<second class_id="31" tracking_level="0" version="0">
 				<first>0</first>
-				<second>1</second>
+				<second>15</second>
 			</second>
 		</item>
 	</bblk_ent_exit>

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'LinearContrastStretching'" level="0">
-<item name = "Date">Thu Apr  4 15:41:53 2024
+<item name = "Date">Sat Apr  6 10:44:00 2024
 </item>
 <item name = "Version">2023.1.1 (Build 3869133 on Jun 15 2023)</item>
 <item name = "Project">image_linear_contrast</item>
@@ -31,7 +31,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122">LinearContrastStretching_Pipeline_VITIS_LOOP_24_1, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145">LinearContrastStretching_Pipeline_VITIS_LOOP_27_1, ?, ?, ?, ?, ?, ?, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

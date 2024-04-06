@@ -13,7 +13,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122/grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_activity": {
+				"grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145/grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},

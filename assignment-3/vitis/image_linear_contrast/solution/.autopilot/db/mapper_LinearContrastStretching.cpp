@@ -350,33 +350,33 @@ class AESL_RUNTIME_BC {
     string mName;
 };
 using hls::sim::Byte;
-extern "C" void LinearContrastStretching(Byte<1>*, Byte<1>*, int, int, int, char, char, char, char, char);
-extern "C" void apatb_LinearContrastStretching_hw(volatile void * __xlx_apatb_param_image_out, volatile void * __xlx_apatb_param_image_in, int __xlx_apatb_param_image_length, char __xlx_apatb_param_low_threshold, char __xlx_apatb_param_high_threshold, char __xlx_apatb_param_low_new_threshold, char __xlx_apatb_param_high_new_threshold, char __xlx_apatb_param_max_value) {
+extern "C" void LinearContrastStretching(Byte<4>*, Byte<4>*, int, int, int, int, int, int, int, int);
+extern "C" void apatb_LinearContrastStretching_hw(volatile void * __xlx_apatb_param_image_out, volatile void * __xlx_apatb_param_image_in, int __xlx_apatb_param_image_length, int __xlx_apatb_param_low_threshold, int __xlx_apatb_param_high_threshold, int __xlx_apatb_param_low_new_threshold, int __xlx_apatb_param_high_new_threshold, int __xlx_apatb_param_max_value) {
 using hls::sim::createStream;
   // Collect __xlx_image_out__tmp_vec
-std::vector<Byte<1>> __xlx_image_out__tmp_vec;
+std::vector<Byte<4>> __xlx_image_out__tmp_vec;
 for (size_t i = 0; i < 1; ++i){
-__xlx_image_out__tmp_vec.push_back(((Byte<1>*)__xlx_apatb_param_image_out)[i]);
+__xlx_image_out__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_image_out)[i]);
 }
   int __xlx_size_param_image_out = 1;
   int __xlx_offset_param_image_out = 0;
-  int __xlx_offset_byte_param_image_out = 0*1;
+  int __xlx_offset_byte_param_image_out = 0*4;
   // Collect __xlx_image_in__tmp_vec
-std::vector<Byte<1>> __xlx_image_in__tmp_vec;
+std::vector<Byte<4>> __xlx_image_in__tmp_vec;
 for (size_t i = 0; i < 1; ++i){
-__xlx_image_in__tmp_vec.push_back(((Byte<1>*)__xlx_apatb_param_image_in)[i]);
+__xlx_image_in__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_image_in)[i]);
 }
   int __xlx_size_param_image_in = 1;
   int __xlx_offset_param_image_in = 0;
-  int __xlx_offset_byte_param_image_in = 0*1;
+  int __xlx_offset_byte_param_image_in = 0*4;
   // DUT call
   LinearContrastStretching(__xlx_image_out__tmp_vec.data(), __xlx_image_in__tmp_vec.data(), __xlx_offset_byte_param_image_out, __xlx_offset_byte_param_image_in, __xlx_apatb_param_image_length, __xlx_apatb_param_low_threshold, __xlx_apatb_param_high_threshold, __xlx_apatb_param_low_new_threshold, __xlx_apatb_param_high_new_threshold, __xlx_apatb_param_max_value);
 // print __xlx_apatb_param_image_out
 for (size_t i = 0; i < __xlx_size_param_image_out; ++i) {
-((Byte<1>*)__xlx_apatb_param_image_out)[i] = __xlx_image_out__tmp_vec[__xlx_offset_param_image_out+i];
+((Byte<4>*)__xlx_apatb_param_image_out)[i] = __xlx_image_out__tmp_vec[__xlx_offset_param_image_out+i];
 }
 // print __xlx_apatb_param_image_in
 for (size_t i = 0; i < __xlx_size_param_image_in; ++i) {
-((Byte<1>*)__xlx_apatb_param_image_in)[i] = __xlx_image_in__tmp_vec[__xlx_offset_param_image_in+i];
+((Byte<4>*)__xlx_apatb_param_image_in)[i] = __xlx_image_in__tmp_vec[__xlx_offset_param_image_in+i];
 }
 }

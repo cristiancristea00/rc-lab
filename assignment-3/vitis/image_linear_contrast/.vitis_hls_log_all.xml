@@ -3,26 +3,14 @@
   <errorLogs>
     <logs>
       <synLog/>
-      <simLog/>
-      <mgLog/>
-      <packageLog>
-        <logs message="ERROR: [IMPL 213-68] The specified IP vendor 'Cristian Cristea' contains white space, this is not supported by Vivado" projectName="image_linear_contrast" solutionName="solution" date="2024-04-04T15:43:20.915+0300"/>
-      </packageLog>
-      <csimLog/>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="image_linear_contrast" solutionName="solution" date="2024-04-04T15:41:53.893+0300" type="Warning"/>
-        <logs message="WARNING: [HLS 200-880] The II Violation in module 'LinearContrastStretching_Pipeline_VITIS_LOOP_24_1' (loop 'VITIS_LOOP_24_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('image_in_addr_read_1', image_linear_contrast/solution/code/LinearContrastStretching.cpp:28) on port 'image_in' (image_linear_contrast/solution/code/LinearContrastStretching.cpp:28) and bus read operation ('image_in_addr_read', image_linear_contrast/solution/code/LinearContrastStretching.cpp:28) on port 'image_in' (image_linear_contrast/solution/code/LinearContrastStretching.cpp:28).&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html" projectName="image_linear_contrast" solutionName="solution" date="2024-04-04T15:41:51.981+0300" type="Warning"/>
-        <logs message="WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'image_in' for cosimulation. (image_linear_contrast/solution/code/LinearContrastStretching.cpp:13:0)" projectName="image_linear_contrast" solutionName="solution" date="2024-04-04T15:41:51.488+0300" type="Warning"/>
-        <logs message="WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'image_out' for cosimulation. (image_linear_contrast/solution/code/LinearContrastStretching.cpp:13:0)" projectName="image_linear_contrast" solutionName="solution" date="2024-04-04T15:41:51.485+0300" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="image_linear_contrast" solutionName="solution" date="2024-04-06T10:44:01.073+0300" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'LinearContrastStretching_Pipeline_VITIS_LOOP_27_1/m_axi_image_out_BREADY' to 0." projectName="image_linear_contrast" solutionName="solution" date="2024-04-06T10:44:00.668+0300" type="Warning"/>
       </synLog>
-      <simLog/>
-      <mgLog/>
-      <packageLog/>
-      <csimLog/>
     </logs>
   </warningLogs>
 </vivadoHLSLog:LogRoot>

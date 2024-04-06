@@ -473,17 +473,21 @@ namespace std
 # 2 "image_linear_contrast/solution/code/LinearContrastStretching.cpp" 2
 
 __attribute__((sdx_kernel("LinearContrastStretching", 0))) void LinearContrastStretching(
-    uint8_t * const image_out,
- uint8_t const * const image_in,
+ uint32_t * const image_out,
+ uint32_t const * const image_in,
  uint32_t const image_length,
- uint8_t const low_threshold,
- uint8_t const high_threshold,
- uint8_t const low_new_threshold,
- uint8_t const high_new_threshold,
- uint8_t const max_value
+ uint32_t const low_threshold,
+ uint32_t const high_threshold,
+ uint32_t const low_new_threshold,
+ uint32_t const high_new_threshold,
+ uint32_t const max_value
 )
 {
-#line 16 "/home/cristian/Documents/ACES/RC/assignment-3/vitis/image_linear_contrast/solution/csynth.tcl"
+#line 17 "/home/cristian/Documents/ACES/RC/assignment-3/vitis/image_linear_contrast/solution/csynth.tcl"
+#pragma HLSDIRECTIVE TOP name=LinearContrastStretching
+# 13 "image_linear_contrast/solution/code/LinearContrastStretching.cpp"
+
+#line 7 "/home/cristian/Documents/ACES/RC/assignment-3/vitis/image_linear_contrast/solution/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=LinearContrastStretching
 # 13 "image_linear_contrast/solution/code/LinearContrastStretching.cpp"
 
@@ -497,21 +501,26 @@ __attribute__((sdx_kernel("LinearContrastStretching", 0))) void LinearContrastSt
 #pragma HLS INTERFACE mode = s_axilite port = max_value
 #pragma HLS INTERFACE mode = s_axilite port = return
 
- VITIS_LOOP_24_1: for (unsigned idx = 0; idx < image_length; ++idx)
-    {
-#pragma HLS UNROLL factor = 2 skip_exit_check
+ uint32_t before;
+    uint32_t after;
 
- if (image_in[idx] < low_threshold)
+    VITIS_LOOP_27_1: for (uint32_t idx = 0; idx < image_length; ++idx)
+    {
+     before = image_in[idx];
+
+        if (before < low_threshold)
         {
-            image_out[idx] = image_in[idx] * low_new_threshold / low_threshold;
+            after = before * low_new_threshold / low_threshold;
         }
-        else if (image_in[idx] > high_threshold)
+        else if (before > high_threshold)
         {
-            image_out[idx] = high_new_threshold + (image_in[idx] - high_threshold) * (max_value - high_new_threshold) / (max_value - high_threshold);
+            after = high_new_threshold + (before - high_threshold) * (max_value - high_new_threshold) / (max_value - high_threshold);
         }
         else
         {
-            image_out[idx] = low_new_threshold + (image_in[idx] - low_threshold) * (high_new_threshold - low_new_threshold) / (high_threshold - low_threshold);
+            after = low_new_threshold + (before - low_threshold) * (high_new_threshold - low_new_threshold) / (high_threshold - low_threshold);
         }
+
+        image_out[idx] = after;
     }
 }

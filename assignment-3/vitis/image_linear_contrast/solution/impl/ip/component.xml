@@ -1456,27 +1456,14 @@
           </spirit:reset>
           <spirit:field>
             <spirit:name>low_threshold</spirit:name>
-            <spirit:description>Bit 7 to 0 of low_threshold</spirit:description>
+            <spirit:description>Bit 31 to 0 of low_threshold</spirit:description>
             <spirit:bitOffset>0</spirit:bitOffset>
-            <spirit:bitWidth spirit:format="long">8</spirit:bitWidth>
+            <spirit:bitWidth spirit:format="long">32</spirit:bitWidth>
             <spirit:access>write-only</spirit:access>
             <spirit:writeValueConstraint>
               <spirit:minimum>0</spirit:minimum>
               <spirit:maximum>0</spirit:maximum>
             </spirit:writeValueConstraint>
-            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
-          </spirit:field>
-          <spirit:field>
-            <spirit:name>RESERVED</spirit:name>
-            <spirit:description>Reserved.  0s on read.</spirit:description>
-            <spirit:bitOffset>8</spirit:bitOffset>
-            <spirit:bitWidth spirit:format="long">24</spirit:bitWidth>
-            <spirit:access>read-only</spirit:access>
-            <spirit:writeValueConstraint>
-              <spirit:minimum>0</spirit:minimum>
-              <spirit:maximum>0</spirit:maximum>
-            </spirit:writeValueConstraint>
-            <spirit:readAction>modify</spirit:readAction>
             <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
           </spirit:field>
         </spirit:register>
@@ -1492,27 +1479,14 @@
           </spirit:reset>
           <spirit:field>
             <spirit:name>high_threshold</spirit:name>
-            <spirit:description>Bit 7 to 0 of high_threshold</spirit:description>
+            <spirit:description>Bit 31 to 0 of high_threshold</spirit:description>
             <spirit:bitOffset>0</spirit:bitOffset>
-            <spirit:bitWidth spirit:format="long">8</spirit:bitWidth>
+            <spirit:bitWidth spirit:format="long">32</spirit:bitWidth>
             <spirit:access>write-only</spirit:access>
             <spirit:writeValueConstraint>
               <spirit:minimum>0</spirit:minimum>
               <spirit:maximum>0</spirit:maximum>
             </spirit:writeValueConstraint>
-            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
-          </spirit:field>
-          <spirit:field>
-            <spirit:name>RESERVED</spirit:name>
-            <spirit:description>Reserved.  0s on read.</spirit:description>
-            <spirit:bitOffset>8</spirit:bitOffset>
-            <spirit:bitWidth spirit:format="long">24</spirit:bitWidth>
-            <spirit:access>read-only</spirit:access>
-            <spirit:writeValueConstraint>
-              <spirit:minimum>0</spirit:minimum>
-              <spirit:maximum>0</spirit:maximum>
-            </spirit:writeValueConstraint>
-            <spirit:readAction>modify</spirit:readAction>
             <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
           </spirit:field>
         </spirit:register>
@@ -1528,27 +1502,14 @@
           </spirit:reset>
           <spirit:field>
             <spirit:name>low_new_threshold</spirit:name>
-            <spirit:description>Bit 7 to 0 of low_new_threshold</spirit:description>
+            <spirit:description>Bit 31 to 0 of low_new_threshold</spirit:description>
             <spirit:bitOffset>0</spirit:bitOffset>
-            <spirit:bitWidth spirit:format="long">8</spirit:bitWidth>
+            <spirit:bitWidth spirit:format="long">32</spirit:bitWidth>
             <spirit:access>write-only</spirit:access>
             <spirit:writeValueConstraint>
               <spirit:minimum>0</spirit:minimum>
               <spirit:maximum>0</spirit:maximum>
             </spirit:writeValueConstraint>
-            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
-          </spirit:field>
-          <spirit:field>
-            <spirit:name>RESERVED</spirit:name>
-            <spirit:description>Reserved.  0s on read.</spirit:description>
-            <spirit:bitOffset>8</spirit:bitOffset>
-            <spirit:bitWidth spirit:format="long">24</spirit:bitWidth>
-            <spirit:access>read-only</spirit:access>
-            <spirit:writeValueConstraint>
-              <spirit:minimum>0</spirit:minimum>
-              <spirit:maximum>0</spirit:maximum>
-            </spirit:writeValueConstraint>
-            <spirit:readAction>modify</spirit:readAction>
             <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
           </spirit:field>
         </spirit:register>
@@ -1564,27 +1525,14 @@
           </spirit:reset>
           <spirit:field>
             <spirit:name>high_new_threshold</spirit:name>
-            <spirit:description>Bit 7 to 0 of high_new_threshold</spirit:description>
+            <spirit:description>Bit 31 to 0 of high_new_threshold</spirit:description>
             <spirit:bitOffset>0</spirit:bitOffset>
-            <spirit:bitWidth spirit:format="long">8</spirit:bitWidth>
+            <spirit:bitWidth spirit:format="long">32</spirit:bitWidth>
             <spirit:access>write-only</spirit:access>
             <spirit:writeValueConstraint>
               <spirit:minimum>0</spirit:minimum>
               <spirit:maximum>0</spirit:maximum>
             </spirit:writeValueConstraint>
-            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
-          </spirit:field>
-          <spirit:field>
-            <spirit:name>RESERVED</spirit:name>
-            <spirit:description>Reserved.  0s on read.</spirit:description>
-            <spirit:bitOffset>8</spirit:bitOffset>
-            <spirit:bitWidth spirit:format="long">24</spirit:bitWidth>
-            <spirit:access>read-only</spirit:access>
-            <spirit:writeValueConstraint>
-              <spirit:minimum>0</spirit:minimum>
-              <spirit:maximum>0</spirit:maximum>
-            </spirit:writeValueConstraint>
-            <spirit:readAction>modify</spirit:readAction>
             <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
           </spirit:field>
         </spirit:register>
@@ -1600,27 +1548,14 @@
           </spirit:reset>
           <spirit:field>
             <spirit:name>max_value</spirit:name>
-            <spirit:description>Bit 7 to 0 of max_value</spirit:description>
+            <spirit:description>Bit 31 to 0 of max_value</spirit:description>
             <spirit:bitOffset>0</spirit:bitOffset>
-            <spirit:bitWidth spirit:format="long">8</spirit:bitWidth>
+            <spirit:bitWidth spirit:format="long">32</spirit:bitWidth>
             <spirit:access>write-only</spirit:access>
             <spirit:writeValueConstraint>
               <spirit:minimum>0</spirit:minimum>
               <spirit:maximum>0</spirit:maximum>
             </spirit:writeValueConstraint>
-            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
-          </spirit:field>
-          <spirit:field>
-            <spirit:name>RESERVED</spirit:name>
-            <spirit:description>Reserved.  0s on read.</spirit:description>
-            <spirit:bitOffset>8</spirit:bitOffset>
-            <spirit:bitWidth spirit:format="long">24</spirit:bitWidth>
-            <spirit:access>read-only</spirit:access>
-            <spirit:writeValueConstraint>
-              <spirit:minimum>0</spirit:minimum>
-              <spirit:maximum>0</spirit:maximum>
-            </spirit:writeValueConstraint>
-            <spirit:readAction>modify</spirit:readAction>
             <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
           </spirit:field>
         </spirit:register>
@@ -1641,7 +1576,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f187fe03</spirit:value>
+            <spirit:value>f6d33d19</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1657,7 +1592,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>68314ea9</spirit:value>
+            <spirit:value>a55da440</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1673,7 +1608,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>953c7a1d</spirit:value>
+            <spirit:value>7112ab33</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1689,7 +1624,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c946ff3c</spirit:value>
+            <spirit:value>f0c4087a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1703,7 +1638,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c93223f0</spirit:value>
+            <spirit:value>1dd6684d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3867,23 +3802,15 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LinearContrastStretching_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1.v</spirit:name>
+        <spirit:name>hdl/verilog/LinearContrastStretching_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LinearContrastStretching_mul_8ns_8ns_16_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/LinearContrastStretching_mul_32s_32s_32_2_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LinearContrastStretching_mul_9s_9s_17_1_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LinearContrastStretching_sdiv_17ns_9s_8_21_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LinearContrastStretching_udiv_16ns_8ns_8_20_1.v</spirit:name>
+        <spirit:name>hdl/verilog/LinearContrastStretching_udiv_32ns_32ns_32_36_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -3914,27 +3841,17 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LinearContrastStretching_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1.v</spirit:name>
+        <spirit:name>hdl/verilog/LinearContrastStretching_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LinearContrastStretching_mul_8ns_8ns_16_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/LinearContrastStretching_mul_32s_32s_32_2_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/LinearContrastStretching_mul_9s_9s_17_1_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LinearContrastStretching_sdiv_17ns_9s_8_21_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/LinearContrastStretching_udiv_16ns_8ns_8_20_1.v</spirit:name>
+        <spirit:name>hdl/verilog/LinearContrastStretching_udiv_32ns_32ns_32_36_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3968,29 +3885,21 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LinearContrastStretching_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LinearContrastStretching_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LinearContrastStretching_mul_8ns_8ns_16_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LinearContrastStretching_mul_32s_32s_32_2_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LinearContrastStretching_mul_9s_9s_17_1_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LinearContrastStretching_sdiv_17ns_9s_8_21_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LinearContrastStretching_udiv_16ns_8ns_8_20_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LinearContrastStretching_udiv_32ns_32ns_32_36_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/LinearContrastStretching.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_9ae792f5</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_20649977</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -4016,27 +3925,17 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LinearContrastStretching_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LinearContrastStretching_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LinearContrastStretching_mul_8ns_8ns_16_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LinearContrastStretching_mul_32s_32s_32_2_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/LinearContrastStretching_mul_9s_9s_17_1_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LinearContrastStretching_sdiv_17ns_9s_8_21_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/LinearContrastStretching_udiv_16ns_8ns_8_20_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/LinearContrastStretching_udiv_32ns_32ns_32_36_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -4369,7 +4268,7 @@
       <xilinx:displayName>Linear Contrast Stretching</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
       <xilinx:coreRevision>0</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-04-04T13:24:10Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2024-04-06T07:45:40Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -4379,8 +4278,8 @@
       <xilinx:xilinxVersion>2023.1.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="faa72df2"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="45411bbe"/>
-      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="73b2848b"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="363b34d3"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="51e91ddc"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="10763397"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="9c0c8a62"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="f8b457eb"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="d476e4b5"/>

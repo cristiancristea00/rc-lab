@@ -35,11 +35,11 @@ module LinearContrastStretching_control_s_axi
     output wire [31:0]                   image_out_offset,
     output wire [31:0]                   image_in_offset,
     output wire [31:0]                   image_length,
-    output wire [7:0]                    low_threshold,
-    output wire [7:0]                    high_threshold,
-    output wire [7:0]                    low_new_threshold,
-    output wire [7:0]                    high_new_threshold,
-    output wire [7:0]                    max_value,
+    output wire [31:0]                   low_threshold,
+    output wire [31:0]                   high_threshold,
+    output wire [31:0]                   low_new_threshold,
+    output wire [31:0]                   high_new_threshold,
+    output wire [31:0]                   max_value,
     output wire                          ap_start,
     input  wire                          ap_done,
     input  wire                          ap_ready,
@@ -75,24 +75,19 @@ module LinearContrastStretching_control_s_axi
 //        bit 31~0 - image_length[31:0] (Read/Write)
 // 0x24 : reserved
 // 0x28 : Data signal of low_threshold
-//        bit 7~0 - low_threshold[7:0] (Read/Write)
-//        others  - reserved
+//        bit 31~0 - low_threshold[31:0] (Read/Write)
 // 0x2c : reserved
 // 0x30 : Data signal of high_threshold
-//        bit 7~0 - high_threshold[7:0] (Read/Write)
-//        others  - reserved
+//        bit 31~0 - high_threshold[31:0] (Read/Write)
 // 0x34 : reserved
 // 0x38 : Data signal of low_new_threshold
-//        bit 7~0 - low_new_threshold[7:0] (Read/Write)
-//        others  - reserved
+//        bit 31~0 - low_new_threshold[31:0] (Read/Write)
 // 0x3c : reserved
 // 0x40 : Data signal of high_new_threshold
-//        bit 7~0 - high_new_threshold[7:0] (Read/Write)
-//        others  - reserved
+//        bit 31~0 - high_new_threshold[31:0] (Read/Write)
 // 0x44 : reserved
 // 0x48 : Data signal of max_value
-//        bit 7~0 - max_value[7:0] (Read/Write)
-//        others  - reserved
+//        bit 31~0 - max_value[31:0] (Read/Write)
 // 0x4c : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
@@ -157,11 +152,11 @@ localparam
     reg  [31:0]                   int_image_out_offset = 'b0;
     reg  [31:0]                   int_image_in_offset = 'b0;
     reg  [31:0]                   int_image_length = 'b0;
-    reg  [7:0]                    int_low_threshold = 'b0;
-    reg  [7:0]                    int_high_threshold = 'b0;
-    reg  [7:0]                    int_low_new_threshold = 'b0;
-    reg  [7:0]                    int_high_new_threshold = 'b0;
-    reg  [7:0]                    int_max_value = 'b0;
+    reg  [31:0]                   int_low_threshold = 'b0;
+    reg  [31:0]                   int_high_threshold = 'b0;
+    reg  [31:0]                   int_low_new_threshold = 'b0;
+    reg  [31:0]                   int_high_new_threshold = 'b0;
+    reg  [31:0]                   int_max_value = 'b0;
 
 //------------------------Instantiation------------------
 
@@ -281,19 +276,19 @@ always @(posedge ACLK) begin
                     rdata <= int_image_length[31:0];
                 end
                 ADDR_LOW_THRESHOLD_DATA_0: begin
-                    rdata <= int_low_threshold[7:0];
+                    rdata <= int_low_threshold[31:0];
                 end
                 ADDR_HIGH_THRESHOLD_DATA_0: begin
-                    rdata <= int_high_threshold[7:0];
+                    rdata <= int_high_threshold[31:0];
                 end
                 ADDR_LOW_NEW_THRESHOLD_DATA_0: begin
-                    rdata <= int_low_new_threshold[7:0];
+                    rdata <= int_low_new_threshold[31:0];
                 end
                 ADDR_HIGH_NEW_THRESHOLD_DATA_0: begin
-                    rdata <= int_high_new_threshold[7:0];
+                    rdata <= int_high_new_threshold[31:0];
                 end
                 ADDR_MAX_VALUE_DATA_0: begin
-                    rdata <= int_max_value[7:0];
+                    rdata <= int_max_value[31:0];
                 end
             endcase
         end
@@ -477,53 +472,53 @@ always @(posedge ACLK) begin
     end
 end
 
-// int_low_threshold[7:0]
+// int_low_threshold[31:0]
 always @(posedge ACLK) begin
     if (ARESET)
-        int_low_threshold[7:0] <= 0;
+        int_low_threshold[31:0] <= 0;
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_LOW_THRESHOLD_DATA_0)
-            int_low_threshold[7:0] <= (WDATA[31:0] & wmask) | (int_low_threshold[7:0] & ~wmask);
+            int_low_threshold[31:0] <= (WDATA[31:0] & wmask) | (int_low_threshold[31:0] & ~wmask);
     end
 end
 
-// int_high_threshold[7:0]
+// int_high_threshold[31:0]
 always @(posedge ACLK) begin
     if (ARESET)
-        int_high_threshold[7:0] <= 0;
+        int_high_threshold[31:0] <= 0;
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_HIGH_THRESHOLD_DATA_0)
-            int_high_threshold[7:0] <= (WDATA[31:0] & wmask) | (int_high_threshold[7:0] & ~wmask);
+            int_high_threshold[31:0] <= (WDATA[31:0] & wmask) | (int_high_threshold[31:0] & ~wmask);
     end
 end
 
-// int_low_new_threshold[7:0]
+// int_low_new_threshold[31:0]
 always @(posedge ACLK) begin
     if (ARESET)
-        int_low_new_threshold[7:0] <= 0;
+        int_low_new_threshold[31:0] <= 0;
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_LOW_NEW_THRESHOLD_DATA_0)
-            int_low_new_threshold[7:0] <= (WDATA[31:0] & wmask) | (int_low_new_threshold[7:0] & ~wmask);
+            int_low_new_threshold[31:0] <= (WDATA[31:0] & wmask) | (int_low_new_threshold[31:0] & ~wmask);
     end
 end
 
-// int_high_new_threshold[7:0]
+// int_high_new_threshold[31:0]
 always @(posedge ACLK) begin
     if (ARESET)
-        int_high_new_threshold[7:0] <= 0;
+        int_high_new_threshold[31:0] <= 0;
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_HIGH_NEW_THRESHOLD_DATA_0)
-            int_high_new_threshold[7:0] <= (WDATA[31:0] & wmask) | (int_high_new_threshold[7:0] & ~wmask);
+            int_high_new_threshold[31:0] <= (WDATA[31:0] & wmask) | (int_high_new_threshold[31:0] & ~wmask);
     end
 end
 
-// int_max_value[7:0]
+// int_max_value[31:0]
 always @(posedge ACLK) begin
     if (ARESET)
-        int_max_value[7:0] <= 0;
+        int_max_value[31:0] <= 0;
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_MAX_VALUE_DATA_0)
-            int_max_value[7:0] <= (WDATA[31:0] & wmask) | (int_max_value[7:0] & ~wmask);
+            int_max_value[31:0] <= (WDATA[31:0] & wmask) | (int_max_value[31:0] & ~wmask);
     end
 end
 

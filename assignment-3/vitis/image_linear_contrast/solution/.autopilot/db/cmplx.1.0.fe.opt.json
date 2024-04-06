@@ -4,14 +4,14 @@
     "calls": "",
     "file": "LinearContrastStretching.cpp",
     "fileloc": 3,
-    "instructions": 89,
+    "instructions": 49,
     "loads": {
-      "T": 5
+      "T": 1
     },
     "name": "LinearContrastStretching",
     "stores": {
-      "T": 3
+      "T": 1
     },
-    "total_instructions": 89
+    "total_instructions": 49
   }
 }

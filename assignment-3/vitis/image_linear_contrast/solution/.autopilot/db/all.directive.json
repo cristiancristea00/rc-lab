@@ -16,8 +16,29 @@
       ]
     },
     "slx": false,
+    "sourceFile": "/home/cristian/Documents/ACES/RC/assignment-3/vitis/image_linear_contrast/solution/directives.tcl",
+    "sourceLine": 7,
+    "success": true
+  },
+  {
+    "functionLabel": "",
+    "functionName": "LinearContrastStretching",
+    "id": 1,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "LinearContrastStretching"
+        }
+      ]
+    },
+    "slx": false,
     "sourceFile": "/home/cristian/Documents/ACES/RC/assignment-3/vitis/image_linear_contrast/solution/csynth.tcl",
-    "sourceLine": 16,
+    "sourceLine": 17,
     "success": true
   }
 ]

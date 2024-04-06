@@ -15,29 +15,29 @@ set DLRegItemOffset 0
 set C_modelName {LinearContrastStretching}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ image_out int 8 regular {axi_master 1}  }
-	{ image_in int 8 regular {axi_master 0}  }
+	{ image_out int 32 regular {axi_master 1}  }
+	{ image_in int 32 regular {axi_master 0}  }
 	{ image_out_offset int 32 regular {axi_slave 0}  }
 	{ image_in_offset int 32 regular {axi_slave 0}  }
 	{ image_length int 32 regular {axi_slave 0}  }
-	{ low_threshold uint 8 regular {axi_slave 0}  }
-	{ high_threshold uint 8 regular {axi_slave 0}  }
-	{ low_new_threshold uint 8 regular {axi_slave 0}  }
-	{ high_new_threshold uint 8 regular {axi_slave 0}  }
-	{ max_value uint 8 regular {axi_slave 0}  }
+	{ low_threshold int 32 regular {axi_slave 0}  }
+	{ high_threshold int 32 regular {axi_slave 0}  }
+	{ low_new_threshold int 32 regular {axi_slave 0}  }
+	{ high_new_threshold int 32 regular {axi_slave 0}  }
+	{ max_value int 32 regular {axi_slave 0}  }
 }
 set hasAXIMCache 0
 set C_modelArgMapList {[ 
-	{ "Name" : "image_out", "interface" : "axi_master", "bitwidth" : 8, "direction" : "WRITEONLY", "bitSlice":[ {"cElement": [{"cName": "image_out_offset","offset": { "type": "dynamic","port_name": "image_out_offset"},"direction": "WRITEONLY"}]}]} , 
- 	{ "Name" : "image_in", "interface" : "axi_master", "bitwidth" : 8, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "image_in_offset","offset": { "type": "dynamic","port_name": "image_in_offset"},"direction": "READONLY"}]}]} , 
+	{ "Name" : "image_out", "interface" : "axi_master", "bitwidth" : 32, "direction" : "WRITEONLY", "bitSlice":[ {"cElement": [{"cName": "image_out_offset","offset": { "type": "dynamic","port_name": "image_out_offset"},"direction": "WRITEONLY"}]}]} , 
+ 	{ "Name" : "image_in", "interface" : "axi_master", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "image_in_offset","offset": { "type": "dynamic","port_name": "image_in_offset"},"direction": "READONLY"}]}]} , 
  	{ "Name" : "image_out_offset", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":16}, "offset_end" : {"in":23}} , 
  	{ "Name" : "image_in_offset", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":24}, "offset_end" : {"in":31}} , 
  	{ "Name" : "image_length", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":32}, "offset_end" : {"in":39}} , 
- 	{ "Name" : "low_threshold", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 8, "direction" : "READONLY", "offset" : {"in":40}, "offset_end" : {"in":47}} , 
- 	{ "Name" : "high_threshold", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 8, "direction" : "READONLY", "offset" : {"in":48}, "offset_end" : {"in":55}} , 
- 	{ "Name" : "low_new_threshold", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 8, "direction" : "READONLY", "offset" : {"in":56}, "offset_end" : {"in":63}} , 
- 	{ "Name" : "high_new_threshold", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 8, "direction" : "READONLY", "offset" : {"in":64}, "offset_end" : {"in":71}} , 
- 	{ "Name" : "max_value", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 8, "direction" : "READONLY", "offset" : {"in":72}, "offset_end" : {"in":79}} ]}
+ 	{ "Name" : "low_threshold", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":40}, "offset_end" : {"in":47}} , 
+ 	{ "Name" : "high_threshold", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":48}, "offset_end" : {"in":55}} , 
+ 	{ "Name" : "low_new_threshold", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":56}, "offset_end" : {"in":63}} , 
+ 	{ "Name" : "high_new_threshold", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":64}, "offset_end" : {"in":71}} , 
+ 	{ "Name" : "max_value", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":72}, "offset_end" : {"in":79}} ]}
 # RTL Port declarations: 
 set portNum 110
 set portList { 
@@ -265,7 +265,7 @@ set NewPortList {[
  	{ "name": "m_axi_image_in_BUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "image_in", "role": "BUSER" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "15", "16", "17"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "8", "9", "10"],
 		"CDFG" : "LinearContrastStretching",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -281,11 +281,16 @@ set RtlHierarchyInfo {[
 		"IsBlackBox" : "0",
 		"Port" : [
 			{"Name" : "image_out", "Type" : "MAXI", "Direction" : "O",
+				"BlockSignal" : [
+					{"Name" : "image_out_blk_n_AW", "Type" : "RtlSignal"},
+					{"Name" : "image_out_blk_n_B", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122", "Port" : "image_out", "Inst_start_state" : "1", "Inst_end_state" : "2"}]},
+					{"ID" : "1", "SubInstance" : "grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145", "Port" : "image_out", "Inst_start_state" : "10", "Inst_end_state" : "11"}]},
 			{"Name" : "image_in", "Type" : "MAXI", "Direction" : "I",
+				"BlockSignal" : [
+					{"Name" : "image_in_blk_n_AR", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122", "Port" : "image_in", "Inst_start_state" : "1", "Inst_end_state" : "2"}]},
+					{"ID" : "1", "SubInstance" : "grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145", "Port" : "image_in", "Inst_start_state" : "10", "Inst_end_state" : "11"}]},
 			{"Name" : "image_out_offset", "Type" : "None", "Direction" : "I"},
 			{"Name" : "image_in_offset", "Type" : "None", "Direction" : "I"},
 			{"Name" : "image_length", "Type" : "None", "Direction" : "I"},
@@ -294,8 +299,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "low_new_threshold", "Type" : "None", "Direction" : "I"},
 			{"Name" : "high_new_threshold", "Type" : "None", "Direction" : "I"},
 			{"Name" : "max_value", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122", "Parent" : "0", "Child" : ["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"],
-		"CDFG" : "LinearContrastStretching_Pipeline_VITIS_LOOP_24_1",
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145", "Parent" : "0", "Child" : ["2", "3", "4", "5", "6", "7"],
+		"CDFG" : "LinearContrastStretching_Pipeline_VITIS_LOOP_27_1",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -311,53 +316,39 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "image_in", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
-					{"Name" : "image_in_blk_n_AR", "Type" : "RtlSignal"},
 					{"Name" : "image_in_blk_n_R", "Type" : "RtlSignal"}]},
 			{"Name" : "image_out", "Type" : "MAXI", "Direction" : "O",
 				"BlockSignal" : [
-					{"Name" : "image_out_blk_n_AW", "Type" : "RtlSignal"},
-					{"Name" : "image_out_blk_n_W", "Type" : "RtlSignal"},
-					{"Name" : "image_out_blk_n_B", "Type" : "RtlSignal"}]},
+					{"Name" : "image_out_blk_n_W", "Type" : "RtlSignal"}]},
+			{"Name" : "sext_ln27", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln27_1", "Type" : "None", "Direction" : "I"},
 			{"Name" : "image_length", "Type" : "None", "Direction" : "I"},
-			{"Name" : "low_threshold_cast7", "Type" : "None", "Direction" : "I"},
-			{"Name" : "sext_ln38_2", "Type" : "None", "Direction" : "I"},
-			{"Name" : "sext_ln24", "Type" : "None", "Direction" : "I"},
 			{"Name" : "low_new_threshold", "Type" : "None", "Direction" : "I"},
-			{"Name" : "high_threshold", "Type" : "None", "Direction" : "I"},
 			{"Name" : "low_threshold", "Type" : "None", "Direction" : "I"},
-			{"Name" : "low_new_threshold_cast3", "Type" : "None", "Direction" : "I"},
-			{"Name" : "low_threshold_cast4", "Type" : "None", "Direction" : "I"},
-			{"Name" : "image_in_offset", "Type" : "None", "Direction" : "I"},
-			{"Name" : "image_out_offset", "Type" : "None", "Direction" : "I"},
-			{"Name" : "high_threshold_cast6", "Type" : "None", "Direction" : "I"},
-			{"Name" : "sext_ln34_1", "Type" : "None", "Direction" : "I"},
-			{"Name" : "sext_ln38", "Type" : "None", "Direction" : "I"},
-			{"Name" : "high_new_threshold", "Type" : "None", "Direction" : "I"}],
+			{"Name" : "high_threshold", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sub4", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sub6", "Type" : "None", "Direction" : "I"},
+			{"Name" : "high_new_threshold", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sub10", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sub12", "Type" : "None", "Direction" : "I"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_24_1", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "2", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage1", "LastStateIter" : "ap_enable_reg_pp0_iter19", "LastStateBlock" : "ap_block_pp0_stage1_subdone", "QuitState" : "ap_ST_fsm_pp0_stage1", "QuitStateIter" : "ap_enable_reg_pp0_iter19", "QuitStateBlock" : "ap_block_pp0_stage1_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122.mul_9s_9s_17_1_1_U1", "Parent" : "1"},
-	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122.mul_9s_9s_17_1_1_U2", "Parent" : "1"},
-	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122.mul_8ns_8ns_16_1_1_U3", "Parent" : "1"},
-	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122.sdiv_17ns_9s_8_21_1_U4", "Parent" : "1"},
-	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122.sdiv_17ns_9s_8_21_1_U5", "Parent" : "1"},
-	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122.udiv_16ns_8ns_8_20_1_U6", "Parent" : "1"},
-	{"ID" : "8", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122.mul_9s_9s_17_1_1_U7", "Parent" : "1"},
-	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122.mul_9s_9s_17_1_1_U8", "Parent" : "1"},
-	{"ID" : "10", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122.mul_8ns_8ns_16_1_1_U9", "Parent" : "1"},
-	{"ID" : "11", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122.sdiv_17ns_9s_8_21_1_U10", "Parent" : "1"},
-	{"ID" : "12", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122.sdiv_17ns_9s_8_21_1_U11", "Parent" : "1"},
-	{"ID" : "13", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122.udiv_16ns_8ns_8_20_1_U12", "Parent" : "1"},
-	{"ID" : "14", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"},
-	{"ID" : "15", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.control_s_axi_U", "Parent" : "0"},
-	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.image_in_m_axi_U", "Parent" : "0"},
-	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.image_out_m_axi_U", "Parent" : "0"}]}
+			{"Name" : "VITIS_LOOP_27_1", "PipelineType" : "UPC",
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter42", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter42", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145.mul_32s_32s_32_2_1_U1", "Parent" : "1"},
+	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145.mul_32s_32s_32_2_1_U2", "Parent" : "1"},
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145.udiv_32ns_32ns_32_36_1_U3", "Parent" : "1"},
+	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145.udiv_32ns_32ns_32_36_1_U4", "Parent" : "1"},
+	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145.udiv_32ns_32ns_32_36_1_U5", "Parent" : "1"},
+	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"},
+	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.control_s_axi_U", "Parent" : "0"},
+	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.image_in_m_axi_U", "Parent" : "0"},
+	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.image_out_m_axi_U", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	LinearContrastStretching {
-		image_out {Type O LastRead 38 FirstWrite 33}
-		image_in {Type I LastRead 10 FirstWrite -1}
+		image_out {Type O LastRead 11 FirstWrite 42}
+		image_in {Type I LastRead 1 FirstWrite -1}
 		image_out_offset {Type I LastRead 0 FirstWrite -1}
 		image_in_offset {Type I LastRead 0 FirstWrite -1}
 		image_length {Type I LastRead 0 FirstWrite -1}
@@ -366,24 +357,20 @@ set ArgLastReadFirstWriteLatency {
 		low_new_threshold {Type I LastRead 0 FirstWrite -1}
 		high_new_threshold {Type I LastRead 0 FirstWrite -1}
 		max_value {Type I LastRead 0 FirstWrite -1}}
-	LinearContrastStretching_Pipeline_VITIS_LOOP_24_1 {
-		image_in {Type I LastRead 10 FirstWrite -1}
-		image_out {Type O LastRead 38 FirstWrite 33}
+	LinearContrastStretching_Pipeline_VITIS_LOOP_27_1 {
+		image_in {Type I LastRead 1 FirstWrite -1}
+		image_out {Type O LastRead -1 FirstWrite 42}
+		sext_ln27 {Type I LastRead 0 FirstWrite -1}
+		sext_ln27_1 {Type I LastRead 0 FirstWrite -1}
 		image_length {Type I LastRead 0 FirstWrite -1}
-		low_threshold_cast7 {Type I LastRead 0 FirstWrite -1}
-		sext_ln38_2 {Type I LastRead 0 FirstWrite -1}
-		sext_ln24 {Type I LastRead 0 FirstWrite -1}
 		low_new_threshold {Type I LastRead 0 FirstWrite -1}
-		high_threshold {Type I LastRead 0 FirstWrite -1}
 		low_threshold {Type I LastRead 0 FirstWrite -1}
-		low_new_threshold_cast3 {Type I LastRead 0 FirstWrite -1}
-		low_threshold_cast4 {Type I LastRead 0 FirstWrite -1}
-		image_in_offset {Type I LastRead 0 FirstWrite -1}
-		image_out_offset {Type I LastRead 0 FirstWrite -1}
-		high_threshold_cast6 {Type I LastRead 0 FirstWrite -1}
-		sext_ln34_1 {Type I LastRead 0 FirstWrite -1}
-		sext_ln38 {Type I LastRead 0 FirstWrite -1}
-		high_new_threshold {Type I LastRead 0 FirstWrite -1}}}
+		high_threshold {Type I LastRead 0 FirstWrite -1}
+		sub4 {Type I LastRead 0 FirstWrite -1}
+		sub6 {Type I LastRead 0 FirstWrite -1}
+		high_new_threshold {Type I LastRead 0 FirstWrite -1}
+		sub10 {Type I LastRead 0 FirstWrite -1}
+		sub12 {Type I LastRead 0 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 

@@ -45,7 +45,7 @@ image_length {
 }
 low_threshold { 
 	dir I
-	width 8
+	width 32
 	depth 1
 	mode ap_none
 	offset 40
@@ -53,7 +53,7 @@ low_threshold {
 }
 high_threshold { 
 	dir I
-	width 8
+	width 32
 	depth 1
 	mode ap_none
 	offset 48
@@ -61,7 +61,7 @@ high_threshold {
 }
 low_new_threshold { 
 	dir I
-	width 8
+	width 32
 	depth 1
 	mode ap_none
 	offset 56
@@ -69,7 +69,7 @@ low_new_threshold {
 }
 high_new_threshold { 
 	dir I
-	width 8
+	width 32
 	depth 1
 	mode ap_none
 	offset 64
@@ -77,7 +77,7 @@ high_new_threshold {
 }
 max_value { 
 	dir I
-	width 8
+	width 32
 	depth 1
 	mode ap_none
 	offset 72
@@ -97,7 +97,7 @@ dict set axilite_register_dict control $port_control
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 34 \
+			id 21 \
 			corename LinearContrastStretching_control_axilite \
 			name LinearContrastStretching_control_s_axi \
 			ports {$port_control} \

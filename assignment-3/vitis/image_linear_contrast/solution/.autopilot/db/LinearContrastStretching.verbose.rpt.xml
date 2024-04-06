@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'LinearContrastStretching'" level="0">
-<item name = "Date">Thu Apr  4 15:41:53 2024
+<item name = "Date">Sat Apr  6 10:44:01 2024
 </item>
 <item name = "Version">2023.1.1 (Build 3869133 on Jun 15 2023)</item>
 <item name = "Project">image_linear_contrast</item>
@@ -31,7 +31,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122">LinearContrastStretching_Pipeline_VITIS_LOOP_24_1, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145">LinearContrastStretching_Pipeline_VITIS_LOOP_27_1, ?, ?, ?, ?, ?, ?, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -48,24 +48,24 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 56, -</column>
+<column name="Expression">-, -, 0, 156, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">4, 0, 7428, 6370, -</column>
+<column name="Instance">8, 6, 11059, 7861, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 59, -</column>
-<column name="Register">-, -, 167, -, -</column>
+<column name="Multiplexer">-, -, -, 224, -</column>
+<column name="Register">-, -, 397, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">1, 0, 7, 12, 0</specialColumn>
+<specialColumn name="Utilization (%)">2, 2, 10, 15, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122">LinearContrastStretching_Pipeline_VITIS_LOOP_24_1, 0, 0, 5476, 4350, 0</column>
-<column name="control_s_axi_U">control_s_axi, 0, 0, 220, 312, 0</column>
-<column name="image_in_m_axi_U">image_in_m_axi, 2, 0, 866, 854, 0</column>
-<column name="image_out_m_axi_U">image_out_m_axi, 2, 0, 866, 854, 0</column>
+<column name="grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145">LinearContrastStretching_Pipeline_VITIS_LOOP_27_1, 0, 6, 9059, 5841, 0</column>
+<column name="control_s_axi_U">control_s_axi, 0, 0, 340, 552, 0</column>
+<column name="image_in_m_axi_U">image_in_m_axi, 4, 0, 830, 734, 0</column>
+<column name="image_out_m_axi_U">image_out_m_axi, 4, 0, 830, 734, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -82,37 +82,45 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="sub24_fu_176_p2">-, 0, 0, 14, 9, 9</column>
-<column name="sub42_fu_183_p2">-, 0, 0, 14, 9, 9</column>
-<column name="sub_ln34_fu_190_p2">-, 0, 0, 14, 9, 9</column>
-<column name="sub_ln38_fu_197_p2">-, 0, 0, 14, 9, 9</column>
+<column name="sub10_fu_214_p2">-, 0, 0, 39, 32, 32</column>
+<column name="sub12_fu_219_p2">-, 0, 0, 39, 32, 32</column>
+<column name="sub4_fu_204_p2">-, 0, 0, 39, 32, 32</column>
+<column name="sub6_fu_209_p2">-, 0, 0, 39, 32, 32</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">14, 3, 1, 3</column>
-<column name="image_in_ARVALID">9, 2, 1, 2</column>
+<column name="ap_NS_fsm">81, 17, 1, 17</column>
+<column name="image_in_ARADDR">14, 3, 32, 96</column>
+<column name="image_in_ARLEN">14, 3, 32, 96</column>
+<column name="image_in_ARVALID">14, 3, 1, 3</column>
 <column name="image_in_RREADY">9, 2, 1, 2</column>
-<column name="image_out_AWVALID">9, 2, 1, 2</column>
-<column name="image_out_BREADY">9, 2, 1, 2</column>
+<column name="image_in_blk_n_AR">9, 2, 1, 2</column>
+<column name="image_out_AWADDR">14, 3, 32, 96</column>
+<column name="image_out_AWLEN">14, 3, 32, 96</column>
+<column name="image_out_AWVALID">14, 3, 1, 3</column>
+<column name="image_out_BREADY">14, 3, 1, 3</column>
 <column name="image_out_WVALID">9, 2, 1, 2</column>
+<column name="image_out_blk_n_AW">9, 2, 1, 2</column>
+<column name="image_out_blk_n_B">9, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_CS_fsm">2, 0, 2, 0</column>
-<column name="grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122_ap_start_reg">1, 0, 1, 0</column>
-<column name="high_new_threshold_read_reg_204">8, 0, 8, 0</column>
-<column name="high_threshold_read_reg_215">8, 0, 8, 0</column>
-<column name="image_in_offset_read_reg_233">32, 0, 32, 0</column>
-<column name="image_length_read_reg_228">32, 0, 32, 0</column>
-<column name="image_out_offset_read_reg_238">32, 0, 32, 0</column>
-<column name="low_new_threshold_read_reg_209">8, 0, 8, 0</column>
-<column name="low_threshold_read_reg_221">8, 0, 8, 0</column>
-<column name="sub24_reg_243">9, 0, 9, 0</column>
-<column name="sub42_reg_248">9, 0, 9, 0</column>
-<column name="sub_ln34_reg_253">9, 0, 9, 0</column>
-<column name="sub_ln38_reg_258">9, 0, 9, 0</column>
+<column name="ap_CS_fsm">16, 0, 16, 0</column>
+<column name="grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145_ap_start_reg">1, 0, 1, 0</column>
+<column name="high_new_threshold_read_reg_230">32, 0, 32, 0</column>
+<column name="high_threshold_read_reg_243">32, 0, 32, 0</column>
+<column name="image_length_read_reg_256">32, 0, 32, 0</column>
+<column name="low_new_threshold_read_reg_237">32, 0, 32, 0</column>
+<column name="low_threshold_read_reg_250">32, 0, 32, 0</column>
+<column name="max_value_read_reg_224">32, 0, 32, 0</column>
+<column name="sub10_reg_295">32, 0, 32, 0</column>
+<column name="sub12_reg_300">32, 0, 32, 0</column>
+<column name="sub4_reg_285">32, 0, 32, 0</column>
+<column name="sub6_reg_290">32, 0, 32, 0</column>
+<column name="trunc_ln27_1_reg_269">30, 0, 30, 0</column>
+<column name="trunc_ln_reg_263">30, 0, 30, 0</column>
 </table>
 </item>
 </section>

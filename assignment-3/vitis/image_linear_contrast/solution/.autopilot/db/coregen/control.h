@@ -27,24 +27,19 @@
 //        bit 31~0 - image_length[31:0] (Read/Write)
 // 0x24 : reserved
 // 0x28 : Data signal of low_threshold
-//        bit 7~0 - low_threshold[7:0] (Read/Write)
-//        others  - reserved
+//        bit 31~0 - low_threshold[31:0] (Read/Write)
 // 0x2c : reserved
 // 0x30 : Data signal of high_threshold
-//        bit 7~0 - high_threshold[7:0] (Read/Write)
-//        others  - reserved
+//        bit 31~0 - high_threshold[31:0] (Read/Write)
 // 0x34 : reserved
 // 0x38 : Data signal of low_new_threshold
-//        bit 7~0 - low_new_threshold[7:0] (Read/Write)
-//        others  - reserved
+//        bit 31~0 - low_new_threshold[31:0] (Read/Write)
 // 0x3c : reserved
 // 0x40 : Data signal of high_new_threshold
-//        bit 7~0 - high_new_threshold[7:0] (Read/Write)
-//        others  - reserved
+//        bit 31~0 - high_new_threshold[31:0] (Read/Write)
 // 0x44 : reserved
 // 0x48 : Data signal of max_value
-//        bit 7~0 - max_value[7:0] (Read/Write)
-//        others  - reserved
+//        bit 31~0 - max_value[31:0] (Read/Write)
 // 0x4c : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
@@ -59,12 +54,12 @@
 #define CONTROL_ADDR_IMAGE_LENGTH_DATA       0x20
 #define CONTROL_BITS_IMAGE_LENGTH_DATA       32
 #define CONTROL_ADDR_LOW_THRESHOLD_DATA      0x28
-#define CONTROL_BITS_LOW_THRESHOLD_DATA      8
+#define CONTROL_BITS_LOW_THRESHOLD_DATA      32
 #define CONTROL_ADDR_HIGH_THRESHOLD_DATA     0x30
-#define CONTROL_BITS_HIGH_THRESHOLD_DATA     8
+#define CONTROL_BITS_HIGH_THRESHOLD_DATA     32
 #define CONTROL_ADDR_LOW_NEW_THRESHOLD_DATA  0x38
-#define CONTROL_BITS_LOW_NEW_THRESHOLD_DATA  8
+#define CONTROL_BITS_LOW_NEW_THRESHOLD_DATA  32
 #define CONTROL_ADDR_HIGH_NEW_THRESHOLD_DATA 0x40
-#define CONTROL_BITS_HIGH_NEW_THRESHOLD_DATA 8
+#define CONTROL_BITS_HIGH_NEW_THRESHOLD_DATA 32
 #define CONTROL_ADDR_MAX_VALUE_DATA          0x48
-#define CONTROL_BITS_MAX_VALUE_DATA          8
+#define CONTROL_BITS_MAX_VALUE_DATA          32

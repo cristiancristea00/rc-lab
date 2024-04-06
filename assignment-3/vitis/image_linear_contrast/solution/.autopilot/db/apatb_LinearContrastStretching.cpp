@@ -1151,10 +1151,10 @@ namespace hls::sim
 
 
 extern "C"
-void LinearContrastStretching_hw_stub_wrapper(void*, void*, hls::sim::Byte<4>, hls::sim::Byte<1>, hls::sim::Byte<1>, hls::sim::Byte<1>, hls::sim::Byte<1>, hls::sim::Byte<1>);
+void LinearContrastStretching_hw_stub_wrapper(void*, void*, hls::sim::Byte<4>, hls::sim::Byte<4>, hls::sim::Byte<4>, hls::sim::Byte<4>, hls::sim::Byte<4>, hls::sim::Byte<4>);
 
 extern "C"
-void apatb_LinearContrastStretching_hw(void* __xlx_apatb_param_image_out, void* __xlx_apatb_param_image_in, hls::sim::Byte<4> __xlx_apatb_param_image_length, hls::sim::Byte<1> __xlx_apatb_param_low_threshold, hls::sim::Byte<1> __xlx_apatb_param_high_threshold, hls::sim::Byte<1> __xlx_apatb_param_low_new_threshold, hls::sim::Byte<1> __xlx_apatb_param_high_new_threshold, hls::sim::Byte<1> __xlx_apatb_param_max_value)
+void apatb_LinearContrastStretching_hw(void* __xlx_apatb_param_image_out, void* __xlx_apatb_param_image_in, hls::sim::Byte<4> __xlx_apatb_param_image_length, hls::sim::Byte<4> __xlx_apatb_param_low_threshold, hls::sim::Byte<4> __xlx_apatb_param_high_threshold, hls::sim::Byte<4> __xlx_apatb_param_low_new_threshold, hls::sim::Byte<4> __xlx_apatb_param_high_new_threshold, hls::sim::Byte<4> __xlx_apatb_param_max_value)
 {
   hls::sim::Byte<4> __xlx_offset_byte_param_image_out;
   static hls::sim::Register port0 {
@@ -1193,7 +1193,7 @@ void apatb_LinearContrastStretching_hw(void* __xlx_apatb_param_image_out, void* 
 
   static hls::sim::Register port3 {
     .name = "low_threshold",
-    .width = 8,
+    .width = 32,
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
@@ -1204,7 +1204,7 @@ void apatb_LinearContrastStretching_hw(void* __xlx_apatb_param_image_out, void* 
 
   static hls::sim::Register port4 {
     .name = "high_threshold",
-    .width = 8,
+    .width = 32,
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
@@ -1215,7 +1215,7 @@ void apatb_LinearContrastStretching_hw(void* __xlx_apatb_param_image_out, void* 
 
   static hls::sim::Register port5 {
     .name = "low_new_threshold",
-    .width = 8,
+    .width = 32,
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
@@ -1226,7 +1226,7 @@ void apatb_LinearContrastStretching_hw(void* __xlx_apatb_param_image_out, void* 
 
   static hls::sim::Register port6 {
     .name = "high_new_threshold",
-    .width = 8,
+    .width = 32,
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
@@ -1237,7 +1237,7 @@ void apatb_LinearContrastStretching_hw(void* __xlx_apatb_param_image_out, void* 
 
   static hls::sim::Register port7 {
     .name = "max_value",
-    .width = 8,
+    .width = 32,
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
@@ -1247,8 +1247,8 @@ void apatb_LinearContrastStretching_hw(void* __xlx_apatb_param_image_out, void* 
   port7.param = &__xlx_apatb_param_max_value;
 
   static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port8 {
-    .width = 8,
-    .asize = 1,
+    .width = 32,
+    .asize = 4,
     .hbm = false,
     .name = { "image_in" },
 #ifdef POST_CHECK
@@ -1263,8 +1263,8 @@ void apatb_LinearContrastStretching_hw(void* __xlx_apatb_param_image_out, void* 
   port8.hasWrite = { false };
 
   static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port9 {
-    .width = 8,
-    .asize = 1,
+    .width = 32,
+    .asize = 4,
     .hbm = false,
     .name = { "image_out" },
 #ifdef POST_CHECK

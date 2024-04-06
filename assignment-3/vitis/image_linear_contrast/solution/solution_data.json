@@ -18,8 +18,8 @@
     "image_out": {
       "index": "0",
       "direction": "out",
-      "srcType": "unsigned char* const ",
-      "srcSize": "8",
+      "srcType": "unsigned int* const ",
+      "srcSize": "32",
       "hwRefs": [
         {
           "type": "interface",
@@ -40,8 +40,8 @@
     "image_in": {
       "index": "1",
       "direction": "in",
-      "srcType": "unsigned char const * const ",
-      "srcSize": "8",
+      "srcType": "unsigned int const * const ",
+      "srcSize": "32",
       "hwRefs": [
         {
           "type": "interface",
@@ -75,8 +75,8 @@
     "low_threshold": {
       "index": "3",
       "direction": "in",
-      "srcType": "unsigned char const ",
-      "srcSize": "8",
+      "srcType": "unsigned int const ",
+      "srcSize": "32",
       "hwRefs": [{
           "type": "register",
           "interface": "s_axi_control",
@@ -88,8 +88,8 @@
     "high_threshold": {
       "index": "4",
       "direction": "in",
-      "srcType": "unsigned char const ",
-      "srcSize": "8",
+      "srcType": "unsigned int const ",
+      "srcSize": "32",
       "hwRefs": [{
           "type": "register",
           "interface": "s_axi_control",
@@ -101,8 +101,8 @@
     "low_new_threshold": {
       "index": "5",
       "direction": "in",
-      "srcType": "unsigned char const ",
-      "srcSize": "8",
+      "srcType": "unsigned int const ",
+      "srcSize": "32",
       "hwRefs": [{
           "type": "register",
           "interface": "s_axi_control",
@@ -114,8 +114,8 @@
     "high_new_threshold": {
       "index": "6",
       "direction": "in",
-      "srcType": "unsigned char const ",
-      "srcSize": "8",
+      "srcType": "unsigned int const ",
+      "srcSize": "32",
       "hwRefs": [{
           "type": "register",
           "interface": "s_axi_control",
@@ -127,8 +127,8 @@
     "max_value": {
       "index": "7",
       "direction": "in",
-      "srcType": "unsigned char const ",
-      "srcSize": "8",
+      "srcType": "unsigned int const ",
+      "srcSize": "32",
       "hwRefs": [{
           "type": "register",
           "interface": "s_axi_control",
@@ -152,6 +152,7 @@
       "config_interface -m_axi_addr64=0",
       "config_cosim -tool=xsim"
     ],
+    "DirectiveTcl": ["set_directive_top LinearContrastStretching -name LinearContrastStretching"],
     "ProfileOption": "0",
     "ProfileType": "none",
     "KernelName": "LinearContrastStretching"
@@ -184,11 +185,9 @@
       "impl\/vhdl\/LinearContrastStretching_flow_control_loop_pipe_sequential_init.vhd",
       "impl\/vhdl\/LinearContrastStretching_image_in_m_axi.vhd",
       "impl\/vhdl\/LinearContrastStretching_image_out_m_axi.vhd",
-      "impl\/vhdl\/LinearContrastStretching_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1.vhd",
-      "impl\/vhdl\/LinearContrastStretching_mul_8ns_8ns_16_1_1.vhd",
-      "impl\/vhdl\/LinearContrastStretching_mul_9s_9s_17_1_1.vhd",
-      "impl\/vhdl\/LinearContrastStretching_sdiv_17ns_9s_8_21_1.vhd",
-      "impl\/vhdl\/LinearContrastStretching_udiv_16ns_8ns_8_20_1.vhd",
+      "impl\/vhdl\/LinearContrastStretching_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1.vhd",
+      "impl\/vhdl\/LinearContrastStretching_mul_32s_32s_32_2_1.vhd",
+      "impl\/vhdl\/LinearContrastStretching_udiv_32ns_32ns_32_36_1.vhd",
       "impl\/vhdl\/LinearContrastStretching.vhd"
     ],
     "Verilog": [
@@ -196,11 +195,9 @@
       "impl\/verilog\/LinearContrastStretching_flow_control_loop_pipe_sequential_init.v",
       "impl\/verilog\/LinearContrastStretching_image_in_m_axi.v",
       "impl\/verilog\/LinearContrastStretching_image_out_m_axi.v",
-      "impl\/verilog\/LinearContrastStretching_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1.v",
-      "impl\/verilog\/LinearContrastStretching_mul_8ns_8ns_16_1_1.v",
-      "impl\/verilog\/LinearContrastStretching_mul_9s_9s_17_1_1.v",
-      "impl\/verilog\/LinearContrastStretching_sdiv_17ns_9s_8_21_1.v",
-      "impl\/verilog\/LinearContrastStretching_udiv_16ns_8ns_8_20_1.v",
+      "impl\/verilog\/LinearContrastStretching_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1.v",
+      "impl\/verilog\/LinearContrastStretching_mul_32s_32s_32_2_1.v",
+      "impl\/verilog\/LinearContrastStretching_udiv_32ns_32ns_32_36_1.v",
       "impl\/verilog\/LinearContrastStretching.v"
     ],
     "SwDriver": [
@@ -459,22 +456,13 @@
           "access": "W",
           "description": "Data signal of low_threshold",
           "range": "32",
-          "fields": [
-            {
+          "fields": [{
               "offset": "0",
-              "width": "8",
+              "width": "32",
               "name": "low_threshold",
               "access": "W",
-              "description": "Bit 7 to 0 of low_threshold"
-            },
-            {
-              "offset": "8",
-              "width": "24",
-              "name": "RESERVED",
-              "access": "R",
-              "description": "Reserved.  0s on read."
-            }
-          ]
+              "description": "Bit 31 to 0 of low_threshold"
+            }]
         },
         {
           "offset": "0x30",
@@ -482,22 +470,13 @@
           "access": "W",
           "description": "Data signal of high_threshold",
           "range": "32",
-          "fields": [
-            {
+          "fields": [{
               "offset": "0",
-              "width": "8",
+              "width": "32",
               "name": "high_threshold",
               "access": "W",
-              "description": "Bit 7 to 0 of high_threshold"
-            },
-            {
-              "offset": "8",
-              "width": "24",
-              "name": "RESERVED",
-              "access": "R",
-              "description": "Reserved.  0s on read."
-            }
-          ]
+              "description": "Bit 31 to 0 of high_threshold"
+            }]
         },
         {
           "offset": "0x38",
@@ -505,22 +484,13 @@
           "access": "W",
           "description": "Data signal of low_new_threshold",
           "range": "32",
-          "fields": [
-            {
+          "fields": [{
               "offset": "0",
-              "width": "8",
+              "width": "32",
               "name": "low_new_threshold",
               "access": "W",
-              "description": "Bit 7 to 0 of low_new_threshold"
-            },
-            {
-              "offset": "8",
-              "width": "24",
-              "name": "RESERVED",
-              "access": "R",
-              "description": "Reserved.  0s on read."
-            }
-          ]
+              "description": "Bit 31 to 0 of low_new_threshold"
+            }]
         },
         {
           "offset": "0x40",
@@ -528,22 +498,13 @@
           "access": "W",
           "description": "Data signal of high_new_threshold",
           "range": "32",
-          "fields": [
-            {
+          "fields": [{
               "offset": "0",
-              "width": "8",
+              "width": "32",
               "name": "high_new_threshold",
               "access": "W",
-              "description": "Bit 7 to 0 of high_new_threshold"
-            },
-            {
-              "offset": "8",
-              "width": "24",
-              "name": "RESERVED",
-              "access": "R",
-              "description": "Reserved.  0s on read."
-            }
-          ]
+              "description": "Bit 31 to 0 of high_new_threshold"
+            }]
         },
         {
           "offset": "0x48",
@@ -551,22 +512,13 @@
           "access": "W",
           "description": "Data signal of max_value",
           "range": "32",
-          "fields": [
-            {
+          "fields": [{
               "offset": "0",
-              "width": "8",
+              "width": "32",
               "name": "max_value",
               "access": "W",
-              "description": "Bit 7 to 0 of max_value"
-            },
-            {
-              "offset": "8",
-              "width": "24",
-              "name": "RESERVED",
-              "access": "R",
-              "description": "Reserved.  0s on read."
-            }
-          ]
+              "description": "Bit 31 to 0 of max_value"
+            }]
         }
       ],
       "constraints": [
@@ -740,8 +692,8 @@
         },
         {
           "constraint_type": "bitwidth",
-          "orig_bitwidth": "8",
-          "final_bitwidth": "8",
+          "orig_bitwidth": "32",
+          "final_bitwidth": "32",
           "argName": "image_out"
         }
       ]
@@ -830,8 +782,8 @@
         },
         {
           "constraint_type": "bitwidth",
-          "orig_bitwidth": "8",
-          "final_bitwidth": "8",
+          "orig_bitwidth": "32",
+          "final_bitwidth": "32",
           "argName": "image_in"
         }
       ]
@@ -1303,12 +1255,12 @@
     "Hierarchy": {
       "ModuleName": "LinearContrastStretching",
       "Instances": [{
-          "ModuleName": "LinearContrastStretching_Pipeline_VITIS_LOOP_24_1",
-          "InstanceName": "grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122"
+          "ModuleName": "LinearContrastStretching_Pipeline_VITIS_LOOP_27_1",
+          "InstanceName": "grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145"
         }]
     },
     "Info": {
-      "LinearContrastStretching_Pipeline_VITIS_LOOP_24_1": {
+      "LinearContrastStretching_Pipeline_VITIS_LOOP_27_1": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "1",
@@ -1324,7 +1276,7 @@
       }
     },
     "Metrics": {
-      "LinearContrastStretching_Pipeline_VITIS_LOOP_24_1": {
+      "LinearContrastStretching_Pipeline_VITIS_LOOP_27_1": {
         "Latency": {
           "LatencyBest": "",
           "LatencyAvg": "",
@@ -1339,22 +1291,22 @@
           "Estimate": "7.300"
         },
         "Loops": [{
-            "Name": "VITIS_LOOP_24_1",
+            "Name": "VITIS_LOOP_27_1",
             "TripCount": "",
             "Latency": "",
-            "PipelineII": "2",
-            "PipelineDepth": "40"
+            "PipelineII": "1",
+            "PipelineDepth": "43"
           }],
         "Area": {
-          "DSP": "0",
+          "DSP": "6",
           "AVAIL_DSP": "220",
-          "UTIL_DSP": "0",
-          "FF": "5476",
+          "UTIL_DSP": "2",
+          "FF": "9059",
           "AVAIL_FF": "106400",
-          "UTIL_FF": "5",
-          "LUT": "4350",
+          "UTIL_FF": "8",
+          "LUT": "5841",
           "AVAIL_LUT": "53200",
-          "UTIL_LUT": "8",
+          "UTIL_LUT": "10",
           "BRAM_18K": "0",
           "AVAIL_BRAM": "280",
           "UTIL_BRAM": "0",
@@ -1378,18 +1330,18 @@
           "Estimate": "7.300"
         },
         "Area": {
-          "BRAM_18K": "4",
+          "BRAM_18K": "8",
           "AVAIL_BRAM": "280",
-          "UTIL_BRAM": "1",
-          "DSP": "0",
+          "UTIL_BRAM": "2",
+          "DSP": "6",
           "AVAIL_DSP": "220",
-          "UTIL_DSP": "0",
-          "FF": "7595",
+          "UTIL_DSP": "2",
+          "FF": "11456",
           "AVAIL_FF": "106400",
-          "UTIL_FF": "7",
-          "LUT": "6485",
+          "UTIL_FF": "10",
+          "LUT": "8241",
           "AVAIL_LUT": "53200",
-          "UTIL_LUT": "12",
+          "UTIL_LUT": "15",
           "URAM": "0",
           "AVAIL_URAM": "0",
           "UTIL_URAM": "0"
@@ -1400,7 +1352,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2024-04-04 16:23:52 EEST",
+    "Time": "2024-04-06 10:45:22 EEST",
     "ToolName": "vitis_hls",
     "ToolVersion": "2023.1.1"
   }

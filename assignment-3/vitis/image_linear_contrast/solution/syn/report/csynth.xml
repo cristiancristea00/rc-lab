@@ -31,10 +31,10 @@
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
-            <BRAM_18K>4</BRAM_18K>
-            <DSP>0</DSP>
-            <FF>7595</FF>
-            <LUT>6485</LUT>
+            <BRAM_18K>8</BRAM_18K>
+            <DSP>6</DSP>
+            <FF>11456</FF>
+            <LUT>8241</LUT>
             <URAM>0</URAM>
         </Resources>
         <AvailableResources>
@@ -54,7 +54,7 @@
             <Dir>in</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
-            <CType>uint</CType>
+            <CType>int</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
@@ -65,7 +65,7 @@
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
-            <CType>uint</CType>
+            <CType>int</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
@@ -76,7 +76,7 @@
             <Dir>in</Dir>
             <Bits>7</Bits>
             <Attribute>unknown</Attribute>
-            <CType>uint</CType>
+            <CType>int</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
@@ -87,7 +87,7 @@
             <Dir>in</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
-            <CType>uint</CType>
+            <CType>int</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
@@ -98,7 +98,7 @@
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
-            <CType>uint</CType>
+            <CType>int</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
@@ -109,7 +109,7 @@
             <Dir>in</Dir>
             <Bits>32</Bits>
             <Attribute>unknown</Attribute>
-            <CType>uint</CType>
+            <CType>int</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
@@ -120,7 +120,7 @@
             <Dir>in</Dir>
             <Bits>4</Bits>
             <Attribute>unknown</Attribute>
-            <CType>uint</CType>
+            <CType>int</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
@@ -131,7 +131,7 @@
             <Dir>in</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
-            <CType>uint</CType>
+            <CType>int</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
@@ -142,7 +142,7 @@
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
-            <CType>uint</CType>
+            <CType>int</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
@@ -153,7 +153,7 @@
             <Dir>in</Dir>
             <Bits>7</Bits>
             <Attribute>unknown</Attribute>
-            <CType>uint</CType>
+            <CType>int</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
@@ -164,7 +164,7 @@
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
-            <CType>uint</CType>
+            <CType>int</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
@@ -175,7 +175,7 @@
             <Dir>in</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
-            <CType>uint</CType>
+            <CType>int</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
@@ -186,7 +186,7 @@
             <Dir>out</Dir>
             <Bits>32</Bits>
             <Attribute>unknown</Attribute>
-            <CType>uint</CType>
+            <CType>int</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
@@ -197,7 +197,7 @@
             <Dir>out</Dir>
             <Bits>2</Bits>
             <Attribute>unknown</Attribute>
-            <CType>uint</CType>
+            <CType>int</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
@@ -208,7 +208,7 @@
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
-            <CType>uint</CType>
+            <CType>int</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
@@ -219,7 +219,7 @@
             <Dir>in</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
-            <CType>uint</CType>
+            <CType>int</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
@@ -230,7 +230,7 @@
             <Dir>out</Dir>
             <Bits>2</Bits>
             <Attribute>unknown</Attribute>
-            <CType>uint</CType>
+            <CType>int</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
@@ -1352,21 +1352,21 @@
             <ModuleName>LinearContrastStretching</ModuleName>
             <InstancesList>
                 <Instance>
-                    <InstName>grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_122</InstName>
-                    <ModuleName>LinearContrastStretching_Pipeline_VITIS_LOOP_24_1</ModuleName>
+                    <InstName>grp_LinearContrastStretching_Pipeline_VITIS_LOOP_27_1_fu_145</InstName>
+                    <ModuleName>LinearContrastStretching_Pipeline_VITIS_LOOP_27_1</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>122</ID>
-                    <BindInstances>add_ln28_fu_360_p2 add_ln28_1_fu_423_p2 add_ln28_2_fu_433_p2 sub_ln38_fu_390_p2 mul_9s_9s_17_1_1_U1 add_ln38_fu_507_p2 sub_ln34_fu_404_p2 mul_9s_9s_17_1_1_U2 add_ln34_fu_515_p2 mul_8ns_8ns_16_1_1_U3 sub_ln38_1_fu_459_p2 mul_9s_9s_17_1_1_U7 add_ln38_1_fu_524_p2 sub_ln34_1_fu_473_p2 mul_9s_9s_17_1_1_U8 add_ln34_1_fu_533_p2 mul_8ns_8ns_16_1_1_U9 idx_5_fu_372_p2</BindInstances>
+                    <ID>145</ID>
+                    <BindInstances>add_ln27_fu_195_p2 sub_ln41_fu_220_p2 mul_32s_32s_32_2_1_U2 after_3_fu_242_p2 sub_ln37_fu_224_p2 mul_32s_32s_32_2_1_U2 after_2_fu_247_p2 mul_32s_32s_32_2_1_U1</BindInstances>
                 </Instance>
             </InstancesList>
-            <BindInstances>sub24_fu_176_p2 sub42_fu_183_p2 sub_ln34_fu_190_p2 sub_ln38_fu_197_p2</BindInstances>
+            <BindInstances>sub4_fu_204_p2 sub6_fu_209_p2 sub10_fu_214_p2 sub12_fu_219_p2</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
         <Module>
-            <Name>LinearContrastStretching_Pipeline_VITIS_LOOP_24_1</Name>
+            <Name>LinearContrastStretching_Pipeline_VITIS_LOOP_27_1</Name>
             <Loops>
-                <VITIS_LOOP_24_1/>
+                <VITIS_LOOP_27_1/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
@@ -1385,30 +1385,30 @@
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_24_1>
-                        <Name>VITIS_LOOP_24_1</Name>
+                    <VITIS_LOOP_27_1>
+                        <Name>VITIS_LOOP_27_1</Name>
                         <Slack>7.30</Slack>
                         <TripCount>undef</TripCount>
                         <Latency>undef</Latency>
                         <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
-                        <PipelineII>2</PipelineII>
-                        <PipelineDepth>40</PipelineDepth>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>43</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_24_1>
+                    </VITIS_LOOP_27_1>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <DSP>0</DSP>
+                    <DSP>6</DSP>
                     <AVAIL_DSP>220</AVAIL_DSP>
-                    <UTIL_DSP>0</UTIL_DSP>
-                    <FF>5476</FF>
+                    <UTIL_DSP>2</UTIL_DSP>
+                    <FF>9059</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
-                    <UTIL_FF>5</UTIL_FF>
-                    <LUT>4350</LUT>
+                    <UTIL_FF>8</UTIL_FF>
+                    <LUT>5841</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
-                    <UTIL_LUT>8</UTIL_LUT>
+                    <UTIL_LUT>10</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
                     <AVAIL_BRAM>280</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
@@ -1418,24 +1418,14 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_fu_360_p2" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:28" URAM="0" VARIABLE="add_ln28"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_1_fu_423_p2" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:28" URAM="0" VARIABLE="add_ln28_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_2_fu_433_p2" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:28" URAM="0" VARIABLE="add_ln28_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln38_fu_390_p2" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:38" URAM="0" VARIABLE="sub_ln38"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_17_1_1_U1" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:38" URAM="0" VARIABLE="mul_ln38"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln38_fu_507_p2" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:38" URAM="0" VARIABLE="add_ln38"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln34_fu_404_p2" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:34" URAM="0" VARIABLE="sub_ln34"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_17_1_1_U2" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:34" URAM="0" VARIABLE="mul_ln34"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln34_fu_515_p2" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:34" URAM="0" VARIABLE="add_ln34"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_8ns_8ns_16_1_1_U3" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:30" URAM="0" VARIABLE="mul_ln30"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln38_1_fu_459_p2" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:38" URAM="0" VARIABLE="sub_ln38_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_17_1_1_U7" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:38" URAM="0" VARIABLE="mul_ln38_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln38_1_fu_524_p2" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:38" URAM="0" VARIABLE="add_ln38_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln34_1_fu_473_p2" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:34" URAM="0" VARIABLE="sub_ln34_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_17_1_1_U8" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:34" URAM="0" VARIABLE="mul_ln34_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln34_1_fu_533_p2" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:34" URAM="0" VARIABLE="add_ln34_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_8ns_8ns_16_1_1_U9" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:30" URAM="0" VARIABLE="mul_ln30_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="add" PRAGMA="" RTLNAME="idx_5_fu_372_p2" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:24" URAM="0" VARIABLE="idx_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_27_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_fu_195_p2" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:27" URAM="0" VARIABLE="add_ln27"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_27_1" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln41_fu_220_p2" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:41" URAM="0" VARIABLE="sub_ln41"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="1" LOOP="VITIS_LOOP_27_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_2_1_U2" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:41" URAM="0" VARIABLE="mul_ln41"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_27_1" OPTYPE="add" PRAGMA="" RTLNAME="after_3_fu_242_p2" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:41" URAM="0" VARIABLE="after_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_27_1" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln37_fu_224_p2" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:37" URAM="0" VARIABLE="sub_ln37"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="1" LOOP="VITIS_LOOP_27_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_2_1_U2" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:37" URAM="0" VARIABLE="mul_ln37"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_27_1" OPTYPE="add" PRAGMA="" RTLNAME="after_2_fu_247_p2" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:37" URAM="0" VARIABLE="after_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="1" LOOP="VITIS_LOOP_27_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_2_1_U1" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:33" URAM="0" VARIABLE="mul_ln33"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1459,44 +1449,44 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <BRAM_18K>4</BRAM_18K>
+                    <BRAM_18K>8</BRAM_18K>
                     <AVAIL_BRAM>280</AVAIL_BRAM>
-                    <UTIL_BRAM>1</UTIL_BRAM>
-                    <DSP>0</DSP>
+                    <UTIL_BRAM>2</UTIL_BRAM>
+                    <DSP>6</DSP>
                     <AVAIL_DSP>220</AVAIL_DSP>
-                    <UTIL_DSP>0</UTIL_DSP>
-                    <FF>7595</FF>
+                    <UTIL_DSP>2</UTIL_DSP>
+                    <FF>11456</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
-                    <UTIL_FF>7</UTIL_FF>
-                    <LUT>6485</LUT>
+                    <UTIL_FF>10</UTIL_FF>
+                    <LUT>8241</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
-                    <UTIL_LUT>12</UTIL_LUT>
+                    <UTIL_LUT>15</UTIL_LUT>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub24_fu_176_p2" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:4" URAM="0" VARIABLE="sub24"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub42_fu_183_p2" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:4" URAM="0" VARIABLE="sub42"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln34_fu_190_p2" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:34" URAM="0" VARIABLE="sub_ln34"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln38_fu_197_p2" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:38" URAM="0" VARIABLE="sub_ln38"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub4_fu_204_p2" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:4" URAM="0" VARIABLE="sub4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub6_fu_209_p2" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:4" URAM="0" VARIABLE="sub6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub10_fu_214_p2" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:4" URAM="0" VARIABLE="sub10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub12_fu_219_p2" SOURCE="image_linear_contrast/solution/code/LinearContrastStretching.cpp:4" URAM="0" VARIABLE="sub12"/>
             </BindNodes>
         </Module>
     </ModuleInformation>
     <FIFOInformation/>
     <UserConfigCommands>
-        <config_export description="Module that applies Linear Contrast Stretching to an image" display_name="Linear Contrast Stretching" output="/home/cristian/Documents/ACES/RC/assignment-3/vitis/image_linear_contrast" vendor="Cristian Cristea" version="1.0.0" vivado_clock="10"/>
+        <config_export description="Module that applies Linear Contrast Stretching to an image" display_name="Linear Contrast Stretching" output="/home/cristian/Documents/ACES/RC/assignment-3/vitis/image_linear_contrast" vendor="Cristi" version="1.0.0" vivado_clock="10"/>
         <config_interface m_axi_addr64="0"/>
     </UserConfigCommands>
     <Args>
-        <Arg ArgName="image_out" index="0" direction="out" srcType="unsigned char* const " srcSize="8">
+        <Arg ArgName="image_out" index="0" direction="out" srcType="unsigned int* const " srcSize="32">
             <hwRefs>
                 <hwRef type="interface" interface="m_axi_image_out" name="" usage="data" direction="out"/>
                 <hwRef type="interface" interface="s_axi_control" name="" usage="address" direction="out"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="image_in" index="1" direction="in" srcType="unsigned char const * const " srcSize="8">
+        <Arg ArgName="image_in" index="1" direction="in" srcType="unsigned int const * const " srcSize="32">
             <hwRefs>
                 <hwRef type="interface" interface="m_axi_image_in" name="" usage="data" direction="in"/>
                 <hwRef type="interface" interface="s_axi_control" name="" usage="address" direction="in"/>
@@ -1507,27 +1497,27 @@
                 <hwRef type="register" interface="s_axi_control" name="image_length" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="low_threshold" index="3" direction="in" srcType="unsigned char const " srcSize="8">
+        <Arg ArgName="low_threshold" index="3" direction="in" srcType="unsigned int const " srcSize="32">
             <hwRefs>
                 <hwRef type="register" interface="s_axi_control" name="low_threshold" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="high_threshold" index="4" direction="in" srcType="unsigned char const " srcSize="8">
+        <Arg ArgName="high_threshold" index="4" direction="in" srcType="unsigned int const " srcSize="32">
             <hwRefs>
                 <hwRef type="register" interface="s_axi_control" name="high_threshold" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="low_new_threshold" index="5" direction="in" srcType="unsigned char const " srcSize="8">
+        <Arg ArgName="low_new_threshold" index="5" direction="in" srcType="unsigned int const " srcSize="32">
             <hwRefs>
                 <hwRef type="register" interface="s_axi_control" name="low_new_threshold" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="high_new_threshold" index="6" direction="in" srcType="unsigned char const " srcSize="8">
+        <Arg ArgName="high_new_threshold" index="6" direction="in" srcType="unsigned int const " srcSize="32">
             <hwRefs>
                 <hwRef type="register" interface="s_axi_control" name="high_new_threshold" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="max_value" index="7" direction="in" srcType="unsigned char const " srcSize="8">
+        <Arg ArgName="max_value" index="7" direction="in" srcType="unsigned int const " srcSize="32">
             <hwRefs>
                 <hwRef type="register" interface="s_axi_control" name="max_value" usage="data" direction="in"/>
             </hwRefs>
@@ -1605,32 +1595,27 @@
                 </register>
                 <register offset="0x28" name="low_threshold" access="W" description="Data signal of low_threshold" range="32">
                     <fields>
-                        <field offset="0" width="8" name="low_threshold" access="W" description="Bit 7 to 0 of low_threshold"/>
-                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                        <field offset="0" width="32" name="low_threshold" access="W" description="Bit 31 to 0 of low_threshold"/>
                     </fields>
                 </register>
                 <register offset="0x30" name="high_threshold" access="W" description="Data signal of high_threshold" range="32">
                     <fields>
-                        <field offset="0" width="8" name="high_threshold" access="W" description="Bit 7 to 0 of high_threshold"/>
-                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                        <field offset="0" width="32" name="high_threshold" access="W" description="Bit 31 to 0 of high_threshold"/>
                     </fields>
                 </register>
                 <register offset="0x38" name="low_new_threshold" access="W" description="Data signal of low_new_threshold" range="32">
                     <fields>
-                        <field offset="0" width="8" name="low_new_threshold" access="W" description="Bit 7 to 0 of low_new_threshold"/>
-                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                        <field offset="0" width="32" name="low_new_threshold" access="W" description="Bit 31 to 0 of low_new_threshold"/>
                     </fields>
                 </register>
                 <register offset="0x40" name="high_new_threshold" access="W" description="Data signal of high_new_threshold" range="32">
                     <fields>
-                        <field offset="0" width="8" name="high_new_threshold" access="W" description="Bit 7 to 0 of high_new_threshold"/>
-                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                        <field offset="0" width="32" name="high_new_threshold" access="W" description="Bit 31 to 0 of high_new_threshold"/>
                     </fields>
                 </register>
                 <register offset="0x48" name="max_value" access="W" description="Data signal of max_value" range="32">
                     <fields>
-                        <field offset="0" width="8" name="max_value" access="W" description="Bit 7 to 0 of max_value"/>
-                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                        <field offset="0" width="32" name="max_value" access="W" description="Bit 31 to 0 of max_value"/>
                     </fields>
                 </register>
             </registers>
@@ -1740,7 +1725,7 @@
             </ports>
             <constraints>
                 <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0" argName="image_out"/>
-                <constraint constraint_type="bitwidth" orig_bitwidth="8" final_bitwidth="8" argName="image_out"/>
+                <constraint constraint_type="bitwidth" orig_bitwidth="32" final_bitwidth="32" argName="image_out"/>
             </constraints>
         </Interface>
         <Interface InterfaceName="m_axi_image_in" type="axi4full" busTypeName="aximm" mode="master" dataWidth="32" addrWidth="32" portPrefix="m_axi_image_in_" paramPrefix="C_M_AXI_IMAGE_IN_" preferredUsageValue="MEMORY">
@@ -1804,7 +1789,7 @@
             </ports>
             <constraints>
                 <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0" argName="image_in"/>
-                <constraint constraint_type="bitwidth" orig_bitwidth="8" final_bitwidth="8" argName="image_in"/>
+                <constraint constraint_type="bitwidth" orig_bitwidth="32" final_bitwidth="32" argName="image_in"/>
             </constraints>
         </Interface>
     </Interfaces>
@@ -1813,8 +1798,8 @@
             <item name="M_AXI">
                 <table>
                     <keys size="12">Interface, Data Width (SW-&gt;HW), Address Width, Latency, Offset, Register, Max Widen Bitwidth, Max Read Burst Length, Max Write Burst Length, Num Read Outstanding, Num Write Outstanding, Resource Estimate</keys>
-                    <column name="m_axi_image_in">8 -&gt; 8, 32, 0, slave, 0, 0, 16, 16, 16, 16, BRAM=2</column>
-                    <column name="m_axi_image_out">8 -&gt; 8, 32, 0, slave, 0, 0, 16, 16, 16, 16, BRAM=2</column>
+                    <column name="m_axi_image_in">32 -&gt; 32, 32, 0, slave, 0, 0, 16, 16, 16, 16, BRAM=4</column>
+                    <column name="m_axi_image_out">32 -&gt; 32, 32, 0, slave, 0, 0, 16, 16, 16, 16, BRAM=4</column>
                 </table>
             </item>
             <item name="S_AXILITE Interfaces">
@@ -1856,14 +1841,14 @@
             <item name="Top Function Arguments">
                 <table>
                     <keys size="3">Argument, Direction, Datatype</keys>
-                    <column name="image_out">out, unsigned char* const </column>
-                    <column name="image_in">in, unsigned char const * const </column>
+                    <column name="image_out">out, unsigned int* const </column>
+                    <column name="image_in">in, unsigned int const * const </column>
                     <column name="image_length">in, unsigned int const </column>
-                    <column name="low_threshold">in, unsigned char const </column>
-                    <column name="high_threshold">in, unsigned char const </column>
-                    <column name="low_new_threshold">in, unsigned char const </column>
-                    <column name="high_new_threshold">in, unsigned char const </column>
-                    <column name="max_value">in, unsigned char const </column>
+                    <column name="low_threshold">in, unsigned int const </column>
+                    <column name="high_threshold">in, unsigned int const </column>
+                    <column name="low_new_threshold">in, unsigned int const </column>
+                    <column name="high_new_threshold">in, unsigned int const </column>
+                    <column name="max_value">in, unsigned int const </column>
                 </table>
             </item>
             <item name="SW-to-HW Mapping">
@@ -1888,15 +1873,18 @@
         <section name="M_AXI Burst Information" level="0" HEADER_NOTE="Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.">
             <item name="Inferred Burst Summary">
                 <table>
-                    <keys size="4">HW Interface, Direction, Length, Width</keys>
-                    <column name="m_axi_image_in">read, 2, 8</column>
+                    <keys size="6">HW Interface, Direction, Length, Width, Loop, Loop Location</keys>
+                    <column name="m_axi_image_in">read, variable, 32, VITIS_LOOP_27_1, image_linear_contrast/solution/code/LinearContrastStretching.cpp:27:22</column>
+                    <column name="m_axi_image_out">write, variable, 32, VITIS_LOOP_27_1, image_linear_contrast/solution/code/LinearContrastStretching.cpp:27:22</column>
                 </table>
             </item>
             <item name="All M_AXI Variable Accesses">
                 <table>
                     <keys size="10">HW Interface, Variable, Access Location, Direction, Burst Status, Length, Loop, Loop Location, Resolution, Problem</keys>
-                    <column name="m_axi_image_in">image_in, image_linear_contrast/solution/code/LinearContrastStretching.cpp:28:6, read, Widen Fail, , , , 214-353, Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
-                    <column name="m_axi_image_in">image_in, image_linear_contrast/solution/code/LinearContrastStretching.cpp:28:6, read, Inferred, 2, VITIS_LOOP_24_1, image_linear_contrast/solution/code/LinearContrastStretching.cpp:24:19, , </column>
+                    <column name="m_axi_image_in">image_in, image_linear_contrast/solution/code/LinearContrastStretching.cpp:29:15, read, Widen Fail, , VITIS_LOOP_27_1, image_linear_contrast/solution/code/LinearContrastStretching.cpp:27:22, 214-353, Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
+                    <column name="m_axi_image_in">image_in, image_linear_contrast/solution/code/LinearContrastStretching.cpp:29:15, read, Inferred, variable, VITIS_LOOP_27_1, image_linear_contrast/solution/code/LinearContrastStretching.cpp:27:22, , </column>
+                    <column name="m_axi_image_out">image_out, image_linear_contrast/solution/code/LinearContrastStretching.cpp:44:24, write, Widen Fail, , VITIS_LOOP_27_1, image_linear_contrast/solution/code/LinearContrastStretching.cpp:27:22, 214-353, Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
+                    <column name="m_axi_image_out">image_out, image_linear_contrast/solution/code/LinearContrastStretching.cpp:44:24, write, Inferred, variable, VITIS_LOOP_27_1, image_linear_contrast/solution/code/LinearContrastStretching.cpp:27:22, , </column>
                 </table>
             </item>
         </section>
@@ -1911,7 +1899,6 @@
         <Pragma type="interface" location="image_linear_contrast/solution/code/LinearContrastStretching.cpp:20" status="valid" parentFunction="linearcontraststretching" variable="" isDirective="0" options="mode = s_axilite port = high_new_threshold"/>
         <Pragma type="interface" location="image_linear_contrast/solution/code/LinearContrastStretching.cpp:21" status="valid" parentFunction="linearcontraststretching" variable="" isDirective="0" options="mode = s_axilite port = max_value"/>
         <Pragma type="interface" location="image_linear_contrast/solution/code/LinearContrastStretching.cpp:22" status="valid" parentFunction="linearcontraststretching" variable="" isDirective="0" options="mode = s_axilite port = return"/>
-        <Pragma type="unroll" location="image_linear_contrast/solution/code/LinearContrastStretching.cpp:26" status="valid" parentFunction="linearcontraststretching" variable="" isDirective="0" options="factor = 2 skip_exit_check"/>
     </PragmaReport>
 </profile>
 
