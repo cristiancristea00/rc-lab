@@ -1,0 +1,78 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1.1 (lin64) Build 3900603 Fri Jun 16 19:30:25 MDT 2023
+| Date         : Tue Apr  9 20:08:26 2024
+| Host         : Hephaestion running 64-bit Ubuntu 23.10
+| Command      : report_utilization -hierarchical -hierarchical_depth 6 -file ./report/LinearContrastStretching_utilization_hierarchical_synth.rpt
+| Design       : bd_0_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++--------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+|                                 Instance                                 |                                           Module                                           | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
++--------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+| bd_0_wrapper                                                             |                                                                                      (top) |       6561 |       6163 |       0 |  398 | 8599 |      0 |      2 |          6 |
+|   bd_0_i                                                                 |                                                                                       bd_0 |       6561 |       6163 |       0 |  398 | 8599 |      0 |      2 |          6 |
+|     hls_inst                                                             |                                                                            bd_0_hls_inst_0 |       6561 |       6163 |       0 |  398 | 8599 |      0 |      2 |          6 |
+|       (hls_inst)                                                         |                                                                            bd_0_hls_inst_0 |          0 |          0 |       0 |    0 |    0 |      0 |      0 |          0 |
+|       inst                                                               |                                                   bd_0_hls_inst_0_LinearContrastStretching |       6561 |       6163 |       0 |  398 | 8599 |      0 |      2 |          6 |
+|         (inst)                                                           |                                                   bd_0_hls_inst_0_LinearContrastStretching |        128 |        128 |       0 |    0 |  393 |      0 |      0 |          0 |
+|         control_s_axi_U                                                  |                                     bd_0_hls_inst_0_LinearContrastStretching_control_s_axi |        279 |        279 |       0 |    0 |  312 |      0 |      0 |          0 |
+|         grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134     | bd_0_hls_inst_0_LinearContrastStretching_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1 |       5215 |       4988 |       0 |  227 | 6726 |      0 |      0 |          6 |
+|           (grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134) | bd_0_hls_inst_0_LinearContrastStretching_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1 |        325 |        254 |       0 |   71 |  505 |      0 |      0 |          0 |
+|           flow_control_loop_pipe_sequential_init_U                       |            bd_0_hls_inst_0_LinearContrastStretching_flow_control_loop_pipe_sequential_init |        119 |        119 |       0 |    0 |    2 |      0 |      0 |          0 |
+|           mul_32s_32s_32_2_1_U1                                          |                                bd_0_hls_inst_0_LinearContrastStretching_mul_32s_32s_32_2_1 |         16 |         16 |       0 |    0 |   17 |      0 |      0 |          3 |
+|           mul_32s_32s_32_2_1_U2                                          |                              bd_0_hls_inst_0_LinearContrastStretching_mul_32s_32s_32_2_1_3 |         15 |         15 |       0 |    0 |   17 |      0 |      0 |          3 |
+|           udiv_32ns_32ns_32_36_1_U3                                      |                            bd_0_hls_inst_0_LinearContrastStretching_udiv_32ns_32ns_32_36_1 |       1569 |       1506 |       0 |   63 | 2052 |      0 |      0 |          0 |
+|             (udiv_32ns_32ns_32_36_1_U3)                                  |                            bd_0_hls_inst_0_LinearContrastStretching_udiv_32ns_32ns_32_36_1 |         31 |          0 |       0 |   31 |   34 |      0 |      0 |          0 |
+|             LinearContrastStretching_udiv_32ns_32ns_32_36_1_divider_u    |                  bd_0_hls_inst_0_LinearContrastStretching_udiv_32ns_32ns_32_36_1_divider_7 |       1538 |       1506 |       0 |   32 | 2018 |      0 |      0 |          0 |
+|           udiv_32ns_32ns_32_36_1_U4                                      |                          bd_0_hls_inst_0_LinearContrastStretching_udiv_32ns_32ns_32_36_1_4 |       1634 |       1572 |       0 |   62 | 2083 |      0 |      0 |          0 |
+|             (udiv_32ns_32ns_32_36_1_U4)                                  |                          bd_0_hls_inst_0_LinearContrastStretching_udiv_32ns_32ns_32_36_1_4 |         32 |         32 |       0 |    0 |   65 |      0 |      0 |          0 |
+|             LinearContrastStretching_udiv_32ns_32ns_32_36_1_divider_u    |                  bd_0_hls_inst_0_LinearContrastStretching_udiv_32ns_32ns_32_36_1_divider_6 |       1602 |       1540 |       0 |   62 | 2018 |      0 |      0 |          0 |
+|           udiv_32ns_32ns_32_36_1_U5                                      |                          bd_0_hls_inst_0_LinearContrastStretching_udiv_32ns_32ns_32_36_1_5 |       1537 |       1506 |       0 |   31 | 2050 |      0 |      0 |          0 |
+|             (udiv_32ns_32ns_32_36_1_U5)                                  |                          bd_0_hls_inst_0_LinearContrastStretching_udiv_32ns_32ns_32_36_1_5 |         32 |         32 |       0 |    0 |   64 |      0 |      0 |          0 |
+|             LinearContrastStretching_udiv_32ns_32ns_32_36_1_divider_u    |                    bd_0_hls_inst_0_LinearContrastStretching_udiv_32ns_32ns_32_36_1_divider |       1505 |       1474 |       0 |   31 | 1986 |      0 |      0 |          0 |
+|         image_in_m_axi_U                                                 |                                    bd_0_hls_inst_0_LinearContrastStretching_image_in_m_axi |        450 |        387 |       0 |   63 |  574 |      0 |      1 |          0 |
+|           bus_read                                                       |                               bd_0_hls_inst_0_LinearContrastStretching_image_in_m_axi_read |        263 |        262 |       0 |    1 |  401 |      0 |      0 |          0 |
+|             fifo_burst                                                   |               bd_0_hls_inst_0_LinearContrastStretching_image_in_m_axi_fifo__parameterized1 |         18 |         17 |       0 |    1 |   13 |      0 |      0 |          0 |
+|             fifo_rctl                                                    |             bd_0_hls_inst_0_LinearContrastStretching_image_in_m_axi_fifo__parameterized1_2 |          9 |          9 |       0 |    0 |    8 |      0 |      0 |          0 |
+|             rreq_burst_conv                                              |                    bd_0_hls_inst_0_LinearContrastStretching_image_in_m_axi_burst_converter |        196 |        196 |       0 |    0 |  309 |      0 |      0 |          0 |
+|             rs_rdata                                                     |          bd_0_hls_inst_0_LinearContrastStretching_image_in_m_axi_reg_slice__parameterized2 |         40 |         40 |       0 |    0 |   71 |      0 |      0 |          0 |
+|           bus_write                                                      |                              bd_0_hls_inst_0_LinearContrastStretching_image_in_m_axi_write |          2 |          2 |       0 |    0 |    3 |      0 |      0 |          0 |
+|             rs_resp                                                      |          bd_0_hls_inst_0_LinearContrastStretching_image_in_m_axi_reg_slice__parameterized1 |          2 |          2 |       0 |    0 |    3 |      0 |      0 |          0 |
+|           load_unit                                                      |                               bd_0_hls_inst_0_LinearContrastStretching_image_in_m_axi_load |        185 |        123 |       0 |   62 |  170 |      0 |      1 |          0 |
+|             (load_unit)                                                  |                               bd_0_hls_inst_0_LinearContrastStretching_image_in_m_axi_load |          0 |          0 |       0 |    0 |   62 |      0 |      0 |          0 |
+|             buff_rdata                                                   |               bd_0_hls_inst_0_LinearContrastStretching_image_in_m_axi_fifo__parameterized3 |         39 |         39 |       0 |    0 |   36 |      0 |      1 |          0 |
+|             fifo_rreq                                                    |                               bd_0_hls_inst_0_LinearContrastStretching_image_in_m_axi_fifo |        146 |         84 |       0 |   62 |   72 |      0 |      0 |          0 |
+|         image_out_m_axi_U                                                |                                   bd_0_hls_inst_0_LinearContrastStretching_image_out_m_axi |        489 |        381 |       0 |  108 |  594 |      0 |      1 |          0 |
+|           bus_read                                                       |                              bd_0_hls_inst_0_LinearContrastStretching_image_out_m_axi_read |          4 |          4 |       0 |    0 |    5 |      0 |      0 |          0 |
+|             rs_rdata                                                     |         bd_0_hls_inst_0_LinearContrastStretching_image_out_m_axi_reg_slice__parameterized2 |          4 |          4 |       0 |    0 |    5 |      0 |      0 |          0 |
+|           bus_write                                                      |                             bd_0_hls_inst_0_LinearContrastStretching_image_out_m_axi_write |        379 |        303 |       0 |   76 |  463 |      0 |      0 |          0 |
+|             (bus_write)                                                  |                             bd_0_hls_inst_0_LinearContrastStretching_image_out_m_axi_write |          6 |          6 |       0 |    0 |   10 |      0 |      0 |          0 |
+|             fifo_burst                                                   |              bd_0_hls_inst_0_LinearContrastStretching_image_out_m_axi_fifo__parameterized4 |         26 |         22 |       0 |    4 |   16 |      0 |      0 |          0 |
+|             fifo_resp                                                    |            bd_0_hls_inst_0_LinearContrastStretching_image_out_m_axi_fifo__parameterized1_0 |         17 |         16 |       0 |    1 |   13 |      0 |      0 |          0 |
+|             rs_resp                                                      |         bd_0_hls_inst_0_LinearContrastStretching_image_out_m_axi_reg_slice__parameterized1 |          4 |          4 |       0 |    0 |    5 |      0 |      0 |          0 |
+|             wreq_burst_conv                                              |                   bd_0_hls_inst_0_LinearContrastStretching_image_out_m_axi_burst_converter |        167 |        167 |       0 |    0 |  245 |      0 |      0 |          0 |
+|             wreq_throttle                                                |                          bd_0_hls_inst_0_LinearContrastStretching_image_out_m_axi_throttle |        159 |         88 |       0 |   71 |  174 |      0 |      0 |          0 |
+|           load_unit                                                      |                              bd_0_hls_inst_0_LinearContrastStretching_image_out_m_axi_load |         17 |         17 |       0 |    0 |   12 |      0 |      0 |          0 |
+|             buff_rdata                                                   |              bd_0_hls_inst_0_LinearContrastStretching_image_out_m_axi_fifo__parameterized3 |         17 |         17 |       0 |    0 |   12 |      0 |      0 |          0 |
+|           store_unit                                                     |                             bd_0_hls_inst_0_LinearContrastStretching_image_out_m_axi_store |         89 |         57 |       0 |   32 |  114 |      0 |      1 |          0 |
+|             (store_unit)                                                 |                             bd_0_hls_inst_0_LinearContrastStretching_image_out_m_axi_store |          1 |          1 |       0 |    0 |   33 |      0 |      0 |          0 |
+|             buff_wdata                                                   |              bd_0_hls_inst_0_LinearContrastStretching_image_out_m_axi_fifo__parameterized0 |         12 |         12 |       0 |    0 |   20 |      0 |      1 |          0 |
+|             fifo_wreq                                                    |                              bd_0_hls_inst_0_LinearContrastStretching_image_out_m_axi_fifo |         46 |         15 |       0 |   31 |   41 |      0 |      0 |          0 |
+|             fifo_wrsp                                                    |              bd_0_hls_inst_0_LinearContrastStretching_image_out_m_axi_fifo__parameterized1 |         20 |         19 |       0 |    1 |   13 |      0 |      0 |          0 |
+|             user_resp                                                    |              bd_0_hls_inst_0_LinearContrastStretching_image_out_m_axi_fifo__parameterized2 |         10 |         10 |       0 |    0 |    7 |      0 |      0 |          0 |
++--------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+
+

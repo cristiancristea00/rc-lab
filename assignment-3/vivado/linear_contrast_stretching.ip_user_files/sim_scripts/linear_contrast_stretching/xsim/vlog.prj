@@ -1,0 +1,20 @@
+verilog xil_defaultlib --include "/home/cristian/Xilinx/Vivado/2023.1/data/xilinx_vip/include" --include "../../../../linear_contrast_stretching.gen/sources_1/bd/linear_contrast_stretching/ipshared/ec67/hdl" --include "../../../../linear_contrast_stretching.gen/sources_1/bd/linear_contrast_stretching/ipshared/aed8/hdl" --include "../../../../linear_contrast_stretching.gen/sources_1/bd/linear_contrast_stretching/ip/linear_contrast_stretching_LinearContrastStretc_0_2/drivers/LinearContrastStretching_v1_0/src" \
+"../../../bd/linear_contrast_stretching/ip/linear_contrast_stretching_processing_system7_0_1/sim/linear_contrast_stretching_processing_system7_0_1.v" \
+"../../../bd/linear_contrast_stretching/ip/linear_contrast_stretching_xbar_0/sim/linear_contrast_stretching_xbar_0.v" \
+"../../../../linear_contrast_stretching.gen/sources_1/bd/linear_contrast_stretching/ipshared/763b/hdl/verilog/LinearContrastStretching_control_s_axi.v" \
+"../../../../linear_contrast_stretching.gen/sources_1/bd/linear_contrast_stretching/ipshared/763b/hdl/verilog/LinearContrastStretching_flow_control_loop_pipe_sequential_init.v" \
+"../../../../linear_contrast_stretching.gen/sources_1/bd/linear_contrast_stretching/ipshared/763b/hdl/verilog/LinearContrastStretching_image_in_m_axi.v" \
+"../../../../linear_contrast_stretching.gen/sources_1/bd/linear_contrast_stretching/ipshared/763b/hdl/verilog/LinearContrastStretching_image_out_m_axi.v" \
+"../../../../linear_contrast_stretching.gen/sources_1/bd/linear_contrast_stretching/ipshared/763b/hdl/verilog/LinearContrastStretching_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1.v" \
+"../../../../linear_contrast_stretching.gen/sources_1/bd/linear_contrast_stretching/ipshared/763b/hdl/verilog/LinearContrastStretching_mul_32s_32s_32_2_1.v" \
+"../../../../linear_contrast_stretching.gen/sources_1/bd/linear_contrast_stretching/ipshared/763b/hdl/verilog/LinearContrastStretching_udiv_32ns_32ns_32_36_1.v" \
+"../../../../linear_contrast_stretching.gen/sources_1/bd/linear_contrast_stretching/ipshared/763b/hdl/verilog/LinearContrastStretching.v" \
+"../../../bd/linear_contrast_stretching/ip/linear_contrast_stretching_LinearContrastStretc_0_2/sim/linear_contrast_stretching_LinearContrastStretc_0_2.v" \
+"../../../bd/linear_contrast_stretching/sim/linear_contrast_stretching.v" \
+"../../../bd/linear_contrast_stretching/ip/linear_contrast_stretching_auto_pc_0/sim/linear_contrast_stretching_auto_pc_0.v" \
+"../../../bd/linear_contrast_stretching/ip/linear_contrast_stretching_auto_pc_1/sim/linear_contrast_stretching_auto_pc_1.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

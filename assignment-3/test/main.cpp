@@ -26,27 +26,20 @@ auto LinearContrastStretching(
 	uint32_t const max_value = MAX_VALUE
 ) -> void
 {
-    uint32_t before;
-    uint32_t after;
-
     for (uint32_t idx = 0; idx < image_length; ++idx)
     {
-    	before = image_in[idx];
-
-        if (before < low_threshold)
+        if (image_in[idx] < low_threshold)
         {
-            after = before * low_new_threshold / low_threshold;
+        	image_out[idx] = image_in[idx] * low_new_threshold / low_threshold;
         }
-        else if (before > high_threshold)
+        else if (image_in[idx] > high_threshold)
         {
-            after = high_new_threshold + (before - high_threshold) * (max_value - high_new_threshold) / (max_value - high_threshold);
+        	image_out[idx] = high_new_threshold + (image_in[idx] - high_threshold) * (max_value - high_new_threshold) / (max_value - high_threshold);
         }
         else
         {
-            after = low_new_threshold + (before - low_threshold) * (high_new_threshold - low_new_threshold) / (high_threshold - low_threshold);
+        	image_out[idx] = low_new_threshold + (image_in[idx] - low_threshold) * (high_new_threshold - low_new_threshold) / (high_threshold - low_threshold);
         }
-
-        image_out[idx] = after;
     }
 }
 
@@ -67,7 +60,7 @@ auto main(int argc, char* argv[]) -> int
         std::cerr << std::format("Could not read the image: {}\n", argv[1]);
     }
 
-    // Convert the image to grayscale
+    // Convert the image to greyscale
     cv::Mat greyImage;
     cv::cvtColor(image, greyImage, cv::COLOR_BGR2GRAY);
 

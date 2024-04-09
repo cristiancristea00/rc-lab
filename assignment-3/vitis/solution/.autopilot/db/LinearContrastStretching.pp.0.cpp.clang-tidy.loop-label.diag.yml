@@ -1,0 +1,13 @@
+---
+MainSourceFile:  /home/cristian/Documents/ACES/RC/assignment-3/vitis/solution/.autopilot/db/LinearContrastStretching.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_24_1:  '
+    FileOffset:      24
+    FilePath:        /home/cristian/Documents/ACES/RC/assignment-3/vitis/solution/code/LinearContrastStretching.cpp
+    Replacements:    
+      - FilePath:        /home/cristian/Documents/ACES/RC/assignment-3/vitis/solution/.autopilot/db/LinearContrastStretching.pp.0.cpp
+        Offset:          20770
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_24_1: '
+...

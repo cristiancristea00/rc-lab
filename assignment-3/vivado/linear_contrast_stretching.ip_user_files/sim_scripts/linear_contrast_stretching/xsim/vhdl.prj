@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../bd/linear_contrast_stretching/ip/linear_contrast_stretching_rst_ps7_0_100M_1/sim/linear_contrast_stretching_rst_ps7_0_100M_1.vhd" \
+
+# Do not sort compile order
+nosort

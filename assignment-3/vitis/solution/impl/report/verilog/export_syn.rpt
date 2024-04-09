@@ -1,0 +1,187 @@
+================================================================
+== Vivado RTL Synthesis Results
+================================================================
++ General Information:
+    * Date:            Tue Apr 09 20:08:45 EEST 2024
+    * Version:         2023.1 (Build 3869133 on Jun 15 2023)
+    * Project:         vitis
+    * Solution:        solution (Vivado IP Flow Target)
+    * Product family:  zynq
+    * Target device:   xc7z020-clg400-1
+
+
+================================================================
+== Run Constraints & Options
+================================================================
++ Design Constraints & Options:
+    * RTL Synthesis target clock:  10 ns
+    * C-Synthesis target clock:    10 ns
+    * C-Synthesis uncertainty:     27%
+
++ RTL Synthesis Options:
+    * config_export -vivado_synth_strategy:     default
+    * config_export -vivado_synth_design_args:  -directive sdx_optimization_effort_high
+
++ Reporting Options:
+    * config_export -vivado_report_level:      2
+    * config_export -vivado_max_timing_paths:  10
+
+
+================================================================
+== RTL Synthesis Resource Summary
+================================================================
+LUT:              6561
+FF:               8599
+DSP:              6
+BRAM:             2
+URAM:             0
+SRL:              398
+
+
+================================================================
+== RTL Synthesis Timing Summary
+================================================================
+* Timing was met
++----------------+-------------+
+| Timing         | Period (ns) |
++----------------+-------------+
+| Target         | 10.000      |
+| Post-Synthesis | 7.929       |
++----------------+-------------+
+
+
+================================================================
+== RTL Synthesis Resources
+================================================================
++--------------------------------------------------------------------+------+------+-----+------+------+-----+--------+------+---------+----------+-----------------------------------------------------+
+| Name                                                               | LUT  | FF   | DSP | BRAM | URAM | SRL | Pragma | Impl | Latency | Variable | Source                                              |
++--------------------------------------------------------------------+------+------+-----+------+------+-----+--------+------+---------+----------+-----------------------------------------------------+
+| inst                                                               | 6561 | 8599 | 6   | 2    |      |     |        |      |         |          |                                                     |
+|   (inst)                                                           | 128  | 393  |     |      |      |     |        |      |         |          |                                                     |
+|   control_s_axi_U                                                  | 279  | 312  |     |      |      |     |        |      |         |          |                                                     |
+|   grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134     | 5215 | 6726 | 6   |      |      |     |        |      |         |          |                                                     |
+|     (grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134) | 325  | 505  |     |      |      |     |        |      |         |          |                                                     |
+|     flow_control_loop_pipe_sequential_init_U                       | 119  | 2    |     |      |      |     |        |      |         |          |                                                     |
+|     mul_32s_32s_32_2_1_U1                                          | 16   | 17   | 3   |      |      |     |        |      |         |          |                                                     |
+|       bind_op mul                                                  |      |      |     |      |      |     |        | auto | 1       | mul_ln28 | vitis/solution/code/LinearContrastStretching.cpp:28 |
+|     mul_32s_32s_32_2_1_U2                                          | 15   | 17   | 3   |      |      |     |        |      |         |          |                                                     |
+|       bind_op mul                                                  |      |      |     |      |      |     |        | auto | 1       | mul_ln36 | vitis/solution/code/LinearContrastStretching.cpp:36 |
+|       bind_op mul                                                  |      |      |     |      |      |     |        | auto | 1       | mul_ln32 | vitis/solution/code/LinearContrastStretching.cpp:32 |
+|     udiv_32ns_32ns_32_36_1_U3                                      | 1569 | 2052 |     |      |      |     |        |      |         |          |                                                     |
+|       (udiv_32ns_32ns_32_36_1_U3)                                  | 31   | 34   |     |      |      |     |        |      |         |          |                                                     |
+|     udiv_32ns_32ns_32_36_1_U4                                      | 1634 | 2083 |     |      |      |     |        |      |         |          |                                                     |
+|       (udiv_32ns_32ns_32_36_1_U4)                                  | 32   | 65   |     |      |      |     |        |      |         |          |                                                     |
+|     udiv_32ns_32ns_32_36_1_U5                                      | 1537 | 2050 |     |      |      |     |        |      |         |          |                                                     |
+|       (udiv_32ns_32ns_32_36_1_U5)                                  | 32   | 64   |     |      |      |     |        |      |         |          |                                                     |
+|   image_in_m_axi_U                                                 | 450  | 574  |     | 1    |      |     |        |      |         |          |                                                     |
+|   image_out_m_axi_U                                                | 489  | 594  |     | 1    |      |     |        |      |         |          |                                                     |
++--------------------------------------------------------------------+------+------+-----+------+------+-----+--------+------+---------+----------+-----------------------------------------------------+
+
+
+================================================================
+== RTL Synthesis Fail Fast
+================================================================
++-----------------------------------------------------------+-----------+--------+--------+
+| Criteria                                                  | Guideline | Actual | Status |
++-----------------------------------------------------------+-----------+--------+--------+
+| LUT                                                       | 70%       | 12.33% | OK     |
+| FD                                                        | 50%       | 8.08%  | OK     |
+| LUTRAM+SRL                                                | 25%       | 2.29%  | OK     |
+| MUXF7                                                     | 15%       | 0.00%  | OK     |
+| DSP                                                       | 80%       | 2.73%  | OK     |
+| RAMB/FIFO                                                 | 80%       | 0.71%  | OK     |
+| DSP+RAMB+URAM (Avg)                                       | 70%       | 1.72%  | OK     |
+| BUFGCE* + BUFGCTRL                                        | 24        | 0      | OK     |
+| DONT_TOUCH (cells/nets)                                   | 0         | 0      | OK     |
+| MARK_DEBUG (nets)                                         | 0         | 0      | OK     |
+| Control Sets                                              | 998       | 92     | OK     |
+| Average Fanout for modules > 100k cells                   | 4         | 0      | OK     |
+| Non-FD high fanout nets > 10k loads                       | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| TIMING-6 (No common primary clock between related clocks) | 0         | 0      | OK     |
+| TIMING-7 (No common node between related clocks)          | 0         | 0      | OK     |
+| TIMING-8 (No common period between related clocks)        | 0         | 0      | OK     |
+| TIMING-14 (LUT on the clock tree)                         | 0         | 0      | OK     |
+| TIMING-35 (No common node in paths with the same clock)   | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| Number of paths above max LUT budgeting (0.575ns)         | 0         | 0      | OK     |
+| Number of paths above max Net budgeting (0.403ns)         | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+
+
+================================================================
+== RTL Synthesis Timing Paths
+================================================================
+* Timing was met
++-------+-------+-----------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path  | SLACK | STARTPOINT PIN                                                                          | ENDPOINT PIN                                                                                          | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
+|       |       |                                                                                         |                                                                                                       |              |            |                |          DELAY |        DELAY |
++-------+-------+-----------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path1 | 2.071 | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/sub_ln32_reg_410_reg[16]/C | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/mul_32s_32s_32_2_1_U2/buff0_reg/PCIN[0]  |            2 |          1 |          6.445 |          4.849 |        1.596 |
+| Path2 | 2.071 | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/sub_ln32_reg_410_reg[16]/C | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/mul_32s_32s_32_2_1_U2/buff0_reg/PCIN[10] |            2 |          1 |          6.445 |          4.849 |        1.596 |
+| Path3 | 2.071 | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/sub_ln32_reg_410_reg[16]/C | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/mul_32s_32s_32_2_1_U2/buff0_reg/PCIN[11] |            2 |          1 |          6.445 |          4.849 |        1.596 |
+| Path4 | 2.071 | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/sub_ln32_reg_410_reg[16]/C | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/mul_32s_32s_32_2_1_U2/buff0_reg/PCIN[12] |            2 |          1 |          6.445 |          4.849 |        1.596 |
+| Path5 | 2.071 | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/sub_ln32_reg_410_reg[16]/C | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/mul_32s_32s_32_2_1_U2/buff0_reg/PCIN[13] |            2 |          1 |          6.445 |          4.849 |        1.596 |
++-------+-------+-----------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+
+    +---------------------------------------------------------------------------------------------------+----------------------+
+    | Path1 Cells                                                                                       | Primitive Type       |
+    +---------------------------------------------------------------------------------------------------+----------------------+
+    | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/sub_ln32_reg_410_reg[16]             | FLOP_LATCH.flop.FDRE |
+    | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/tmp_product__0_i_1                   | LUT.others.LUT3      |
+    | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/mul_32s_32s_32_2_1_U2/tmp_product__0 | MULT.dsp.DSP48E1     |
+    | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/mul_32s_32s_32_2_1_U2/buff0_reg      | MULT.dsp.DSP48E1     |
+    +---------------------------------------------------------------------------------------------------+----------------------+
+
+    +---------------------------------------------------------------------------------------------------+----------------------+
+    | Path2 Cells                                                                                       | Primitive Type       |
+    +---------------------------------------------------------------------------------------------------+----------------------+
+    | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/sub_ln32_reg_410_reg[16]             | FLOP_LATCH.flop.FDRE |
+    | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/tmp_product__0_i_1                   | LUT.others.LUT3      |
+    | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/mul_32s_32s_32_2_1_U2/tmp_product__0 | MULT.dsp.DSP48E1     |
+    | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/mul_32s_32s_32_2_1_U2/buff0_reg      | MULT.dsp.DSP48E1     |
+    +---------------------------------------------------------------------------------------------------+----------------------+
+
+    +---------------------------------------------------------------------------------------------------+----------------------+
+    | Path3 Cells                                                                                       | Primitive Type       |
+    +---------------------------------------------------------------------------------------------------+----------------------+
+    | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/sub_ln32_reg_410_reg[16]             | FLOP_LATCH.flop.FDRE |
+    | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/tmp_product__0_i_1                   | LUT.others.LUT3      |
+    | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/mul_32s_32s_32_2_1_U2/tmp_product__0 | MULT.dsp.DSP48E1     |
+    | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/mul_32s_32s_32_2_1_U2/buff0_reg      | MULT.dsp.DSP48E1     |
+    +---------------------------------------------------------------------------------------------------+----------------------+
+
+    +---------------------------------------------------------------------------------------------------+----------------------+
+    | Path4 Cells                                                                                       | Primitive Type       |
+    +---------------------------------------------------------------------------------------------------+----------------------+
+    | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/sub_ln32_reg_410_reg[16]             | FLOP_LATCH.flop.FDRE |
+    | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/tmp_product__0_i_1                   | LUT.others.LUT3      |
+    | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/mul_32s_32s_32_2_1_U2/tmp_product__0 | MULT.dsp.DSP48E1     |
+    | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/mul_32s_32s_32_2_1_U2/buff0_reg      | MULT.dsp.DSP48E1     |
+    +---------------------------------------------------------------------------------------------------+----------------------+
+
+    +---------------------------------------------------------------------------------------------------+----------------------+
+    | Path5 Cells                                                                                       | Primitive Type       |
+    +---------------------------------------------------------------------------------------------------+----------------------+
+    | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/sub_ln32_reg_410_reg[16]             | FLOP_LATCH.flop.FDRE |
+    | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/tmp_product__0_i_1                   | LUT.others.LUT3      |
+    | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/mul_32s_32s_32_2_1_U2/tmp_product__0 | MULT.dsp.DSP48E1     |
+    | grp_LinearContrastStretching_Pipeline_VITIS_LOOP_24_1_fu_134/mul_32s_32s_32_2_1_U2/buff0_reg      | MULT.dsp.DSP48E1     |
+    +---------------------------------------------------------------------------------------------------+----------------------+
+
+
+================================================================
+== RTL Synthesis Vivado Reports
+================================================================
++--------------------------+---------------------------------------------------------------------------------+
+| Report Type              | Report Location                                                                 |
++--------------------------+---------------------------------------------------------------------------------+
+| design_analysis          | impl/verilog/report/LinearContrastStretching_design_analysis_synth.rpt          |
+| failfast                 | impl/verilog/report/LinearContrastStretching_failfast_synth.rpt                 |
+| timing                   | impl/verilog/report/LinearContrastStretching_timing_synth.rpt                   |
+| timing_paths             | impl/verilog/report/LinearContrastStretching_timing_paths_synth.rpt             |
+| utilization              | impl/verilog/report/LinearContrastStretching_utilization_synth.rpt              |
+| utilization_hierarchical | impl/verilog/report/LinearContrastStretching_utilization_hierarchical_synth.rpt |
++--------------------------+---------------------------------------------------------------------------------+
+
+

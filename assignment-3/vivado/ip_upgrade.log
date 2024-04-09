@@ -1,0 +1,16 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1.1 (lin64) Build 3900603 Fri Jun 16 19:30:25 MDT 2023
+| Date         : Tue Apr  9 20:11:20 2024
+| Host         : Hephaestion running 64-bit Ubuntu 23.10
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'linear_contrast_stretching_LinearContrastStretc_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the update of linear_contrast_stretching_LinearContrastStretc_0_2 (Cristi:hls:LinearContrastStretching:1.0) to current project options.
+

@@ -1,0 +1,42 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cristian/Documents/ACES/RC/assignment-3/vitis/solution/csynth.tcl:17:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="LinearContrastStretching" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=LinearContrastStretching" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cristian/Documents/ACES/RC/assignment-3/vitis/solution/directives.tcl:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="LinearContrastStretching" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=LinearContrastStretching" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="vitis/solution/code/LinearContrastStretching.cpp:14:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="LinearContrastStretching" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode = m_axi port = image_out bundle = image_out offset = slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="vitis/solution/code/LinearContrastStretching.cpp:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="LinearContrastStretching" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode = m_axi port = image_in bundle = image_in offset = slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="vitis/solution/code/LinearContrastStretching.cpp:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="LinearContrastStretching" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode = s_axilite port = image_length" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="vitis/solution/code/LinearContrastStretching.cpp:17:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="LinearContrastStretching" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode = s_axilite port = low_threshold" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="vitis/solution/code/LinearContrastStretching.cpp:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="LinearContrastStretching" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode = s_axilite port = high_threshold" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="vitis/solution/code/LinearContrastStretching.cpp:19:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="LinearContrastStretching" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode = s_axilite port = low_new_threshold" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="vitis/solution/code/LinearContrastStretching.cpp:20:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="LinearContrastStretching" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode = s_axilite port = high_new_threshold" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="vitis/solution/code/LinearContrastStretching.cpp:21:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="LinearContrastStretching" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode = s_axilite port = max_value" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="vitis/solution/code/LinearContrastStretching.cpp:22:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="LinearContrastStretching" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode = s_axilite port = return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-386" msg_severity="WARNING" msg_loc="vitis/solution/code/LinearContrastStretching.cpp:13:0" msg_body="A depth specification is required for MAXI interface port 'image_out' for cosimulation.">
+        <args Name="image_out"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-386" msg_severity="WARNING" msg_loc="vitis/solution/code/LinearContrastStretching.cpp:13:0" msg_body="A depth specification is required for MAXI interface port 'image_in' for cosimulation.">
+        <args Name="image_in"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

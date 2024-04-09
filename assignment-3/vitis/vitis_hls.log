@@ -1,9 +1,9 @@
 INFO: [HLS 200-10] Running '/home/cristian/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'root' on host 'hephaestion' (Linux_x86_64 version 6.5.0-26-generic) on Sat Apr 06 10:45:20 EEST 2024
+INFO: [HLS 200-10] For user 'root' on host 'hephaestion' (Linux_x86_64 version 6.5.0-26-generic) on Tue Apr 09 11:27:40 EEST 2024
 INFO: [HLS 200-10] On os Ubuntu 23.10
 INFO: [HLS 200-10] In directory '/home/cristian/Documents/ACES/RC/assignment-3/vitis'
-Sourcing Tcl script '/home/cristian/Documents/ACES/RC/assignment-3/vitis/image_linear_contrast/solution/export.tcl'
-INFO: [HLS 200-1510] Running: source /home/cristian/Documents/ACES/RC/assignment-3/vitis/image_linear_contrast/solution/export.tcl
+Sourcing Tcl script '/home/cristian/Documents/ACES/RC/assignment-3/vitis/image_linear_contrast/solution/csynth.tcl'
+INFO: [HLS 200-1510] Running: source /home/cristian/Documents/ACES/RC/assignment-3/vitis/image_linear_contrast/solution/csynth.tcl
 INFO: [HLS 200-1510] Running: open_project image_linear_contrast 
 INFO: [HLS 200-10] Opening project '/home/cristian/Documents/ACES/RC/assignment-3/vitis/image_linear_contrast'.
 INFO: [HLS 200-1510] Running: set_top LinearContrastStretching 
@@ -32,22 +32,90 @@ INFO: [HLS 200-1510] Running: config_interface -m_axi_addr64=0
 INFO: [HLS 200-1510] Running: config_cosim -tool xsim 
 INFO: [HLS 200-1510] Running: source ./image_linear_contrast/solution/directives.tcl
 INFO: [HLS 200-1510] Running: set_directive_top -name LinearContrastStretching LinearContrastStretching 
-INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output /home/cristian/Documents/ACES/RC/assignment-3/vitis/image_linear_contrast 
-INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
-
-****** Vivado v2023.1.1 (64-bit)
-  **** SW Build 3900603 on Fri Jun 16 19:30:25 MDT 2023
-  **** IP Build 3900379 on Sat Jun 17 05:28:05 MDT 2023
-  **** SharedData Build 3899622 on Fri Jun 16 03:34:24 MDT 2023
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-
-source run_ippack.tcl -notrace
-ipx::create_core: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1329.695 ; gain = 15.027 ; free physical = 4929 ; free virtual = 14439
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/cristian/Xilinx/Vivado/2023.1/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Sat Apr  6 10:45:40 2024...
-INFO: [HLS 200-802] Generated output file image_linear_contrast/export.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 19.96 seconds. CPU system time: 0.77 seconds. Elapsed time: 22.3 seconds; current allocated memory: 8.684 MB.
-INFO: [HLS 200-112] Total CPU user time: 22.2 seconds. Total CPU system time: 1.01 seconds. Total elapsed time: 24.45 seconds; peak allocated memory: 201.969 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 193.289 MB.
+INFO: [HLS 200-10] Analyzing design file 'image_linear_contrast/solution/code/LinearContrastStretching.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.42 seconds. CPU system time: 0.32 seconds. Elapsed time: 0.73 seconds; current allocated memory: 194.207 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 65 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/cristian/Documents/ACES/RC/assignment-3/vitis/image_linear_contrast/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 113 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details: /home/cristian/Documents/ACES/RC/assignment-3/vitis/image_linear_contrast/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 75 instructions in the design after the 'Performance/Pipeline' phase of compilation. See the Design Size Report for more details: /home/cristian/Documents/ACES/RC/assignment-3/vitis/image_linear_contrast/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 102 instructions in the design after the 'Optimizations' phase of compilation. See the Design Size Report for more details: /home/cristian/Documents/ACES/RC/assignment-3/vitis/image_linear_contrast/solution/syn/report/csynth_design_size.rpt
+WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'image_out' for cosimulation. (image_linear_contrast/solution/code/LinearContrastStretching.cpp:13:0)
+WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'image_in' for cosimulation. (image_linear_contrast/solution/code/LinearContrastStretching.cpp:13:0)
+INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_25_1' (image_linear_contrast/solution/code/LinearContrastStretching.cpp:25:19) in function 'LinearContrastStretching' partially (and skipping exit check) with a factor of 2 (image_linear_contrast/solution/code/LinearContrastStretching.cpp:13:0)
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 32 has been inferred on bundle 'image_in'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (image_linear_contrast/solution/code/LinearContrastStretching.cpp:29:6)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.89 seconds. CPU system time: 0.38 seconds. Elapsed time: 7.91 seconds; current allocated memory: 196.508 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 196.508 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 196.770 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 196.836 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_25_1' (image_linear_contrast/solution/code/LinearContrastStretching.cpp:25) in function 'LinearContrastStretching' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 218.461 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 218.727 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'LinearContrastStretching' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'LinearContrastStretching_Pipeline_VITIS_LOOP_25_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_25_1'.
+WARNING: [HLS 200-880] The II Violation in module 'LinearContrastStretching_Pipeline_VITIS_LOOP_25_1' (loop 'VITIS_LOOP_25_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('image_in_addr_read_1', image_linear_contrast/solution/code/LinearContrastStretching.cpp:29) on port 'image_in' (image_linear_contrast/solution/code/LinearContrastStretching.cpp:29) and bus read operation ('image_in_addr_read', image_linear_contrast/solution/code/LinearContrastStretching.cpp:29) on port 'image_in' (image_linear_contrast/solution/code/LinearContrastStretching.cpp:29).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 57, loop 'VITIS_LOOP_25_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.62 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.65 seconds; current allocated memory: 221.086 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.87 seconds. CPU system time: 0 seconds. Elapsed time: 0.88 seconds; current allocated memory: 221.086 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'LinearContrastStretching' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 221.879 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 221.879 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'LinearContrastStretching_Pipeline_VITIS_LOOP_25_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'LinearContrastStretching_Pipeline_VITIS_LOOP_25_1' pipeline 'VITIS_LOOP_25_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'udiv_32ns_32ns_32_36_1': 6 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'LinearContrastStretching_Pipeline_VITIS_LOOP_25_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.24 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.27 seconds; current allocated memory: 225.141 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'LinearContrastStretching' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'LinearContrastStretching/image_out' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'LinearContrastStretching/image_in' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'LinearContrastStretching/image_out_offset' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'LinearContrastStretching/image_in_offset' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'LinearContrastStretching/image_length' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'LinearContrastStretching/low_threshold' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'LinearContrastStretching/high_threshold' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'LinearContrastStretching/low_new_threshold' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'LinearContrastStretching/high_new_threshold' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'LinearContrastStretching/max_value' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'LinearContrastStretching' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'image_out_offset', 'image_in_offset', 'image_length', 'low_threshold', 'high_threshold', 'low_new_threshold', 'high_new_threshold', 'max_value' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'LinearContrastStretching'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.82 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.83 seconds; current allocated memory: 228.973 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.48 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.51 seconds; current allocated memory: 232.969 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.07 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.12 seconds; current allocated memory: 246.055 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for LinearContrastStretching.
+INFO: [VLOG 209-307] Generating Verilog RTL for LinearContrastStretching.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 7.92 seconds. CPU system time: 0.84 seconds. Elapsed time: 13.44 seconds; current allocated memory: 52.766 MB.
+INFO: [HLS 200-112] Total CPU user time: 9.63 seconds. Total CPU system time: 1.07 seconds. Total elapsed time: 15.2 seconds; peak allocated memory: 246.055 MB.
